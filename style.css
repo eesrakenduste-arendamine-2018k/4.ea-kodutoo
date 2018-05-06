@@ -10,7 +10,7 @@
     border-right: 1vh solid white;
     width: auto;
     height: 48.5vh;
-    background-color: dimgrey;
+    background-color: dimgray;
     color: white;
 }
 
@@ -21,16 +21,24 @@
     border-right: 1vh solid white;
     width: auto;
     height: 48.5vh;
-    background-color: dimgrey;
+    background-color: dimgray;
     color: white;
 }
 
 #percentage {
-    border-top: 1vh solid white;
-    border-bottom: 1vh solid white;
-    border-left: 1vh solid white;
-    border-right: 1vh solid white;
+    border: 0.5vh solid white;
     position: absolute;
     text-align: center;
     color: white;
+    
+    display: block;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+
+    -moz-border-radius: 50%; /* or 50% */
+    border-radius: 50%; /* or 50% */
+
+    background-color: black;
+    font-size: 2em;
 }

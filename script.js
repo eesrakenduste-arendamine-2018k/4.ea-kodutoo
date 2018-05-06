@@ -1,8 +1,9 @@
 /*
-    random[R/G/B] - generated R/G/B values
-    current[R/G/B] - current R/G/B values
+    random[R/G/B] - generated R/G/B values (0...255)
+    randomColorHex - generated R/G/B in HEX
+    current[R/G/B] - current R/G/B values (0...255)
+    currentColorHex - current R/G/B in HEX
     difference[R/G/B] - difference between generated and current R/G/B values (in degrees)
-    percentage[R/G/B] - difference between generated and current R/G/B values (in perentage)
     percentageTotal - total difference between generated and current R/G/B values (in perentage)
 */
 
@@ -12,7 +13,7 @@ showHints = false //for toggling hints
 
 window.onload = function() {
     
-    //generate random color hex
+    //generate random color HEX
     randomColorR = Math.floor(Math.random() * (255 + 1))
     randomColorG = Math.floor(Math.random() * (255 + 1))
     randomColorB = Math.floor(Math.random() * (255 + 1))
@@ -37,7 +38,7 @@ function deviceOrientation(eventData) {
     currentAlpha = currentAlpha < 180 ? currentAlpha + 180 : currentAlpha
     currentAlpha = currentAlpha > 180 ? currentAlpha - 180 : currentAlpha
     
-    //runs on first load to save starting postion and catch bugs
+    //runs on first load to save starting position and catch bugs
     if (orientationDefined === false) {
         originalAlpha = currentAlpha
         if (originalAlpha < 135) {
@@ -101,7 +102,7 @@ function deviceOrientation(eventData) {
     currentColorB = currentColorB < 0 ? 0 : currentColorB
     currentColorB = currentColorB > 255 ? 255 : currentColorB
     
-    //HEX from RGB
+    //RGB to HEX
     currentColorHex =
         ("00" + currentColorR.toString(16)).slice(-2) +
         ("00" + currentColorG.toString(16)).slice(-2) +
@@ -119,18 +120,25 @@ function deviceOrientation(eventData) {
     differenceB = randomColorB - currentColorB
     differenceB = differenceB < 0 ? differenceB * -1 : differenceB
     
-    percentageR = differenceR * (100/360)
-    percentageG = differenceG * (100/360)
-    percentageB = differenceB * (100/360)
-    percentageTotal = Math.floor((percentageR + percentageG + percentageB) / 3)
+    percentageTotal = Math.floor(((100 - ((differenceR * (100/360)) + (differenceG * (100/360)) + (differenceB * (100/360))) / 3) - 29) / 71 * 102)
     
-    //next level
-    if (percentageTotal < 3.5) {
-        location.reload()
+    //change circle size
+    if (percentageTotal < 10) {
+        document.getElementById("percentage").style.width = "50px"
+        document.getElementById("percentage").style.height = "50px"
+        document.getElementById("percentage").style.lineHeight = "50px"
+    } else if (percentageTotal > 99) {
+        document.getElementById("percentage").style.width = "90px"
+        document.getElementById("percentage").style.height = "90px"
+        document.getElementById("percentage").style.lineHeight = "90px"
+    } else {
+        document.getElementById("percentage").style.width = "70px"
+        document.getElementById("percentage").style.height = "70px"
+        document.getElementById("percentage").style.lineHeight = "70px"
     }
     
     //display percentage
-    document.getElementById("percentage").innerHTML = 100 - percentageTotal + 3.5 + "%"
+    document.getElementById("percentage").innerHTML = percentageTotal + "%"
     
     //display hint
     if (showHints === true) {
@@ -156,5 +164,10 @@ function deviceOrientation(eventData) {
     } else {
         document.getElementById("generatedColor").innerHTML = ""
         document.getElementById("currentColor").innerHTML = ""
+    }
+    
+    //next level
+    if (percentageTotal > 97) {
+        location.reload()
     }
 }
