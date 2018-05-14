@@ -6,6 +6,7 @@ const urlsToCache = [
   '/~valerivv/sayings-offline-app/index.html',
   '/~valerivv/sayings-offline-app/',
   '/~valerivv/sayings-offline-app/styles.css',
+  '/~valerivv/sayings-offline-app/dicepic',
   '/~valerivv/sayings-offline-app/dicepic/Dice-1.png',
   '/~valerivv/sayings-offline-app/dicepic/Dice-2.png',
   '/~valerivv/sayings-offline-app/dicepic/Dice-3.png',

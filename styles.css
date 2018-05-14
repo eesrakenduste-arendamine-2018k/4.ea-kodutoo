@@ -14,3 +14,19 @@ body {
 	transform: translate(-50%, -50%);
 	font-family: 'Cousine';font-size: 20px;
 }
+
+body {
+	background-color: white;
+	background-repeat: no-repeat;
+	background-position: center;
+    margin-right: 200px;
+}
+
+#status {
+	color: blue;
+	text-shadow: 3px 2px orange;
+}
+
+#pic1 {
+	left: 60%;
+}

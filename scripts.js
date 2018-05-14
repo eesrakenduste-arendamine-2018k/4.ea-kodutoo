@@ -29,14 +29,14 @@
       const xGravity = event.accelerationIncludingGravity.x
 
       // kui liikumine suurem, siis laeme uue ja ootame 1s enne kui uuesti
-      if (xGravity > 30 && this.new) {
+      if (xGravity > 35 && this.new) {
         this.rollDice()
         navigator.vibrate(300)
 
         this.new = false
         window.setTimeout(function () {
           Dice.instance.new = true
-        }, 5000)
+        }, 1000)
       }
     },
     rollDice: function (){
@@ -47,14 +47,15 @@
           const side1 = Math.floor( Math.random() * 6 ) + 1;
           const side2 = Math.floor( Math.random() * 6 ) + 1;
           const diceTotal = side1 + side2;
-
-          diceSide1.innerHTML = side1;
-          diceSide2.innerHTML = side2;
+			
+		  //tagastab esimese täringu vastuse ja eraldi real teise täringu oma	
+          //diceSide1.innerHTML = side1;
+          //diceSide2.innerHTML = side2;
           status.innerHTML = 'Täringute summa on ' + diceTotal + '.';
 
           document.getElementById("pic1").src = "dicepic/Dice-" + side1 + ".png";
           document.getElementById("pic2").src = "dicepic/Dice-" + side2 + ".png";
-          document.querySelector('#content').innerHTML = diceTotal;
+          document.querySelector('status').innerHTML = diceTotal;
     },
 
     registerServiceWorker: function () {
@@ -76,3 +77,5 @@
     window.app = app
   }
 })()
+
+
