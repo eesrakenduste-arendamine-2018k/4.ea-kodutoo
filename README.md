@@ -1,10 +1,11 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
+TO-DO LIST
 
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+Egert Piksar ja Egert Klaamas
 
 ## Nõuded
 
-1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
+GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:
     * suurelt rakenduse nime; 
     * autorite nimesid; 
