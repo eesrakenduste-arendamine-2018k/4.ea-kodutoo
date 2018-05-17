@@ -18,21 +18,46 @@
   </head>
   <body>
     <main>
-      <h1 class="heading">Track your life</h1>
-      <nav>
-        <ol class="nav">
-          <li class="nav-item nav-item-main">Main</li>
-          <li class="nav-item nav-item-fit">Fit</li>
-          <li class="nav-item nav-item-weird">Weird</li>  
-        </ol>
-      </nav>
-      <div class="intro">
-        <p>If you want to know where the time flies then track your time. And do it quickly. Otherwise your time will be spent here.</p>
-      </div>
-      <div class="timer-app">
-        <p>Time spent on tracker:</p>
-        <p></p> 
-      </div>
+
+      <!-- main page -->
+      <section id="main-view">
+        <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
+        <h2 class="main-heading">Main</h1>
+      </section>
+  
+      <!-- fit page -->
+      <section id="fit-view">
+        <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
+        <h2 class="fit-heading">Fit</h1>
+      </section>
+
+      <!-- weird page -->
+      <section id="weird-view">
+        <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
+        <h2 class="weird-heading">Weird</h1>
+      </section>
+    
+      <!-- Home -->
+      <section id="home-view">
+          <h1 class="home-heading" class="menu-link home-view active-menu">Track your life</h1>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-item menu-item-main">
+                <a href="#main-view" class="menu-link main-view">Main</a></li>
+              <li class="menu-item menu-item-fit">
+                <a href="#fit-view" class="menu-link fit-view">Fit</a></li>
+              <li class="menu-item menu-item-weird">
+                <a href="#weird-view" class="menu-link weird-view">Weird</a></li>  
+            </ul>
+          </nav>
+          <div class="home-intro">
+            <p>If you want to know where the time flies then track your time. And do it quickly. Otherwise your time will be spent here.</p>
+          </div>
+          <div class="timer-app">
+            <p>Time spent on tracker:</p>
+            <p></p> 
+          </div>
+      </section>
     </main>
   </body>
 </html>
