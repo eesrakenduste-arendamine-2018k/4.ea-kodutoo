@@ -1,4 +1,31 @@
 .done-true {
   text-decoration: line-through;
-  color: grey;
+  color: green;
+}
+
+.done-false {
+	color: red;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+	font-style: Times New Roman;
+	color: white;
+}
+
+body {
+	background-image: url("todolist2.png");
+	background-size: cover;
+	image-rendering: -webkit-optimize-contrast;
+	background-repeat: no-repeat;
+	color: white;
+}
+
+.btn-primary {
+	border-radius: 6px;
+}
+
+.textbox {
+	border-radius: 6px;
 }
