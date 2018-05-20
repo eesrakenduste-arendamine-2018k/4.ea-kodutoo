@@ -47,8 +47,8 @@
           const side1 = Math.floor( Math.random() * 6 ) + 1;
           const side2 = Math.floor( Math.random() * 6 ) + 1;
           const diceTotal = side1 + side2;
-			
-		  //tagastab esimese täringu vastuse ja eraldi real teise täringu oma	
+
+		  //tagastab esimese täringu vastuse ja eraldi real teise täringu oma
           //diceSide1.innerHTML = side1;
           //diceSide2.innerHTML = side2;
           status.innerHTML = 'Täringute summa on ' + diceTotal + '.';
@@ -77,5 +77,3 @@
     window.app = app
   }
 })()
-
-

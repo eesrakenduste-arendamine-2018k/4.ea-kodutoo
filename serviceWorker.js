@@ -1,18 +1,16 @@
 // service worker
 const CACHE_NAME = 'sayings-v1'
 const urlsToCache = [
-  '/~valerivv/sayings-offline-app/sayings.json',
-  '/~valerivv/sayings-offline-app/scripts.js',
-  '/~valerivv/sayings-offline-app/index.html',
-  '/~valerivv/sayings-offline-app/',
-  '/~valerivv/sayings-offline-app/styles.css',
-  '/~valerivv/sayings-offline-app/dicepic',
-  '/~valerivv/sayings-offline-app/dicepic/Dice-1.png',
-  '/~valerivv/sayings-offline-app/dicepic/Dice-2.png',
-  '/~valerivv/sayings-offline-app/dicepic/Dice-3.png',
-  '/~valerivv/sayings-offline-app/dicepic/Dice-4.png',
-  '/~valerivv/sayings-offline-app/dicepic/Dice-5.png',
-  '/~valerivv/sayings-offline-app/dicepic/Dice-6.png'
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/scripts.js',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/index.html',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/styles.css',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/dicepic/Dice-1.png',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/dicepic/Dice-2.png',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/dicepic/Dice-3.png',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/dicepic/Dice-4.png',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/dicepic/Dice-5.png',
+  'https://www.tlu.ee/~valerivv/sayings-offline-app/dicepic/Dice-6.png'
 ]
 
 self.addEventListener('install', function (event) {
@@ -22,7 +20,6 @@ self.addEventListener('install', function (event) {
     caches.open(CACHE_NAME)
       .then(function (cache) {
         console.log('Opened cache')
-
         return cache.addAll(urlsToCache)
       })
   )
