@@ -1,10 +1,16 @@
 .done-true {
   text-decoration: line-through;
-  color: green;
+  color: red;
 }
 
 .done-false {
-	color: red;
+	color: black;
+}
+
+.header {
+	width: 100%;
+	background-color: black;
+	text-align: center;
 }
 
 h2 {
@@ -15,11 +21,10 @@ h2 {
 }
 
 body {
-	background-image: url("todolist2.png");
+	background-image: url("paper.png");
 	background-size: cover;
 	image-rendering: -webkit-optimize-contrast;
-	background-repeat: no-repeat;
-	color: white;
+	color: black;
 }
 
 .btn-primary {
