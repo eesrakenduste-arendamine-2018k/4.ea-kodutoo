@@ -143,11 +143,15 @@ input {
 
 
 <h3>Completed</h3>
-      <ul id="completed-tasks">
+     <ul id="completed-tasks">
 
+	 
+	 </ul>
 <script>
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName("LI");
+var incompleteTasksHolder = document.getElementById("myUL");
+var completedTasksHolder = document.getElementById("completed-tasks");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
@@ -168,12 +172,16 @@ for (i = 0; i < close.length; i++) {
 }
 
 // Add a "checked" symbol when clicking on a list item
+
+/*
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
 }, false);
+*/
+
 
 // Create a new list item when clicking on the "Add" button
 function newElement() {
@@ -200,6 +208,63 @@ function newElement() {
       div.style.display = "none";
     }
   }
+}
+
+// Mark a task as complete 
+var taskCompleted = function() {
+  console.log("Task complete...");
+  //Append the task list item to the #completed-tasks
+  var listItem = this.parentNode;
+  completedTasksHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskIncomplete);
+}
+
+// Mark a task as incomplete
+var taskIncomplete = function() {
+  console.log("Task Incomplete...");
+  // When checkbox is unchecked
+  // Append the task list item #incomplete-tasks
+  var listItem = this.parentNode;
+  incompleteTasksHolder.appendChild(listItem);
+  bindTaskEvents(listItem, taskCompleted);
+}
+
+// Cycle over the incompleteTaskHolder ul list items
+for(var i = 0; i <  incompleteTasksHolder.children.length; i++) {
+    // bind events to list item's children (taskCompleted)
+  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
+}
+// Cycle over the completeTaskHolder ul list items
+for(var i = 0; i <  completedTasksHolder.children.length; i++) {
+    // bind events to list item's children (taskIncompleted)
+  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
+
+}
+
+// Edit an existing task
+var editTask = function() {
+  console.log("Edit Task...");
+  
+  var listItem = this.parentNode;
+  
+  var editInput = listItem.querySelector("input[type=text]")
+  var label = listItem.querySelector("label");
+  
+  var containsClass = listItem.classList.contains("editMode");
+    //if the class of the parent is .editMode 
+  if(containsClass) {
+      //switch from .editMode 
+      //Make label text become the input's value
+    label.innerText = editInput.value;
+  } else {
+      //Switch to .editMode
+      //input value becomes the label's text
+    editInput.value = label.innerText;
+  }
+  
+    // Toggle .editMode on the parent
+  listItem.classList.toggle("editMode");
+ 
 }
 </script>
 
