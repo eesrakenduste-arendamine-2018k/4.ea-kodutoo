@@ -151,3 +151,22 @@ for(var i = 0; i <  completedTasksHolder.children.length; i++) {
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
 
 }
+Sayings.prototype = {
+    init: function () {
+      console.log('Sayings started')
+
+      // service workeri käivitus
+      this.registerServiceWorker()
+}
+
+registerServiceWorker: function () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful: ', registration)
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err)
+        })
+      }
+	 }
