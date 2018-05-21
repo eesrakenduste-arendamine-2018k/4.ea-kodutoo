@@ -6,6 +6,18 @@ var addButton = document.getElementsByTagName("button")[0];
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
+function registerServiceWorker  () {
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
+			  // Registration was successful
+			console.log('ServiceWorker registration successful: ', registration)
+		}, function (err) {
+			  // registration failed :(
+			console.log('ServiceWorker registration failed: ', err)
+		})
+	}
+}
+
 //New Task List Item
 var createNewTaskElement = function(taskString) {
   //Create List Item
@@ -151,15 +163,64 @@ for(var i = 0; i <  completedTasksHolder.children.length; i++) {
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
 
 }
+/*MainApp.routes = {
+  'home-view': {
+    'render': function () {
+      console.log('>>>> Home')
+    }
+  },
+  'app-view': {
+    'render': function () {
+      console.log('>>>> App')
 
-function registerServiceWorker  () {
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
-			  // Registration was successful
-			console.log('ServiceWorker registration successful: ', registration)
-		}, function (err) {
-			  // registration failed :(
-			console.log('ServiceWorker registration failed: ', err)
-		})
-	}
+      const localValue = localStorage.getItem('new-task')
+      if (localValue) document.querySelector('#input').value = JSON.parse(localValue).text
+
+      document
+        .querySelector('#saveLocal')
+        .addEventListener('click', saveServer)
+
+      document
+        .querySelector('#saveServer')
+        .addEventListener('click', saveServer)
+
+      document
+        .querySelector('#loadServer')
+        .addEventListener('click', loadServer)
+
+      window.addEventListener('keypress', autosave)
+    }
+  }
 }
+function saveLocal () {
+  console.log(window.app)
+  const o = {
+    text: window.app.input.value,
+    date: new Date()
+  }
+  localStorage.setItem('textInput', JSON.stringify(o))
+}
+function saveServer () {
+  const o = {
+    text: window.app.input.value,
+    date: new Date()
+  }
+  function loadServer () {
+  let xhttp = new XMLHttpRequest()
+  xhttp.onreadystatechange = function () {
+    if (this.readyState === 4 && this.status === 200) {
+      console.log('laetud')
+      console.log(JSON.parse(xhttp.responseText))
+    }
+  }
+
+  xhttp.open('GET', 'save.php?latest', true)
+  xhttp.send()
+}
+
+// kui leht laetud käivitan app'i
+window.onload = function () {
+  const app = new MainApp()
+  window.app = app
+}*/
+
