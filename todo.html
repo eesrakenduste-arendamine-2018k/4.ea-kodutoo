@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TO-DO list</title>
+	<link rel="stylesheet" href="todo.css">
+    <script src="todo.js"></script>
+  </head>
+
+<body>
+    <div class="container">
+      <p>
+        <label for="new-task">Lisa tegevus</label><input id="new-task" type="text"><button>lisa</button>
+      </p>
+      
+      <h3>Tegevus</h3>
+      <ul id="incomplete-tasks">
+        <li><input type="checkbox"><label>Koolitus 23.05</label><input type="text"><button class="edit">muuda</button><button class="delete">kustuta</button></li>
+        <li class="editMode"><input type="checkbox"><label>Perearst 04.05</label><input type="text" value="Auto ostmine 05.02"><button class="edit">muuda</button><button class="delete">kustuta</button></li>
+        
+      </ul>
+      
+      <h3>Tehtud</h3>
+      <ul id="completed-tasks">
+        <li><input type="checkbox" checked><label>Hambaarst 21.05</label><input type="text"><button class="edit">muuda</button><button class="delete">kustuta</button></li>
+      </ul>
+    </div>
+
+    <script type="text/javascript" src="todo.js"></script>
+
+ </body>
