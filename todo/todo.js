@@ -27,9 +27,9 @@ var createNewTaskElement = function(taskString) {
   checkBox.type = "checkbox";
   editInput.type = "text";
   
-  editButton.innerText = "Edit";
+  editButton.innerText = "Muuda";
   editButton.className = "edit";
-  deleteButton.innerText = "Delete";
+  deleteButton.innerText = "Kustuta";
   deleteButton.className = "delete";
   
   label.innerText = taskString;
