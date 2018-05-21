@@ -1,10 +1,10 @@
 // service worker
 const CACHE_NAME = 'To-Do List'
 const urlsToCache = [
-  '/~pikseger/4.ea-kodutoo/todo.css',
-  '/~pikseger/4.ea-kodutoo/todo.html',
-  '/~pikseger/4.ea-kodutoo/todo.js',
-  '/~pikseger/4.ea-kodutoo/'
+  'http://www.tlu.ee/~pikseger/eesrakendused/4.ea-kodutoo/todo/todo.css',
+  'http://www.tlu.ee/~pikseger/eesrakendused/4.ea-kodutoo/todo/todo.html',
+  'http://www.tlu.ee/~pikseger/eesrakendused/4.ea-kodutoo/todo/todo.js',
+  'http://www.tlu.ee/~pikseger/eesrakendused/4.ea-kodutoo/todo'
 ]
 
 self.addEventListener('install', function (event) {
@@ -21,7 +21,7 @@ self.addEventListener('install', function (event) {
 })
 
 self.addEventListener('fetch', function (event) {
-  // console.log('WORKER: fetch event in progress.');
+   console.log('WORKER: fetch event in progress.');
 
   if (event.request.method !== 'GET') { return }
   event.respondWith(
