@@ -1,7 +1,7 @@
 let canvas;
 let ctx;
-let recW = 150;
-let recH = 150;
+let recW = 100;
+let recH = 100;
 let x;
 let x1;
 let y;
@@ -71,8 +71,8 @@ function drawSquare(){
 			document.getElementById("hits").innerHTML = "Pihta saamise skoor: "+hits;
 
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
-			x = Math.random()*800;
-			y = Math.random()*800;
+			x = Math.random()*400;
+			y = Math.random()*400;
 			speedX+= 1;
 			if(speedY<0){
 				speedY-= (1+Math.random()*2); 
@@ -86,10 +86,10 @@ function drawSquare(){
 	}
 
 
-	xmin = x-100;
-	xmax = x+100;
-	ymin = y-100;
-	ymax = y+100;
+	xmin = x-125;
+	xmax = x+125;
+	ymin = y-125;
+	ymax = y+125;
 
 	requestAnimationFrame(drawSquare);
 	
