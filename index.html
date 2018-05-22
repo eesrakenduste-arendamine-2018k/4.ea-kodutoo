@@ -17,41 +17,65 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <main>
+
+    <nav class="menu">
+      <ul class="menu-list">
+        <h1 class="home-heading">
+          <a href="#home-view" class="menu-link home-view active-menu">Track your life</a></h1>
+        <li class="menu-item menu-item-main">
+          <a href="#main-view" class="menu-link main-view">Main</a></li>
+        <li class="menu-item menu-item-fit">
+          <a href="#fit-view" class="menu-link fit-view">Fit</a></li>
+        <li class="menu-item menu-item-weird">
+          <a href="#weird-view" class="menu-link weird-view">Weird</a></li>  
+      </ul>
+    </nav>
+
+    <main role="main">
 
       <!-- main page -->
       <section id="main-view">
         <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
         <h2 class="main-heading">Main</h1>
+        <div class="activity main-activity">Massiiv</div>
+        <button class="btn-tracker btn-tracker-main">Save</button>
+        <div class="timer-app">
+          <p>Time spent on tracker:</p>
+          <p></p> 
+        </div>
+        <div class="activity-tracker activity-tracker-main">Kuvamised</div>
       </section>
   
       <!-- fit page -->
       <section id="fit-view">
         <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
         <h2 class="fit-heading">Fit</h1>
+        <div class="activity fit-activity">Massiiv</div>
+        <button class="btn-tracker btn-tracker-fit">Save</button>
+        <div class="timer-app">
+          <p>Time spent on tracker:</p>
+          <p></p> 
+        </div>
+        <div class="activity-tracker activity-tracker-fit">Kuvamised</div>
       </section>
 
       <!-- weird page -->
       <section id="weird-view">
         <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
         <h2 class="weird-heading">Weird</h1>
+        <div class="activity weird-activity">Massiiv</div>
+        <button class="btn-tracker btn-tracker-weird">Save</button>
+        <div class="timer-app">
+          <p>Time spent on tracker:</p>
+          <p></p> 
+        </div>
+        <div class="activity-tracker activity-tracker-weird">Kuvamised</div>
       </section>
     
       <!-- Home -->
       <section id="home-view">
-          <h1 class="home-heading" class="menu-link home-view active-menu">Track your life</h1>
-          <nav class="menu">
-            <ul class="menu-list">
-              <li class="menu-item menu-item-main">
-                <a href="#main-view" class="menu-link main-view">Main</a></li>
-              <li class="menu-item menu-item-fit">
-                <a href="#fit-view" class="menu-link fit-view">Fit</a></li>
-              <li class="menu-item menu-item-weird">
-                <a href="#weird-view" class="menu-link weird-view">Weird</a></li>  
-            </ul>
-          </nav>
           <div class="home-intro">
-            <p>If you want to know where the time flies then track your time. And do it quickly. Otherwise your time will be spent here.</p>
+            If you want to know where the time flies then track your time. And do it quickly. Otherwise your time will be spent here.
           </div>
           <div class="timer-app">
             <p>Time spent on tracker:</p>

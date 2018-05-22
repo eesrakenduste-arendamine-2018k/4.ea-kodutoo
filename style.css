@@ -45,32 +45,35 @@ main {
 
 .menu {
   line-height: 1;
-  border-bottom: 2px solid rgb(95,75,139);
+  border-bottom: 2px solid rgb(48, 46, 54);
   margin-bottom: 0;
   color: black;
   padding-top: 10px;
   padding-left: 10px;
   position: relative;
-  text-align: center;
   left: 0;
   right: 0;
 }
 .menu-list {
-  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
 }
 .menu-item {
-  display: block;
+  text-align: center;
   margin: 0 0 10px 0;
 }
 .menu-link {
-  color: rgb(95,75,139);
+  color: rgb(43, 40, 40);
   font-size: 18px;
   font-weight: bold;
   display: block;
@@ -91,14 +94,20 @@ main {
   outline: none;
 }
 .menu-link:active {
-  color: rgb(95,75,139);
+  color: rgb(27, 26, 29);
 }
 .menu-link.active-menu {
-  border: 2px solid rgb(95,75,139);
+  border: 2px solid rgb(102, 93, 50);
 }
 
-.home_intro,
-.timer_app {
+.home-intro,
+.timer-app {
   position: relative;
+}
+
+.home-intro {
+  display: relative;
+  padding: 40px 0;
+  margin-top: 60px;
 }
 
