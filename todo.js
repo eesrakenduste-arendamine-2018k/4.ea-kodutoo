@@ -1,8 +1,11 @@
-
 //If storage space doesn't exist
 if(localStorage.getItem("todoitems")==null){
     let placeholder = []
     localStorage.setItem("todoitems", JSON.stringify(placeholder))
+}
+
+function random(to){
+  return Math.floor(Math.random() * to)
 }
 
 //Push to local storage
@@ -21,12 +24,30 @@ angular.module('todoApp', [])
     var todoList = this;
     //Pulls from local storage
     todoList.todos = pullFromStorage()
+
+    window.addEventListener('devicemotion', function(){
+      const xGravity = event.accelerationIncludingGravity.x
+    
+      if(xGravity > 10){
+        alert(todoList.todos[random(todoList.todos.length)])
+        navigator.vibrate(500)
+
+        window.setTimeout(function () {
+          console.log("waiting")
+        },1000)
+      }
+    })
     
     //Add function, pushes to local array which is pushed to local storage
     todoList.addTodo = function() {
-      todoList.todos.push({text:todoList.todoText, done:false});
-      pushToStorage(todoList.todos)
-      todoList.todoText = '';
+      if(todoList.todoText === ""){
+        alert("Write something first!")
+      }
+      else{
+        todoList.todos.push({text:todoList.todoText, done:false});
+        pushToStorage(todoList.todos)
+        todoList.todoText = '';
+      }
     };
     
     //Remaining calculation
