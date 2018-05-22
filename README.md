@@ -6,6 +6,7 @@
 
 Riho Noormets
 Mängu põhimõtteks on liikuvale ruudule pihta saamine
+![alt text](https://gyazo.com/c401be225670e6fccf6d6ba9e00fe261)
 
 
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
