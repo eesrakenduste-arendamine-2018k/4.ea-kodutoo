@@ -54,7 +54,8 @@ main {
   left: 0;
   right: 0;
 }
-.menu-list {
+.menu-list,
+.flex-activity {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -65,7 +66,7 @@ main {
   display: -webkit-flex;
   display: flex;
   
-  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   justify-content: center;
 }
 .menu-item {
@@ -96,7 +97,9 @@ main {
 .menu-link:active {
   color: rgb(27, 26, 29);
 }
-.menu-link.active-menu {
+.menu-link.main-view.active-menu,
+.menu-link.fit-view.active-menu,
+.menu-link.weird-view.active-menu {
   border: 2px solid rgb(102, 93, 50);
 }
 
@@ -106,8 +109,64 @@ main {
 }
 
 .home-intro {
-  display: relative;
   padding: 40px 0;
-  margin-top: 60px;
 }
 
+.activity-item {
+  padding: 5px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Select box */
+
+.custom-select {
+  position: relative;
+  width: 700px;
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: DodgerBlue;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}

@@ -20,7 +20,7 @@
 
     <nav class="menu">
       <ul class="menu-list">
-        <h1 class="home-heading">
+        <h1 class="home-heading menu-item menu-item-home">
           <a href="#home-view" class="menu-link home-view active-menu">Track your life</a></h1>
         <li class="menu-item menu-item-main">
           <a href="#main-view" class="menu-link main-view">Main</a></li>
@@ -35,39 +35,57 @@
 
       <!-- main page -->
       <section id="main-view">
-        <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
-        <h2 class="main-heading">Main</h1>
-        <div class="activity main-activity">Massiiv</div>
-        <button class="btn-tracker btn-tracker-main">Save</button>
+        <div class="flex-activity">
+          <div class="activity-item activity-main">
+            <div class="custom-select" style="width:200px;">
+              <select>
+                <option value="0">Select car:</option>
+                <option value="1">Audi</option>
+                <option value="2">BMW</option>
+                <option value="3">Citroen</option>
+                <option value="4">Ford</option>
+                <option value="5">Honda</option>
+                <option value="6">Jaguar</option>
+                <option value="7">Land Rover</option>
+                <option value="8">Mercedes</option>
+                <option value="9">Mini</option>
+                <option value="10">Nissan</option>
+                <option value="11">Toyota</option>
+                <option value="12">Volvo</option>
+              </select>
+            </div>
+          </div>
+          <button class="activity-item btn-tracker btn-tracker-main">Save</button>
+        </div> 
         <div class="timer-app">
           <p>Time spent on tracker:</p>
-          <p></p> 
+          <div></div> 
         </div>
         <div class="activity-tracker activity-tracker-main">Kuvamised</div>
       </section>
   
       <!-- fit page -->
       <section id="fit-view">
-        <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
-        <h2 class="fit-heading">Fit</h1>
-        <div class="activity fit-activity">Massiiv</div>
-        <button class="btn-tracker btn-tracker-fit">Save</button>
+        <div class="flex-activity">
+          <div class="activity-item activity-fit">Massiiv</div>
+          <button class="activity-item btn-tracker btn-tracker-fit">Save</button>
+        </div>
         <div class="timer-app">
           <p>Time spent on tracker:</p>
-          <p></p> 
+          <div></div>
         </div>
         <div class="activity-tracker activity-tracker-fit">Kuvamised</div>
       </section>
 
       <!-- weird page -->
       <section id="weird-view">
-        <h1 class="home-heading" class="menu-link home-view">Track your life</h1>
-        <h2 class="weird-heading">Weird</h1>
-        <div class="activity weird-activity">Massiiv</div>
-        <button class="btn-tracker btn-tracker-weird">Save</button>
+        <div class="flex-activity">
+          <div class="activity-item activity-weird">Massiiv</div>
+          <button class="activity-item btn-tracker btn-tracker-weird">Save</button>
+        </div>
         <div class="timer-app">
           <p>Time spent on tracker:</p>
-          <p></p> 
+          <div></div> 
         </div>
         <div class="activity-tracker activity-tracker-weird">Kuvamised</div>
       </section>
