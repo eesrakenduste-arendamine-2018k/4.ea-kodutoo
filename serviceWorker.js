@@ -20,7 +20,7 @@ self.addEventListener('fetch', function (event) {
   if (event.request.method !== 'GET') { }
   event.respondWith(
     caches
-      .match
+      .match(event.request)
       .then(function (cached) {
         const networked = fetch(event.request)
           .then(fetchedFromNetwork, unableToResolve)

@@ -186,6 +186,7 @@ Game = {
   Runner: {
 
     initialize: function (id, game, cfg) {
+      this.registerServiceWorker()
       this.cfg = Object.extend(game.Defaults || {}, cfg || {}) // use game defaults (if any) and extend with custom cfg (if any)
       this.fps = this.cfg.fps || 60
       this.interval = 1000.0 / this.fps
@@ -202,7 +203,6 @@ Game = {
       this.back2d = this.back.getContext('2d')
       this.addEvents()
       this.resetStats()
-      this.registerServiceWorker()
 
       this.game = Object.construct(game, this, this.cfg) // finally construct the game object itself
     },
