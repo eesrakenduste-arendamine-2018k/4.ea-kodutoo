@@ -151,8 +151,9 @@ for(var i = 0; i <  completedTasksHolder.children.length; i++) {
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
 
 }
-/*
 
+
+/*
 $(document).ready(function () {
     var i = 0;
     for (i = 0; i < localStorage.length; i++) {
@@ -189,5 +190,4 @@ $(document).ready(function () {
 
 
 });
-
 */
