@@ -1,25 +1,13 @@
-// Problem: User interaction doesn't provide desired results.
-// Solution: Add interactivity so the user can manage daily tasks
+
 
 var taskInput = document.getElementById("new-task");
 var addButton = document.getElementsByTagName("button")[0];
 var incompleteTasksHolder = document.getElementById("incomplete-tasks");
 var completedTasksHolder = document.getElementById("completed-tasks");
 
-function registerServiceWorker  () {
-	if ('serviceWorker' in navigator) {
-		navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
-			  // Registration was successful
-			console.log('ServiceWorker registration successful: ', registration)
-		}, function (err) {
-			  // registration failed :(
-			console.log('ServiceWorker registration failed: ', err)
-		})
-	}
-}
 
 //New Task List Item
-var createNewTaskElement = function(taskString) {
+  var createNewTaskElement = function(taskString) {
   //Create List Item
   var listItem = document.createElement("li");
 
@@ -163,64 +151,43 @@ for(var i = 0; i <  completedTasksHolder.children.length; i++) {
   bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
 
 }
-/*MainApp.routes = {
-  'home-view': {
-    'render': function () {
-      console.log('>>>> Home')
+/*
+
+$(document).ready(function () {
+    var i = 0;
+    for (i = 0; i < localStorage.length; i++) {
+        var taskID = "task-" + i;
+        $('#incomplete-tasks').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
     }
-  },
-  'app-view': {
-    'render': function () {
-      console.log('>>>> App')
+    $('#clear').click(function () {
+        localStorage.clear();
+    });
+    $('#new-task').submit(function () {
+        if ($('#new-task').val() !== "") {
+            var taskID = "task-" + i;
+            var taskMessage = $('#new-task').val();
+            localStorage.setItem(taskID, taskMessage);
+            $('#incomplete-tasks').append("<li class='task' id='" + taskID + "'>" + taskMessage + "</li>");
+            var task = $('#' + taskID);
+            task.css('display', 'none');
+            task.slideDown();
+            $('#new-task').val("");
+            i++;
+        }
+        return false;
+    });
 
-      const localValue = localStorage.getItem('new-task')
-      if (localValue) document.querySelector('#input').value = JSON.parse(localValue).text
+    $('#incomplete-tasks').on("click", "li", function (event) {
+        self = $(this);
+        taskID = self.attr('id');
+        localStorage.removeItem(taskID);
+        self.slideUp('slow', function () {
+            self.remove();
+        });
 
-      document
-        .querySelector('#saveLocal')
-        .addEventListener('click', saveServer)
+    });
 
-      document
-        .querySelector('#saveServer')
-        .addEventListener('click', saveServer)
 
-      document
-        .querySelector('#loadServer')
-        .addEventListener('click', loadServer)
+});
 
-      window.addEventListener('keypress', autosave)
-    }
-  }
-}
-function saveLocal () {
-  console.log(window.app)
-  const o = {
-    text: window.app.input.value,
-    date: new Date()
-  }
-  localStorage.setItem('textInput', JSON.stringify(o))
-}
-function saveServer () {
-  const o = {
-    text: window.app.input.value,
-    date: new Date()
-  }
-  function loadServer () {
-  let xhttp = new XMLHttpRequest()
-  xhttp.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
-      console.log('laetud')
-      console.log(JSON.parse(xhttp.responseText))
-    }
-  }
-
-  xhttp.open('GET', 'save.php?latest', true)
-  xhttp.send()
-}
-
-// kui leht laetud käivitan app'i
-window.onload = function () {
-  const app = new MainApp()
-  window.app = app
-}*/
-
+*/

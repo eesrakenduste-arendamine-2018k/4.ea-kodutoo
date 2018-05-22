@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html manifest="./offline.appcache">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="stylesheet" href="todo.css">
-<script src="todo.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="todo.css">
+	<script src="todo.js"></script>
+	<script src="indexeddb.shim.min.js"></script>
+	<!--<script src="save.js"></script>	-->
 
-<link rel="icon" type="image/png" href="icon 54x60.png" sizes="54x60">
-<link rel="icon" type="image/png" href="icon 60x66.png" sizes="60x66">
-<link rel="icon" type="image/png" href="icon 75x83.png" sizes="75x83">
-<link rel="icon" type="image/png" href="icon 120x133.png" sizes="120x133">
+
+	<link rel="icon" type="image/png" href="icon 54x60.png" sizes="54x60">
+	<link rel="icon" type="image/png" href="icon 60x66.png" sizes="60x66">
+	<link rel="icon" type="image/png" href="icon 75x83.png" sizes="75x83">
+	<link rel="icon" type="image/png" href="icon 120x133.png" sizes="120x133">
 
 <body>
     <div class="container">
       <p>
-        <label for="new-task">Lisa tegevus</label><input id="new-task" type="text"><button>lisa</button>
+        <label for="new-task">Lisa tegevus</label>
+		<input id="new-task" />
+		<button>lisa</button>
       </p>
       
       <h3>Tegevused</h3>
@@ -35,7 +40,7 @@
     </div>
 
     <script type="text/javascript" src="todo.js"></script>
-
+	
   </body>
   </head>
   </html>
