@@ -147,3 +147,27 @@ function closeAllSelect (elmnt) {
 /* if the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener('click', closeAllSelect)
+
+
+
+/* Taimer */
+
+var timer = document.getElementById('timer');
+var toggleBtn = document.getElementById('toggle');
+
+
+var watch = new Stopwatch(timer);
+
+function start() {
+  toggleBtn.textContent ='';
+  watch.start();
+}
+
+function stop() {
+  toggleBtn.textContent = '';
+  watch.stop();
+}
+
+toggleBtn.addEventListener('click', function() {
+  watch.isOn ? stop() : start();
+});
