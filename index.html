@@ -40,17 +40,17 @@
         <div class="flex-activity">
           <div class="activity-item activity-main">
             <div class="custom-select" style="width:200px;">
-              <select>
-                <option value="0">Select main acitivity:</option>
-                <option value="1">Work</option>
-                <option value="2">School</option>
-                <option value="3">Home</option>
-                <option value="4">Culture</option>
-                <option value="5">Party</option>
+              <select id="main-activity">
+                <option value="main">Select main acitivity:</option>
+                <option value="work">Work</option>
+                <option value="school">School</option>
+                <option value="home">Home</option>
+                <option value="culture">Culture</option>
+                <option value="party">Party</option>
               </select>
             </div>
           </div>
-          <button class="activity-item btn-tracker btn-tracker-main">Save</button>
+          <button id="start-main-activity" class="activity-item btn-tracker btn-tracker-main">Start</button>
         </div> 
         <div class="timer-app">
           <h1>Time spent on tracker:</h1>
@@ -69,24 +69,24 @@
         <div class="flex-activity">
           <div class="activity-item activity-main">
               <div class="custom-select" style="width:200px;">
-                <select>
-                  <option value="0">Select fit acitivity:</option>
-                  <option value="1">Running</option>
-                  <option value="2">Walking</option>
-                  <option value="3">Cycling</option>
-                  <option value="4">Swimming</option>
-                  <option value="5">Gym</option>
-                  <option value="6">Football</option>
-                  <option value="7">Basketball</option>
-                  <option value="8">Volleyball</option>
-                  <option value="9">Baseball</option>
-                  <option value="10">Skiing</option>
-                  <option value="11">Sailing</option>
-                  <option value="12">Golf</option>
+                <select id="fit-activity">
+                  <option value="fit">Select fit acitivity:</option>
+                  <option value="running">Running</option>
+                  <option value="walking">Walking</option>
+                  <option value="cycling">Cycling</option>
+                  <option value="swimming">Swimming</option>
+                  <option value="gym">Gym</option>
+                  <option value="football">Football</option>
+                  <option value="basketball">Basketball</option>
+                  <option value="volleyball">Volleyball</option>
+                  <option value="baseball">Baseball</option>
+                  <option value="skiing">Skiing</option>
+                  <option value="sailing">Sailing</option>
+                  <option value="golf">Golf</option>
                 </select>
               </div>
             </div>
-          <button class="activity-item btn-tracker btn-tracker-fit">Save</button>
+          <button id="start-fit-activity" class="activity-item btn-tracker btn-tracker-fit">Start</button>
         </div>
         <div class="timer-app">
             <h1>Time spent on tracker:</h1>
@@ -105,17 +105,18 @@
         <div class="flex-activity">
             <div class="activity-item activity-main">
               <div class="custom-select" style="width:200px;">
-                <select>
-                  <option value="0">Select weird acitivity:</option>
-                  <option value="1">Eating icecream</option>
-                  <option value="2">Playing videogames</option>
-                  <option value="3">Sitting</option>
-                  <option value="4">Watering plants</option>
-                  <option value="5">Talking with yourself</option>
+                <select id="weird-activity">
+                  <option value="weird">Select weird acitivity:</option>
+                  <option value="icecream">Eating icecream</option>
+                  <option value="videogames">Playing videogames</option>
+                  <option value="sitting">Sitting</option>
+                  <option value="plants">Watering plants</option>
+                  <option value="yourself">Talking with yourself</option>
+                  <option value="dishes">Washing dishes</option>
                 </select>
               </div>
             </div>
-          <button class="activity-item btn-tracker btn-tracker-weird">Save</button>
+          <button id="start-weird-activity" class="activity-item btn-tracker btn-tracker-weird">Start</button>
         </div>
         <div class="timer-app">
           <h1>Time spent on tracker:</h1>

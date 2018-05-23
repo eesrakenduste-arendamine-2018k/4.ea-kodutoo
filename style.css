@@ -2,6 +2,7 @@ body,
 html {
   margin: 0;
   background-color: rgb(188, 223, 236);
+  position: relative;
   text-align: center;
   color: rgb(41, 40, 40);
   font-family: 'Titillium Web', sans-serif;
@@ -22,15 +23,10 @@ main > *:target ~ * {
   display: none;
 }
 
-body,
-html {
-  position: relative;
-}
-
 .menu {
   line-height: 1;
   border-bottom: 2px solid rgb(48, 46, 54);
-  margin-bottom: 0;
+  margin-bottom: 40px;
   color: black;
   padding-top: 10px;
   padding-left: 10px;
@@ -62,8 +58,6 @@ html {
 
 .menu-link {
   color: rgb(43, 40, 40);
-  font-size: 18px;
-  font-weight: bold;
   display: block;
   padding: 10px;
   cursor: pointer;
@@ -87,15 +81,8 @@ html {
   color: rgb(27, 26, 29);
 }
 
-.menu-link.main-view.active-menu,
-.menu-link.fit-view.active-menu,
-.menu-link.weird-view.active-menu {
+.menu-link.active-menu {
   border: 2px solid rgb(102, 93, 50);
-}
-
-.home-intro,
-.timer-app {
-  position: relative;
 }
 
 .home-intro {
@@ -106,6 +93,14 @@ html {
   padding: 5px;
   margin-top: 10px;
   text-align: center;
+}
+
+.flex-activity {
+  margin-bottom: 40px;
+}
+
+.menu-link.home-view {
+  font: 41em;
 }
 
 /* Select box */

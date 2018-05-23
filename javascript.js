@@ -167,3 +167,57 @@ function stop () {
 toggleBtn.addEventListener('click', function () {
   watch.isOn ? stop() : start()
 })
+
+// Main activity stopper
+
+const mainActivityTrigger = document.getElementById('start-main-activity')
+const mainActivity = document.getElementById('main-activity')
+const mainActivityStopwatch = new Stopwatch(false)
+
+function startMainActivity () {
+  mainActivityStopwatch.start()
+}
+
+function stopMainActivity () {
+  mainActivityStopwatch.stop(mainActivity.value)
+}
+
+mainActivityTrigger.addEventListener('click', function () {
+  mainActivityStopwatch.isOn ? stopMainActivity() : startMainActivity()
+})
+
+// Fit activity stopper
+
+const fitActivityTrigger = document.getElementById('start-fit-activity')
+const fitActivity = document.getElementById('fit-activity')
+const fitActivityStopwatch = new Stopwatch(false)
+
+function startFitActivity () {
+  fitActivityStopwatch.start()
+}
+
+function stopFitActivity () {
+  fitActivityStopwatch.stop(fitActivity.value)
+}
+
+fitActivityTrigger.addEventListener('click', function () {
+  fitActivityStopwatch.isOn ? stopFitActivity() : startFitActivity()
+})
+
+// Weird activity stopper
+
+const weirdActivityTrigger = document.getElementById('start-weird-activity')
+const weirdActivity = document.getElementById('weird-activity')
+const weirdActivityStopwatch = new Stopwatch(false)
+
+function startWeirdActivity () {
+  weirdActivityStopwatch.start()
+}
+
+function stopWeirdActivity () {
+  weirdActivityStopwatch.stop(weirdActivity.value)
+}
+
+weirdActivityTrigger.addEventListener('click', function () {
+  weirdActivityStopwatch.isOn ? stopWeirdActivity() : startWeirdActivity()
+})

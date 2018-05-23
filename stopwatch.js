@@ -8,7 +8,9 @@ function Stopwatch (elem) {
       time += delta()
     }
 
-    elem.textContent = timeFormatter(time)
+    if (elem) {
+      elem.textContent = timeFormatter(time)
+    }
   }
 
   function delta () {
@@ -18,6 +20,10 @@ function Stopwatch (elem) {
     offset = now
 
     return timePassed
+  }
+
+  function save (activity) {
+    localStorage.setItem(activity, timeFormatter(time += delta()))
   }
 
   function timeFormatter (time) {
@@ -48,7 +54,10 @@ function Stopwatch (elem) {
     this.isOn = true
   }
 
-  this.stop = function () {
+  this.stop = function (activity) {
+    if (!elem && activity) {
+      save(activity)
+    }
     clearInterval(interval)
     interval = null
     this.isOn = false
