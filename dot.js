@@ -1,4 +1,7 @@
 
+// Mäng on võetud aadressilt:
+// http://www.jsmadeeasy.com/javascripts/Games/Hit%20The%20Dot/index.htm
+
 gamelength=30;
 timerID=null
 var playing=false;
