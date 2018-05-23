@@ -2,7 +2,7 @@
 // Mäng on võetud aadressilt:
 // http://www.jsmadeeasy.com/javascripts/Games/Hit%20The%20Dot/index.htm
 
-gamelength=30;
+gamelength=60;
 timerID=null
 var playing=false;
 var numholes=6*10;
@@ -84,7 +84,7 @@ if(currentpos!=id) {
 	document.cpanel.score.value=totalhits;
 	document.dmz.elements[id].checked=false;
 	}else {
-	totalhits+=1;
+	totalhits+=2;
 	document.cpanel.score.value=totalhits;
 	launch();
 	document.dmz.elements[id].checked=false;
