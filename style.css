@@ -170,3 +170,21 @@ main {
 .select-items div:hover, .same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
+
+/* Taimer */
+#timer{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 50px;
+  font-weight: 100;
+  
+  }
+  
+  button {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #90a7c4;
+  }
+  
+  button:focus{
+      background-color: #ff6961;
+  }
