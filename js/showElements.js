@@ -15,7 +15,6 @@ function showComparison() {
     var comparison = document.getElementById("comparison");
     tutorial.style.display = "none";
     comparison.style.display = "block";
-    
 } 
 function getBack() {
     var tutorial = document.getElementById("tutorial");

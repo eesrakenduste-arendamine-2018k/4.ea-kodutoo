@@ -30,7 +30,54 @@ p{
     line-height: 120%;
     font-family: sans-serif;
 }
-
+.btn1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:135%;
+    font-weight: 400;
+    color:#5F607F;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #5F607F;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn1:hover {
+    color:#CBDFD6;
+    border: solid #CBDFD6 2px;
+}
+.btn2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:100%;
+    font-weight: 400;
+    color:#CBDFD6;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #CBDFD6;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn2:hover {
+    color:#5F607F;
+    border: solid #5F607F 2px;
+}
+.btn3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:90%;
+    font-weight: 400;
+    color:#5F607F;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #5F607F;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn3:hover {
+    color:#CBDFD6;
+    border: solid #CBDFD6 2px;
+}
 /*--- content --*/
 .content{
     max-width: 600px;
@@ -46,23 +93,6 @@ p{
     color: #E1EFE9;
     line-height: 85%;
     
-}
-
-.btn-content {
-    font-family: 'Montserrat', sans-serif;
-    font-size:135%;
-    font-weight: 400;
-    color:#5F607F;
-    text-transform: uppercase;
-    text-decoration: none;
-    border: solid #5F607F;
-    padding: 10px 20px;
-    border-radius: 9px;
-    transition: all 0.5s;
-}
-.btn-content:hover {
-    color:#CBDFD6;
-    border: solid #CBDFD6 2px;
 }
 
 /*--- tutorial --*/
@@ -81,19 +111,44 @@ p{
     
 }
 
+/*--- Comparison --*/
+.comparison{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:28%;
+    
+}
+.comparison h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size:400%;
+    color: #E1EFE9;
+    line-height: 85%;
+}
+.comparison .calculations{
+    margin:7%;
+    /*--- BLUR ---*/
+    border-radius: 5px;
+    line-height: 1.5;
+    padding: 1rem 2rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.4);  
+}
+
 
 /*--- Media Queries --*/
 @media screen and (max-width: 900px) {
+    .btn-1 {
+        font-size:130%;
+        padding: 9px 17px;
+    }
     /*--- content --*/
     .content{
         padding-bottom:30%;
     }
     .content h1{
         font-size: 450%;
-    }
-    .btn-content {
-        font-size:130%;
-        padding: 9px 17px;
     }
     /*--- tutorial --*/
     .tutorial{
@@ -104,17 +159,17 @@ p{
     }
 }
 @media screen and (max-width: 768px) {
-    /*--- content --*/
+    .btn-1 {
+        font-size:110%;
+        padding: 7px 15px;
+    }/*--- content --*/
     .content{
         padding-bottom:40%;
     }
     .content h1{
         font-size: 300%;
     }
-    .btn-content {
-        font-size:110%;
-        padding: 7px 15px;
-    }
+
     p {
         font-size:100%;
         line-height:100%;
@@ -128,6 +183,10 @@ p{
     }
 }
 @media screen and (max-width: 480px) {
+    .btn-1 {
+        font-size:100%;
+        padding: 6px 14px;
+    }
     /*--- content --*/
     .content{
         padding-bottom:50%;
@@ -135,10 +194,7 @@ p{
     .content h1{
         font-size: 250%;
     }
-    .btn-content {
-        font-size:100%;
-        padding: 6px 14px;
-    }
+
     p {
         font-size:100%;
         line-height:100%;
