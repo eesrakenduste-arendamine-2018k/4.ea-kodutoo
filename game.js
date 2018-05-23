@@ -172,7 +172,7 @@ Game = {
     PAGEDOWN: 34,
     INSERT: 45,
     ZERO: 48,
-    ONE: 49,
+    Y: 89,
     TWO: 50,
     A: 65,
     L: 76,

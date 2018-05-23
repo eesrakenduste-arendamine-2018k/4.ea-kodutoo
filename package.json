@@ -1,7 +1,7 @@
 {
-  "name": "2.ea-kodutoo",
+  "name": "4.ea-kodutoo",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,5 +19,8 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "standard": "^11.0.0"
+  },
+  "dependencies": {
+    "idb": "^2.1.2"
   }
 }

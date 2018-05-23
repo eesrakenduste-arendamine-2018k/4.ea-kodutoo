@@ -1,16 +1,17 @@
 const CACHE_NAME = 'js_pong'
 const cachedUrls = [
-  '/index.html',
-  '/game.js',
-  '/pong.js',
-  '/pong.css',
-  '/images/press1.png',
-  '/images/press2.png',
-  '/images/winner.png',
-  '/sounds/goal.wav',
-  '/sounds/ping.wav',
-  '/sounds/pong.wav',
-  '/sounds/wall.wav'
+  '',
+  'index.html',
+  'game.js',
+  'pong.js',
+  'pong.css',
+  'images/press1.png',
+  'images/press2.png',
+  'images/winner.png',
+  'sounds/goal.wav',
+  'sounds/ping.wav',
+  'sounds/pong.wav',
+  'sounds/wall.wav'
 ]
 
 self.addEventListener('install', function (event) {
@@ -22,7 +23,6 @@ self.addEventListener('install', function (event) {
       })
   )
 })
-
 self.addEventListener('fetch', function (event) {
   if (event.request.method !== 'GET') { }
   event.respondWith(
@@ -34,7 +34,6 @@ self.addEventListener('fetch', function (event) {
           .catch(unableToResolve)
         console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url)
         return cached || networked
-
         function fetchedFromNetwork (response) {
           const cacheCopy = response.clone()
           console.log('WORKER: fetch response from network', event.request.url)
@@ -60,4 +59,7 @@ self.addEventListener('fetch', function (event) {
         }
       })
   )
+})
+self.addEventListener('activate', function (event) {
+  console.log('activate event')
 })

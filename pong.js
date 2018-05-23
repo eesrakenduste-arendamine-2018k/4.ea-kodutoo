@@ -1,6 +1,7 @@
 //= ============================================================================
 // PONG
 //= ============================================================================
+let timer, mode
 
 Pong = {
 
@@ -53,6 +54,9 @@ Pong = {
   ],
 
   // -----------------------------------------------------------------------------
+  startDemo: function () { this.start(0) },
+  startSinglePlayer: function () { this.start(1) },
+  startDoublePlayer: function () { this.start(2) },
 
   initialize: function (runner, cfg) {
     Game.loadImages(Pong.Images, function (images) {
@@ -66,16 +70,18 @@ Pong = {
       this.menu = Object.construct(Pong.Menu, this)
       this.court = Object.construct(Pong.Court, this)
       this.leftPaddle = Object.construct(Pong.Paddle, this)
+      console.log('lp init')
       this.rightPaddle = Object.construct(Pong.Paddle, this, true)
+      console.log('rp init')
       this.ball = Object.construct(Pong.Ball, this)
       this.sounds = Object.construct(Pong.Sounds, this)
       this.runner.start()
+      this.p1HighScore = 0
+      this.p2HighScore = 0
+      this.startTime = 0
+      this.duration = 0
     }.bind(this))
   },
-
-  startDemo: function () { this.start(0) },
-  startSinglePlayer: function () { this.start(1) },
-  startDoublePlayer: function () { this.start(2) },
 
   start: function (numPlayers) {
     if (!this.playing) {
@@ -85,6 +91,14 @@ Pong = {
       this.rightPaddle.setAuto(numPlayers < 2, this.level(1))
       this.ball.reset()
       this.runner.hideCursor()
+      this.startTime = Date.now() / 1000
+      this.duration = parseFloat(document.getElementById('duration').value) * 60
+      timer = this.duration
+      console.log(this.duration)
+      this.timer = setInterval(function () {
+        timer = timer - 1
+        console.log(timer)
+      }, 1000)
     }
   },
 
@@ -95,6 +109,16 @@ Pong = {
         this.leftPaddle.setAuto(false)
         this.rightPaddle.setAuto(false)
         this.runner.showCursor()
+        clearInterval(this.timer)
+        // this.endTime = Date.new()
+        if (this.scores[0] > this.p1HighScore) {
+          this.p1HighScore = this.scores[0]
+          console.log('p1HighScore updated: ' + this.p1HighScore)
+        }
+        if (this.scores[1] > this.p2HighScore) {
+          this.p2HighScore = this.scores[1]
+          console.log('p2HighScore updated: ' + this.p2HighScore)
+        }
       }
     }
   },
@@ -120,12 +144,24 @@ Pong = {
     this.leftPaddle.update(dt, this.ball)
     this.rightPaddle.update(dt, this.ball)
     if (this.playing) {
-      var dx = this.ball.dx
-      var dy = this.ball.dy
-      this.ball.update(dt, this.leftPaddle, this.rightPaddle)
-      if (this.ball.dx < 0 && dx > 0) { this.sounds.ping() } else if (this.ball.dx > 0 && dx < 0) { this.sounds.pong() } else if (this.ball.dy * dy < 0) { this.sounds.wall() }
+      if (timer > 0) {
+        var dx = this.ball.dx
+        var dy = this.ball.dy
+        this.ball.update(dt, this.leftPaddle, this.rightPaddle)
+        if (this.ball.dx < 0 && dx > 0) { this.sounds.ping() } else if (this.ball.dx > 0 && dx < 0) { this.sounds.pong() } else if (this.ball.dy * dy < 0) { this.sounds.wall() }
 
-      if (this.ball.left > this.width) { this.goal(0) } else if (this.ball.right < 0) { this.goal(1) }
+        if (this.ball.left > this.width) { this.goal(0) } else if (this.ball.right < 0) { this.goal(1) }
+      } else {
+        if (this.scores[0] > this.scores[1]) {
+          this.menu.declareWinner(0)
+          this.stop()
+        } else if (this.scores[1] > this.scores[0]) {
+          this.menu.declareWinner(1)
+          this.stop()
+        } else {
+          timer += 5
+        }
+      }
     }
   },
 
@@ -138,9 +174,15 @@ Pong = {
 
   onkeydown: function (keyCode) {
     switch (keyCode) {
-      case Game.KEY.ZERO: this.startDemo(); break
-      case Game.KEY.ONE: this.startSinglePlayer(); break
-      case Game.KEY.TWO: this.startDoublePlayer(); break
+      case Game.KEY.Y:
+        if (mode === 1) {
+          this.startSinglePlayer()
+        } else if (mode === 2) {
+          this.startDoublePlayer()
+        } else if (mode === 0) {
+          this.startDemo()
+        }
+        break
       case Game.KEY.ESC: this.stop(true); break
       case Game.KEY.Q: if (!this.leftPaddle.auto) this.leftPaddle.moveUp(); break
       case Game.KEY.A: if (!this.leftPaddle.auto) this.leftPaddle.moveDown(); break
@@ -596,3 +638,36 @@ Pong = {
   //= ============================================================================
 
 } // Pong
+let modeSingle = document.getElementById('single')
+let modeDouble = document.getElementById('double')
+let modeDemo = document.getElementById('demo')
+modeSingle.addEventListener('click', function () {
+  console.log('clicked 1')
+  mode = 1
+  console.log(mode)
+})
+modeDouble.addEventListener('click', function () {
+  console.log('clicked 2')
+  mode = 2
+  console.log(mode)
+})
+modeDemo.addEventListener('click', function () {
+  console.log('clicked 0')
+  mode = 0
+  console.log(mode)
+})
+this.startButton = document.getElementById('startButton')
+this.startButton.onclick = function () {
+  console.log(mode)
+  switch (mode) {
+    case 1:
+      Pong.startSinglePlayer()
+      break
+    case 2:
+      Pong.startDoublePlayer()
+      break
+    case 0:
+      Pong.startDemo()
+      break
+  }
+}

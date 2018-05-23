@@ -26,9 +26,7 @@
         This is a javascript version of Pong.
       </p>
       <p>
-        Press <b>1</b> for a single player game.<br>
-        Press <b>2</b> for a double player game.<br>
-        Press <b>0</b> to watch the computer play itself.
+        Press <b>Y</b> to start<br>
       </p>
       <p>
         Player 1 moves using the <b>Q</b> and <b>A</b> keys.<br>
@@ -59,6 +57,18 @@
       <input type='checkbox' id='predictions'>
     </div>
 
+    <div class='settings'>
+      <label for='gameDur'>duration (min): </label>
+      <input type='number' id='duration' value='1'>
+    </div>
+    <div class='settings'>
+      <label>1 player: </label>
+      <input type='radio' name='mode' value='1' id='single'>
+      <label>2 player: </label>
+      <input type='radio' name='mode' value='2' id='double'>
+      <label>0 player: </label>
+      <input type='radio' name='mode' value='0' id='demo'>
+    </div>
   </div>
 
   <canvas id="game">
