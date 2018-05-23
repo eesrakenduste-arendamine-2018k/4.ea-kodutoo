@@ -9,6 +9,7 @@ Rakenduses saab lisada ülesandeid ja märkida olekuks lõpetatud.
 
 Rakendus töötab ka offline.
 
+http://www.tlu.ee/~piksar/todo/todo.html
 
 Abiks oli:
 
