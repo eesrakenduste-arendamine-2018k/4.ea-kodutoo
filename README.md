@@ -1,3 +1,5 @@
+Autorid: Ea Rist
+
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
