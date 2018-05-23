@@ -1,9 +1,18 @@
-Autorid: Ea Rist
-
 # 4. kodutöö – Võrguta olekus töötav rakendus
+___
 
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+# Mäng: Hit the Dot 
 
+**Autorid:** Ea Rist, Marianne Orusalu, Henrik Romanenkov
+
+**Kirjeldus:** Mängu idee seisneb antud aja jooksul võimalikult paljude nupukeste vajutamist. Eesmärgiks on saada võimalikult suur skoor.
+
+**Funktsionaalsused:** 
+1. ServiceWorker, offline + mobiilivaade.
+2. Kui paned mööda, vilgub tauat punaselt.
+3. Iga nupuvajutusega tuleb heli + add to homescreen funktsionaalsus
+
+___
 ## Nõuded
 
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
