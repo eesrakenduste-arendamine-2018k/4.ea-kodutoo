@@ -1,17 +1,17 @@
 const CACHE_NAME = 'js_pong'
 const cachedUrls = [
-  '',
-  'index.html',
-  'game.js',
-  'pong.js',
-  'pong.css',
-  'images/press1.png',
-  'images/press2.png',
-  'images/winner.png',
-  'sounds/goal.wav',
-  'sounds/ping.wav',
-  'sounds/pong.wav',
-  'sounds/wall.wav'
+  '/',
+  '/index.html',
+  '/game.js',
+  '/pong.js',
+  '/pong.css',
+  '/images/press1.png',
+  '/images/press2.png',
+  '/images/winner.png',
+  '/sounds/goal.wav',
+  '/sounds/ping.wav',
+  '/sounds/pong.wav',
+  '/sounds/wall.wav'
 ]
 
 self.addEventListener('install', function (event) {
@@ -59,7 +59,4 @@ self.addEventListener('fetch', function (event) {
         }
       })
   )
-})
-self.addEventListener('activate', function (event) {
-  console.log('activate event')
 })

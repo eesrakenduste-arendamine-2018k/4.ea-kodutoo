@@ -638,36 +638,3 @@ Pong = {
   //= ============================================================================
 
 } // Pong
-let modeSingle = document.getElementById('single')
-let modeDouble = document.getElementById('double')
-let modeDemo = document.getElementById('demo')
-modeSingle.addEventListener('click', function () {
-  console.log('clicked 1')
-  mode = 1
-  console.log(mode)
-})
-modeDouble.addEventListener('click', function () {
-  console.log('clicked 2')
-  mode = 2
-  console.log(mode)
-})
-modeDemo.addEventListener('click', function () {
-  console.log('clicked 0')
-  mode = 0
-  console.log(mode)
-})
-this.startButton = document.getElementById('startButton')
-this.startButton.onclick = function () {
-  console.log(mode)
-  switch (mode) {
-    case 1:
-      Pong.startSinglePlayer()
-      break
-    case 2:
-      Pong.startDoublePlayer()
-      break
-    case 0:
-      Pong.startDemo()
-      break
-  }
-}
