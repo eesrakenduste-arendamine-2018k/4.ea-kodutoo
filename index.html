@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Homework4</title>
-    <script src="javascript.js" charset="utf-8"></script>
+
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
 
@@ -30,6 +30,7 @@
           <a href="#weird-view" class="menu-link weird-view">Weird</a></li>  
       </ul>
     </nav>
+   
 
     <main role="main">
 
@@ -58,9 +59,13 @@
           <button class="activity-item btn-tracker btn-tracker-main">Save</button>
         </div> 
         <div class="timer-app">
-          <p>Time spent on tracker:</p>
-          <div></div> 
+            <h1>Time spent on tracker:</h1>
+            <div></div> 
+            <h2 id="timer">00 : 00 . 000</h2>
+            <div>
+              <button id="toggle"></button>
         </div>
+
         <div class="activity-tracker activity-tracker-main">Kuvamised</div>
       </section>
   
@@ -71,9 +76,13 @@
           <button class="activity-item btn-tracker btn-tracker-fit">Save</button>
         </div>
         <div class="timer-app">
-          <p>Time spent on tracker:</p>
-          <div></div>
+            <h1>Time spent on tracker:</h1>
+            <div></div> 
+            <h2 id="timer">00 : 00 . 000</h2>
+            <div>
+              <button id="toggle"></button>
         </div>
+
         <div class="activity-tracker activity-tracker-fit">Kuvamised</div>
       </section>
 
@@ -84,8 +93,13 @@
           <button class="activity-item btn-tracker btn-tracker-weird">Save</button>
         </div>
         <div class="timer-app">
-          <p>Time spent on tracker:</p>
+          <h1>Time spent on tracker:</h1>
           <div></div> 
+          <h2 id="timer">00 : 00 . 000</h2>
+          <div>
+            <button id="toggle"></button>
+          </div>
+
         </div>
         <div class="activity-tracker activity-tracker-weird">Kuvamised</div>
       </section>
@@ -97,7 +111,9 @@
           </div>
           <div class="timer-app">
             <p>Time spent on tracker:</p>
-            <p></p> 
+            <p></p>
+            <script src="stopwatch.js"></script>
+            <script src="javascript.js"></script> 
           </div>
       </section>
     </main>
