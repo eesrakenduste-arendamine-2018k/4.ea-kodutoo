@@ -1,6 +1,6 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
+  '/~henrrom/eesrakenduste_arendus/ea_4/4.ea-kodutoo/',
   '/~henrrom/eesrakenduste_arendus/ea_4/4.ea-kodutoo/index.html',
   '/~henrrom/eesrakenduste_arendus/ea_4/4.ea-kodutoo/style.css',
   '/~henrrom/eesrakenduste_arendus/ea_4/4.ea-kodutoo/dot.js'
@@ -57,21 +57,4 @@ self.addEventListener('fetch', function(event) {
         );
       })
     );
-});
-
-self.addEventListener('activate', function(event) {
-
-  var cacheWhitelist = ['pages-cache-v1'];
-
-  event.waitUntil(
-    caches.keys().then(function(cacheNames) {
-      return Promise.all(
-        cacheNames.map(function(cacheName) {
-          if (cacheWhitelist.indexOf(cacheName) === -1) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
 });
