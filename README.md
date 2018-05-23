@@ -1,6 +1,6 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-Autorid: Ea Rist, Marianne Orusalu
+Autorid: Ea Rist, Marianne Orusalu, Henrik Romanenkov
 
 ## Nõuded
 
