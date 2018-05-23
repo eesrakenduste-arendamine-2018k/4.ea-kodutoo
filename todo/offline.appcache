@@ -4,6 +4,10 @@ CACHE MANIFEST
 todo.css
 indexeddb.shim.min.js
 todo.js
+vue.min.js
+trash.png
+
+
 
 NETWORK:
 *

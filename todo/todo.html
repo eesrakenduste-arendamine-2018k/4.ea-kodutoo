@@ -1,47 +1,69 @@
 <!DOCTYPE html>
-<html>
+<html manifest="offline.appcache">
 <head>
+	<title>To-do</title>    
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	
-	<link rel="stylesheet" href="todo.css">
-	<script src="todo.js"></script>
+	<link rel="icon" type="image/png" href="icon54x60.png" sizes="54x60">
+	<link rel="icon" type="image/png" href="icon60x66.png" sizes="60x66">
+	<link rel="icon" type="image/png" href="icon75x83.png" sizes="75x83">
+	<link rel="icon" type="image/png" href="icon120x133.png" sizes="120x133">
+  
+	<link rel="stylesheet" type="text/css" href="todo.css">
 	
-	<!--<script src="indexeddb.shim.min.js"></script>-->
+	<script type="text/javascript" src="vue.min.js"></script>
+	<script src="indexeddb.shim.min.js"></script>
 
-
-	<link rel="icon" type="image/png" href="icon 54x60.png" sizes="54x60">
-	<link rel="icon" type="image/png" href="icon 60x66.png" sizes="60x66">
-	<link rel="icon" type="image/png" href="icon 75x83.png" sizes="75x83">
-	<link rel="icon" type="image/png" href="icon 120x133.png" sizes="120x133">
+</head>
 
 <body>
-    <div class="container">
-      <p>
-        <label for="new-task">Lisa tegevus</label>
-		<input id="new-task" />
-		<button>lisa</button>
-      </p>
-      
-      <h3>TEGEVUSED</h3>
-      <ul id="incomplete-tasks">
-	  <!--
-        <li><input type="checkbox"><label>Pay Bills</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        <li class="editMode"><input type="checkbox"><label>Go Shopping</label><input type="text" value="Go Shopping"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-        -->
-      </ul>
-      
-      <h3>Tehtud</h3>
-      <ul id="completed-tasks">
-	  <!--
-        <li><input type="checkbox" checked><label>See the Doctor</label><input type="text"><button class="edit">Edit</button><button class="delete">Delete</button></li>
-		-->
-      </ul>
-    </div>
+  <div id="app">
+    <h1></h1>
+    <section class="todo-wrapper">
+      <h2 class="todo-title">{{ today.day }}<br>{{ today.date }}</h2>
+      <form @keydown.enter.prevent="">
+        <input type="text" class="input-todo" v-bind:class="{ active: new_todo }" placeholder="Sisesta ülesanne" v-model="new_todo" v-on:keyup.enter="addItem">
+        <div class="btn btn-add" v-bind:class="{ active: new_todo }"  @click="addItem">+</div>
+      </form>
 
-    <script type="text/javascript" src="todo.js"></script>
-	
-  </body>
-  </head>
-  </html>
+      <div v-if="pending.length > 0">
+        <p class="status busy">Sul on {{ pending.length }} lõpetamata ülesanne<span v-if="todoList.length>1">t</span></p>
+        <transition-group name="todo-item" tag="ul" class="todo-list">
+          <li v-for="(item, index) in pending" v-bind:key="item.title">
+            <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox">
+            <label v-bind:for="'item_' + item.id"></label>
+            <span class="todo-text">{{ item.title }}</span>
+            <span class="delete" @click="deleteItem(item)"></span>
+          </li>
+        </transition>  
+      </div> 
+
+      <transition name="slide-fade">
+        <p class="status free" v-if="!pending.length" >Sul ei ole ühtegi ülesannet.</p> 
+      </transition> 
+
+      <div v-if="completed.length > 0 && showComplete">
+        <p class="status">lõpetatud ülesanded: </p>
+        <transition-group name="todo-item" tag="ul" class="todo-list archived">
+          <li v-for="(item, index) in completed" v-bind:key="item.title">
+            <input class="todo-checkbox" v-bind:id="'item_' + item.id" v-model="item.done" type="checkbox">
+            <label v-bind:for="'item_' + item.id"></label>
+            <span class="todo-text">{{ item.title }}</span>
+            <span class="delete" @click="deleteItem(item)"></span>
+          </li>
+        </transition>  
+      </div>
+      <div class="control-buttons">
+        <div class="btn btn-secondary" v-if="completed.length > 0" @click="toggleShowComplete"><span v-if="!showComplete">näita</span><span v-else>peida</span> lõpetatud</div>
+        <div class="btn btn-secondary" v-if="todoList.length > 0" @click="clearAll">kustuta kõik</div>
+      </div>
+    </section>
+  </div>
+</body>
+<footer>
+	<p>Egert Piksar, Egert Klaamas</p>
+</footer>
+<script type="text/javascript" src="todo.js"></script>
+</html>

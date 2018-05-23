@@ -1,193 +1,92 @@
-
-
-var taskInput = document.getElementById("new-task");
-var addButton = document.getElementsByTagName("button")[0];
-var incompleteTasksHolder = document.getElementById("incomplete-tasks");
-var completedTasksHolder = document.getElementById("completed-tasks");
-
-
-//New Task List Item
-  var createNewTaskElement = function(taskString) {
-  //Create List Item
-  var listItem = document.createElement("li");
-
-  //input (checkbox)
-  var checkBox = document.createElement("input"); // checkbox
-  //label
-  var label = document.createElement("label");
-  //input (text)
-  var editInput = document.createElement("input"); // text
-  //button.edit
-  var editButton = document.createElement("button");
-  //button.delete
-  var deleteButton = document.createElement("button");
-  
-      //Each element needs modifying
-  
-  checkBox.type = "checkbox";
-  editInput.type = "text";
-  
-  editButton.innerText = "Muuda";
-  editButton.className = "edit";
-  deleteButton.innerText = "Kustuta";
-  deleteButton.className = "delete";
-  
-  label.innerText = taskString;
-  
-    
-      // each element needs appending
-  listItem.appendChild(checkBox);
-  listItem.appendChild(label);
-  listItem.appendChild(editInput);
-  listItem.appendChild(editButton);
-  listItem.appendChild(deleteButton);
-
-  return listItem;
-}
-
-// Add a new task
-var addTask = function() {
-  console.log("Add task...");
-  //Create a new list item with the text from #new-task:
-  var listItem = createNewTaskElement(taskInput.value);
-  //Append listItem to incompleteTasksHolder
-  incompleteTasksHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskCompleted);  
-  
-  taskInput.value = "";   
-}
-
-// Edit an existing task
-var editTask = function() {
-  console.log("Edit Task...");
-  
-  var listItem = this.parentNode;
-  
-  var editInput = listItem.querySelector("input[type=text]")
-  var label = listItem.querySelector("label");
-  
-  var containsClass = listItem.classList.contains("editMode");
-    //if the class of the parent is .editMode 
-  if(containsClass) {
-      //switch from .editMode 
-      //Make label text become the input's value
-    label.innerText = editInput.value;
-  } else {
-      //Switch to .editMode
-      //input value becomes the label's text
-    editInput.value = label.innerText;
-  }
-  
-    // Toggle .editMode on the parent
-  listItem.classList.toggle("editMode");
- 
-}
-
-
-// Delete an existing task
-var deleteTask = function() {
-  console.log("Delete task...");
-  var listItem = this.parentNode;
-  var ul = listItem.parentNode;
-  
-  //Remove the parent list item from the ul
-  ul.removeChild(listItem);
-}
-
-// Mark a task as complete 
-var taskCompleted = function() {
-  console.log("Task complete...");
-  //Append the task list item to the #completed-tasks
-  var listItem = this.parentNode;
-  completedTasksHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskIncomplete);
-}
-
-// Mark a task as incomplete
-var taskIncomplete = function() {
-  console.log("Task Incomplete...");
-  // When checkbox is unchecked
-  // Append the task list item #incomplete-tasks
-  var listItem = this.parentNode;
-  incompleteTasksHolder.appendChild(listItem);
-  bindTaskEvents(listItem, taskCompleted);
-}
-
-var bindTaskEvents = function(taskListItem, checkBoxEventHandler) {
-  console.log("Bind list item events");
-  //select taskListItem's children
-  var checkBox = taskListItem.querySelector("input[type=checkbox]");
-  var editButton = taskListItem.querySelector("button.edit");
-  var deleteButton = taskListItem.querySelector("button.delete");
-  
-  //bind editTask to edit button
-  editButton.onclick = editTask;
-  
-  //bind deleteTask to delete button
-  deleteButton.onclick = deleteTask;
-  
-  //bind checkBoxEventHandler to checkbox
-  checkBox.onchange = checkBoxEventHandler;
-}
-
-var ajaxRequest = function() {
-  console.log("AJAX Request");
-}
-
-// Set the click handler to the addTask function
-//addButton.onclick = addTask;
-addButton.addEventListener("click", addTask);
-addButton.addEventListener("click", ajaxRequest);
-
-
-// Cycle over the incompleteTaskHolder ul list items
-for(var i = 0; i <  incompleteTasksHolder.children.length; i++) {
-    // bind events to list item's children (taskCompleted)
-  bindTaskEvents(incompleteTasksHolder.children[i], taskCompleted);
-}
-// Cycle over the completeTaskHolder ul list items
-for(var i = 0; i <  completedTasksHolder.children.length; i++) {
-    // bind events to list item's children (taskIncompleted)
-  bindTaskEvents(completedTasksHolder.children[i], taskIncomplete); 
-
-}
-
-
-/*
-$(document).ready(function () {
-    var i = 0;
-    for (i = 0; i < localStorage.length; i++) {
-        var taskID = "task-" + i;
-        $('#incomplete-tasks').append("<li id='" + taskID + "'>" + localStorage.getItem(taskID) + "</li>");
+new Vue({
+  el: '#app',
+  data() {
+    return {
+      todoList: [
+        {"id":0,"title":"test","done":false},
+      ],
+      new_todo: '',
+      showComplete: false,
+    };
+  },
+  mounted() {
+    this.getTodos();
+  },
+  watch: {
+    todoList: {
+      handler: function(updatedList) {
+        localStorage.setItem('todo_list', JSON.stringify(updatedList));
+      },
+      deep: true
     }
-    $('#clear').click(function () {
-        localStorage.clear();
-    });
-    $('#new-task').submit(function () {
-        if ($('#new-task').val() !== "") {
-            var taskID = "task-" + i;
-            var taskMessage = $('#new-task').val();
-            localStorage.setItem(taskID, taskMessage);
-            $('#incomplete-tasks').append("<li class='task' id='" + taskID + "'>" + taskMessage + "</li>");
-            var task = $('#' + taskID);
-            task.css('display', 'none');
-            task.slideDown();
-            $('#new-task').val("");
-            i++;
-        }
-        return false;
-    });
+  },
+  computed:{
+    pending: function() {
+      return this.todoList.filter(function(item) {
+        return !item.done;
+      })
+    },
+    completed: function() {
+      return this.todoList.filter(function(item) {
+        return item.done;
+      }); 
+    },
 
-    $('#incomplete-tasks').on("click", "li", function (event) {
-        self = $(this);
-        taskID = self.attr('id');
-        localStorage.removeItem(taskID);
-        self.slideUp('slow', function () {
-            self.remove();
+	//date
+    today: function() {
+      var weekday = ["pühapäev","esmaspäev","teisipäev","kolmapäev","neljapäev","reede","laupäev"];
+      var today = new Date();
+      var dd = today.getDate();
+      var mm = today.getMonth()+1; //January is 0!
+      var yyyy = today.getFullYear();
+      if(dd<10) {
+          dd = '0'+dd
+      } 
+      if(mm<10) {
+          mm = '0'+mm
+      } 
+      today = {
+        day: weekday[today.getDay()],
+        date:  dd + '.' + mm + '.' + yyyy,
+      }
+      return(today);
+    }
+  },
+  methods: {
+    // get all todos when loading the page
+    getTodos() {
+      if (localStorage.getItem('todo_list')) {
+        this.todoList = JSON.parse(localStorage.getItem('todo_list'));
+      }
+    },
+    // add a new item
+    addItem() {
+	  console.log("Task added");
+      // validation check
+      if (this.new_todo) {
+        this.todoList.unshift({
+          id: this.todoList.length,
+          title: this.new_todo,
+          done: false,
+		  
         });
-
-    });
-
-
+      }
+      // reset new_todo
+      this.new_todo = '';
+      // save the new item in localstorage
+      return true;
+    },
+    deleteItem(item) {
+	  console.log("Task deleted");
+      this.todoList.splice(this.todoList.indexOf(item), 1);
+    },
+    toggleShowComplete() {
+	  console.log("Show completed tasks");
+      this.showComplete = !this.showComplete;
+    },
+    clearAll() {
+	  console.log("Delete all tasks");
+      this.todoList = [];
+    }
+  },
 });
-*/
