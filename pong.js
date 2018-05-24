@@ -95,7 +95,8 @@ Pong = {
     }.bind(this))
   },
   deviceOrientationListener: function(event){
-    if(event.alpha > 200){
+    console.log('gamma: ' + event.gamma)
+    if(event.gamma > 20){
       if( e !== undefined){
         if (e.keyCode === Game.KEY.A){
           e = new Event("keyup")
@@ -106,7 +107,7 @@ Pong = {
       e = new Event("keydown")
       e.keyCode = Game.KEY.Q
       document.dispatchEvent(e)
-    } else if (event.alpha < 160){
+    } else if (event.gamma < -20){
       if( e !== undefined){
         if (e.keyCode === Game.KEY.Q){
           e = new Event("keyup")
