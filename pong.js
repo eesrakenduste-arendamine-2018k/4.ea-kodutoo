@@ -1,7 +1,7 @@
 //= ============================================================================
 // PONG
 //= ============================================================================
-let timer, mode, p1HighScore, p2HighScore
+let timer, mode, p1HighScore, p2HighScore, e
 
 Pong = {
 
@@ -60,6 +60,9 @@ Pong = {
 
   initialize: function (runner, cfg) {
     Game.loadImages(Pong.Images, function (images) {
+      if (window.DeviceOrientationEvent){
+        window.addEventListener('deviceorientation', this.deviceOrientationListener)
+      }
       this.cfg = cfg
       this.runner = runner
       this.width = runner.width
@@ -70,9 +73,7 @@ Pong = {
       this.menu = Object.construct(Pong.Menu, this)
       this.court = Object.construct(Pong.Court, this)
       this.leftPaddle = Object.construct(Pong.Paddle, this)
-      console.log('lp init')
       this.rightPaddle = Object.construct(Pong.Paddle, this, true)
-      console.log('rp init')
       this.ball = Object.construct(Pong.Ball, this)
       this.sounds = Object.construct(Pong.Sounds, this)
       this.runner.start()
@@ -93,7 +94,42 @@ Pong = {
       this.duration = 0
     }.bind(this))
   },
-
+  deviceOrientationListener: function(event){
+    if(event.alpha > 200){
+      if( e !== undefined){
+        if (e.keyCode === Game.KEY.A){
+          e = new Event("keyup")
+          e.keyCode = Game.KEY.A
+          document.dispatchEvent(e)
+        }
+      }
+      e = new Event("keydown")
+      e.keyCode = Game.KEY.Q
+      document.dispatchEvent(e)
+    } else if (event.alpha < 160){
+      if( e !== undefined){
+        if (e.keyCode === Game.KEY.Q){
+          e = new Event("keyup")
+          e.keyCode = Game.KEY.Q
+          document.dispatchEvent(e)
+        }
+      }
+      e = new Event("keydown")
+      e.keyCode = Game.KEY.A
+      console.log('keydown a')
+      document.dispatchEvent(e)
+    } else {
+      if(e.keyCode === Game.KEY.A){
+        e = new Event("keyup")
+        e.keyCode = Game.KEY.A
+        document.dispatchEvent(e)
+      } else if (e.keyCode === Game.KEY.Q){
+        e = new Event("keyup")
+        e.keyCode = Game.KEY.Q
+        document.dispatchEvent(e)
+      }
+    }
+  },
   start: function (numPlayers) {
     if (!this.playing) {
       this.scores = [0, 0]
