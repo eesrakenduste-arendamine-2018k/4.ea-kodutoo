@@ -26,6 +26,8 @@ window.onload = function(){
 }
 // Lisab kehakaalu ja hetkekuupäeva ühte massiivi ning salvestab selle localstoragesse.
 bodyWeightToArray = function(){
+    let bodyWeightArray = JSON.parse(localStorage.getItem('bodyArray'))
+    if (bodyWeightArray === null) bodyWeightArray = []
     bodyWeight = document.getElementById('bodyWeight').value
     bodyWeightDate = getDate()
     bodyWeightArray.push(bodyWeight+";"+bodyWeightDate)
