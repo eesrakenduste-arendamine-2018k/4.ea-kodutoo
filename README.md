@@ -12,7 +12,7 @@ ___
 **Funktsionaalsused:** 
 1. ServiceWorker, offline, mobiilivaade.
 3. Vastavalt klikile õige/vale heli.
-3. Add to homescreen funktsionaalsus
+3. Add to homescreen funktsionaalsus, nuppude kujundus.
 
 ___
 ## Nõuded
