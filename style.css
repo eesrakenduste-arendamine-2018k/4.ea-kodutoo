@@ -26,7 +26,7 @@ main > *:target ~ * {
 .menu {
   line-height: 1;
   border-bottom: 2px solid rgb(48, 46, 54);
-  margin-bottom: 40px;
+  margin-bottom: 10px;
   color: black;
   padding-top: 10px;
   padding-left: 10px;
@@ -96,6 +96,7 @@ main > *:target ~ * {
 }
 
 .flex-activity {
+  margin-top: 40px;
   margin-bottom: 40px;
 }
 
@@ -177,18 +178,32 @@ button.is-active {
   margin-left: 20px;
 }
 
+h1 {
+  font-size: 1.8em;
+}
+
 li {
   list-style: none;
 }
 
+li span {
+  text-transform: capitalize;
+}
+
 p {
-  font-size: 1em;
+  font-size: 1.1em;
+  max-width: 70%;
+  margin: 0 auto;
 }
 /* Media queries */
 
 @media (min-width: 789px) {
   h1 {
     font-size: 2.6em;
+  }
+
+  h3 {
+    font-size: 1.8em;
   }
 
   li {
@@ -198,6 +213,5 @@ p {
   p {
     font-size: 1.4em;
     max-width: 400px;
-    margin: 0 auto;
   }
 }

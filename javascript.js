@@ -147,27 +147,6 @@ function closeAllSelect (elmnt) {
 then close all select boxes: */
 document.addEventListener('click', closeAllSelect)
 
-/* Taimer */
-
-const timer = document.getElementById('timer')
-const toggleBtn = document.getElementById('toggle')
-
-const watch = new Stopwatch(timer)
-
-function start () {
-  toggleBtn.textContent = ''
-  watch.start()
-}
-
-function stop () {
-  toggleBtn.textContent = ''
-  watch.stop()
-}
-
-toggleBtn.addEventListener('click', function () {
-  watch.isOn ? stop() : start()
-})
-
 // Main activity stopper
 
 const mainActivityTrigger = document.getElementById('start-main-activity')
@@ -197,10 +176,14 @@ const fitActivity = document.getElementById('fit-activity')
 const fitActivityStopwatch = new Stopwatch(false)
 
 function startFitActivity () {
+  fitActivityTrigger.classList.add('is-active')
+  fitActivityTrigger.textContent = 'Stop'
   fitActivityStopwatch.start()
 }
 
 function stopFitActivity () {
+  fitActivityTrigger.classList.remove('is-active')
+  fitActivityTrigger.textContent = 'Start'
   fitActivityStopwatch.stop(fitActivity.value)
 }
 
@@ -215,10 +198,14 @@ const weirdActivity = document.getElementById('weird-activity')
 const weirdActivityStopwatch = new Stopwatch(false)
 
 function startWeirdActivity () {
+  weirdActivityTrigger.classList.add('is-active')
+  weirdActivityTrigger.textContent = 'Stop'
   weirdActivityStopwatch.start()
 }
 
 function stopWeirdActivity () {
+  weirdActivityTrigger.classList.remove('is-active')
+  weirdActivityTrigger.textContent = 'Start'
   weirdActivityStopwatch.stop(weirdActivity.value)
 }
 
@@ -232,7 +219,7 @@ const activityList = document.getElementById('data')
 
 for (var i = 0, len = localStorage.length; i < len; ++i) {
   // console.log(localStorage.getItem(localStorage.key(i)))
-  activityList.insertAdjacentHTML('beforeend', `<li>${localStorage.key(i)} – ${timeFormatter(destructMS(localStorage.getItem(localStorage.key(i))))}</li>`)
+  activityList.insertAdjacentHTML('beforeend', `<li> <span>${localStorage.key(i)}</span> – ${timeFormatter(destructMS(localStorage.getItem(localStorage.key(i))))}</li>`)
   console.log(destructMS(localStorage.getItem(localStorage.key(i))))
 }
 
@@ -256,5 +243,5 @@ function destructMS (milli) {
 }
 
 function timeFormatter (msObject) {
-  return `${msObject.h} hours and ${msObject.m} minutes ${msObject.s} seconds `
+  return `${msObject.h} h ${msObject.m} min ${msObject.s} sec`
 }
