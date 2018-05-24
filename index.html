@@ -33,7 +33,7 @@
       <ul class="unstyled">
         <li ng-repeat="todo in todoList.todos track by $index">
           <label class="checkbox">
-            <input type="checkbox" ng-model="todo.done">
+            <input type="checkbox" ng-model="todo.done" ng-click="todoList.saveCheck()">
             <span class="done-{{todo.done}}">{{todo.text}}</span>
           </label>
         </li>

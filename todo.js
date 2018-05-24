@@ -80,6 +80,10 @@ angular.module('todoApp', [])
       });
       return count;
     };
+
+    todoList.saveCheck = function(){
+      pushToStorage(todoList.todos)
+    }
     
     //archive function, keeps items that haven't been checked, pushes final array to local storage
     todoList.archive = function() {
