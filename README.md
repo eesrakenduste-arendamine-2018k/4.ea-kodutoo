@@ -1,8 +1,8 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-Rakenduse nimi: Kivi-paper-käärid mäng
+Rakenduse nimi: Kivi-käärid-paber mäng
 
-Autorid: Rauno Kaldmaa ja Tanel Kuklane
+Autorid: Rauno Kaldmaa
 Kivi-käärid-paber algeline mängu kood, mida on vastavalt kodutöö nõuetele kohandatud: http://jsfiddle.net/2jqz51Ly/
 
 Rakenduse kirjeldus: 
@@ -11,3 +11,6 @@ Tegemist on kivi-käärid-paber mänguga, milles mängija võistleb arvutiga. Ar
 1. Vali kõigepealt kivi, paberi ja käärid vahel ning vajuta vastavale nupule
 2. Pärast valiku tegemist vajuta nuppu "Vaata tulemust"
 3. Mängijale kuvatakse tulemus. Uue raundi alustamiseks vali uus märk
+
+Ekraanipilt:
+![alt text](ekraanipilt.png "Kivi-paber-käärid mängu ekraanipilt")
