@@ -5,6 +5,8 @@
     <title>FUEL</title>
 	<link rel="stylesheet" href="style.css" title="styles" type="text/css" media="screen" charset="utf-8">
 	<script type="text/javascript" src="gas.js" charset="utf-8" defer></script>
+	<script type="text/javascript" src="serviceWorker.js" charset="utf-8" defer></script>
+	<script type="text/javascript" src="scripts.js" charset="utf-8" defer></script>
 
 	<link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="images/apple-touch-icon-60x60.png">
@@ -32,9 +34,8 @@
 </head>
 
 <body id="content"FUEL>
-	
+	<br>
 	<h1>Fuel Consumption Calculator</h1>
-	<p>This is a simple form and mathematical result test</p>
 	<p>Distance Driven (km):<input id="distance" type="number" min="1" max="1000000" onchange="computeConsumption()"></p>
 	<p>Fuel l/100:<input id="fuel" type="number" min="1" max="10000000" step="1" onchange="computeConsumption()"></p>
 	<p>Cost per Unit of Fuel: € <input id="costper" type="number" min="0.5" max="10" step="0.01" value="1.38" onchange="computeConsumption()"></p>
