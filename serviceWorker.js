@@ -1,12 +1,12 @@
 //service worker
 const CACHE_NAME = "todolist-v1"
 const urlsToCache = [
-	"/~kristor/4.ea-kodutoo/todo.js",
-	"/~kristor/4.ea-kodutoo/index.html",
-	"/~kristor/4.ea-kodutoo/todo.css",
-	"/~kristor/4.ea-kodutoo/",
-	"/~kristor/4.ea-kodutoo/paper.png",
-	"/~kristor/4.ea-kodutoo/images/"
+	"./todo.js",
+	".index.html",
+	".todo.css",
+	"./",
+	"./paper.png",
+	"./images/"
 ]
 
 self.addEventListener('install', function (event) {
