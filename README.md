@@ -12,5 +12,5 @@ Kui kasutaja on kõik vajamineva informatsiooni sisestanud, arvutatakse PPI. Koh
 
 ## Pildid ja skeemid
 ![alt text][screen1]
-^Home screen
-[screen1]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen1.PNG
+
+[screen1]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen1.PNG "Home screen"
