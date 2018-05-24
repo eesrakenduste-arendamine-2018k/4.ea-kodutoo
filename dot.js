@@ -5,6 +5,9 @@ var playing=false;
 var numholes=6*10;
 var currentpos=-1;
 
+var sound_correct = document.getElementById("audio_correct");
+var sound_false = document.getElementById("audio_false");
+
 function clrholes() {
 	for(var k=0;k<document.dmz.elements.length;k++)
 	document.dmz.elements[k].checked=false;
@@ -55,6 +58,7 @@ function launch() {
 	var launched=false;
 	while(!launched) {
 	mynum=random();
+	console.log(mynum)
 	if(mynum!=currentpos) {
 	document.dmz.elements[mynum].checked=true;
 	currentpos=mynum;
@@ -73,12 +77,17 @@ if(currentpos!=id) {
 	totalhits+=-1;
 	document.cpanel.score.value=totalhits;
 	document.dmz.elements[id].checked=false;
+	
+    sound_false.play();
+	document.body.style.background = radial-gradient(rgba(255,0,0,0), rgba(255,0,0,0), red);
+	
 	}else {
 	totalhits+=1;
 	document.cpanel.score.value=totalhits;
 	launch();
 	document.dmz.elements[id].checked=false;
-	   }
+	sound_correct.play();
+	}
 }
 
 function random() {
