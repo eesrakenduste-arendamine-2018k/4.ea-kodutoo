@@ -8,5 +8,7 @@
 2. Funktsionaalsus - Täringu puudumisel, saab "veeretada" täringut telefonis - pigem telefoni raputamisel 
 loositakse välja kaks erinevat täringut. Täpsemalt rääkides, loositakse kaks erinevat numbrit ja seejärel lisatakse nende arvule sobiva pildi ekraanile.
 Ekraanil on ka kiri, kus on kirjas kahe täringu summa. Iga kord, kui raputatakse telefoni, muutub ka taustavärv.
+3. Vajadusel ka lingid: http://greeny.cs.tlu.ee/~valevale/eesrakendused/4.ea-kodutoo/
+või http://www.tlu.ee/~valerivv/sayings-offline-app/
 ![alt text](images1/test_1.jpg "Esimene vise")
 ![alt text](images1/test_2.jpg "Teine vise")
