@@ -1,12 +1,13 @@
 //service worker
 const CACHE_NAME = "todolist-v1"
 const urlsToCache = [
+  "./angular.min.js",
 	"./todo.js",
-	".index.html",
-	".todo.css",
+	"./index.html",
+	"./todo.css",
 	"./",
 	"./paper.png",
-	"./images/"
+	"./images"
 ]
 
 self.addEventListener('install', function (event) {

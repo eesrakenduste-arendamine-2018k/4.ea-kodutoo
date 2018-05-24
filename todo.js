@@ -1,6 +1,6 @@
 window.onload = function(){
 	
-	registerServiceWorker();
+  registerServiceWorker();
 }
 
 //If storage space doesn't exist
@@ -59,7 +59,7 @@ angular.module('todoApp', [])
         }
       }
     })
-    
+
     //Add function, pushes to local array which is pushed to local storage
     todoList.addTodo = function() {
       if(todoList.todoText == ""){
