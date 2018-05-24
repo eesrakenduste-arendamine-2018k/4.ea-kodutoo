@@ -1,22 +1,15 @@
-function calculate(){
-    var width = screen.width,
-    height = screen.height,
-    x = $("#horizontal").val(width),
-    y = $("#vertical").val(height);
-$('submit').click(function(){
-    	var x = $("#horizontal").val(),
-    	y = $("#vertical").val(),
-    	inch = $("#diagonal").val(),
-    	result = $("#resultTest"),
-    	sqroot = +(x*x) + +(y*y);
-     
-    	if(x==0)
-    		result.val("Horizontal resolution cannot be empty.");
-    	else if (y==0)
-    		result.val("Vertical resolution cannot be empty.");
-    	else if(inch==0)
-    		result.val("Diagnol screen size cannot be empty.")
-    	else
-    		result.val((Math.sqrt(sqroot) / inch).toFixed(2) + " Pixel Per Inch (PPI) Density.");
-    });
+"use strict";
+function clicked(){
+	const width = document.getElementById('horizontal').value;
+	const height = document.getElementById('vertical').value;
+	const inch = document.getElementById('diagonal').value;
+	let answer = '';
+	answer = precisionRound((Math.sqrt((width*width)+(height*height))/inch),2);
+	document.getElementById('result').innerHTML = answer;
+	
+	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
+	function precisionRound(number, precision) {
+		var factor = Math.pow(10, precision);
+		return Math.round(number * factor) / factor;
+	}
 }

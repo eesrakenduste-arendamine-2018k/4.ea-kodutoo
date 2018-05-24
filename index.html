@@ -11,7 +11,6 @@
 	<script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
 	<script src="js/waypoints.js" type="text/javascript"></script>
 	<script src="js/showElements.js"></script>
-	<script src="js/calc.js"></script>
 </head>
 <body>
 	<section id="intro" class="intro">
@@ -29,17 +28,6 @@
 					<h1>Hi!</h1>
 					<p>Whazzzaaa soon you gonna see some serios talk here.</p>
 					<br>
-					<label for="horizontal">Horizontal resolution:</label>
-					<input placeholder="Horizontal resolution:" type="text" id = "horizontal"/>
-					<br>
-					<label for="vertical">Vertical resolution:</label>
-					<input placeholder="Vertical resolution:" type="text" id = "vertical"/>
-					<br>
-					<label for="diagonal">Diagonal (inches):</label>
-					<input placeholder="Diagonal in inches:" type="text" id = "diagonal"/>
-					<br>
-					<input type = "submit" value = "Calculate!" onclick = "calculate()">
-
 				</section>
 				<section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0s">
 					<a class="btn2" href="#" onclick="showComparison()">Calculate!</a>
@@ -49,11 +37,21 @@
 			<div id="comparison" class="comparison" style="display: none;">
 				<section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay=".1s">
 					<section class="calculations">
-					<label for="result">Result</label>
-					<div>
-						<p>Your result will be displayed here:</p>
-						<label id = "resultTest"></label>
-					</div>
+						<label for="result">Result</label>
+						<div id="calculator">
+							<label for="horizontal">Horizontal resolution:</label>
+							<input type="text" id = "horizontal"/>
+							<br>
+							<label for="vertical">Vertical resolution:</label>
+							<input type="text" id = "vertical"/>
+							<br>
+							<label for="diagonal">Diagonal (inches):</label>
+							<input type="text" id = "diagonal"/>
+							<br>
+							<a class="btn" href="#" onclick="clicked()">Calculate!</a>
+						<p id = "result">result:  </p>
+						</div>
+						<script src="js/calc.js"></script>
 					</section>
 					<a class="btn2" href="#" onclick="getBack()">Back</a>
 				</section>
