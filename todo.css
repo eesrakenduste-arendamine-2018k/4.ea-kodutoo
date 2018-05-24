@@ -1,0 +1,36 @@
+.done-true {
+  text-decoration: line-through;
+  color: green;
+}
+
+.done-false {
+	color: black;
+}
+
+.header {
+	width: 100%;
+	background-color: black;
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+	font-weight: bold;
+	font-style: Times New Roman;
+	color: white;
+}
+
+body {
+	background-image: url("paper.png");
+	background-size: cover;
+	image-rendering: -webkit-optimize-contrast;
+	color: black;
+}
+
+.btn-primary {
+	border-radius: 6px;
+}
+
+.textbox {
+	border-radius: 6px;
+}
