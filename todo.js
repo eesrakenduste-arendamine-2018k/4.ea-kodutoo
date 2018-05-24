@@ -1,9 +1,14 @@
+window.onload = function(){
+	
+	registerServiceWorker();
+}
+
 //If storage space doesn't exist
 if(localStorage.getItem("todoitems")==null){
     let placeholder = []
     localStorage.setItem("todoitems", JSON.stringify(placeholder))
 }
-
+this.registerServiceWorker()
 function random(to){
   return Math.floor(Math.random() * to)
 }
@@ -16,6 +21,18 @@ function pushToStorage(data){
 //Pull from local storage
 function pullFromStorage(){
     return JSON.parse(localStorage.getItem("todoitems"))
+}
+
+function registerServiceWorker(){
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
+			// Registration was successful
+			console.log('ServiceWorker registration successful: ', registration)
+		}, function (err) {
+			// registration failed :(
+			console.log('ServiceWorker registration failed: ', err)
+		})
+	}
 }
 
 //Angular module
@@ -72,6 +89,6 @@ angular.module('todoApp', [])
         if (!todo.done) todoList.todos.push(todo);
       });
       pushToStorage(todoList.todos)
-    };
+    };	
   });
 
