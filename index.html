@@ -19,26 +19,25 @@
   <body>
 
     <nav class="menu">
-      <h1 class="home-heading menu-item menu-item-home">
+      <h1 class="menu-item">
         <a href="#home-view" class="menu-link home-view active-menu">Track your life</a>
       </h1>
       <ul class="menu-list">
-        <li class="menu-item menu-item-main">
+        <li class="menu-item">
           <a href="#main-view" class="menu-link main-view">Main</a></li>
-        <li class="menu-item menu-item-fit">
+        <li class="menu-item">
           <a href="#fit-view" class="menu-link fit-view">Fit</a></li>
-        <li class="menu-item menu-item-weird">
+        <li class="menu-item">
           <a href="#weird-view" class="menu-link weird-view">Weird</a></li>  
       </ul>
     </nav>
-   
 
     <main role="main">
 
       <!-- main page -->
       <section id="main-view">
         <div class="flex-activity">
-          <div class="activity-item activity-main">
+          <div class="activity-item">
             <div class="custom-select" style="width:200px;">
               <select id="main-activity">
                 <option value="main">Select main acitivity:</option>
@@ -50,24 +49,19 @@
               </select>
             </div>
           </div>
-          <button id="start-main-activity" class="activity-item btn-tracker btn-tracker-main">Start</button>
+          <button id="start-main-activity" class="activity-item btn-tracker">Start</button>
         </div> 
-        <div class="timer-app">
-          <h1>Time spent on tracker:</h1>
-          <h2 id="timer">00 : 00 . 000</h2>
-        </div>
+        <h2 id="timer">00 : 00 . 000</h2>
 
         <div>
             <button id="toggle"></button>
         </div>
-
-        <div class="activity-tracker activity-tracker-main">Kuvamised</div>
       </section>
   
       <!-- fit page -->
       <section id="fit-view">
         <div class="flex-activity">
-          <div class="activity-item activity-main">
+          <div class="activity-item">
               <div class="custom-select" style="width:200px;">
                 <select id="fit-activity">
                   <option value="fit">Select fit acitivity:</option>
@@ -86,13 +80,10 @@
                 </select>
               </div>
             </div>
-          <button id="start-fit-activity" class="activity-item btn-tracker btn-tracker-fit">Start</button>
-        </div>
-        <div class="timer-app">
-            <h1>Time spent on tracker:</h1>
-            <h2 id="timer">00 : 00 . 000</h2>
+          <button id="start-fit-activity" class="activity-item btn-tracker">Start</button>
         </div>
 
+        <h2 id="timer">00 : 00 . 000</h2>
         <div>
             <button id="toggle"></button>
         </div>
@@ -103,7 +94,7 @@
       <!-- weird page -->
       <section id="weird-view">
         <div class="flex-activity">
-            <div class="activity-item activity-main">
+            <div class="activity-itemn">
               <div class="custom-select" style="width:200px;">
                 <select id="weird-activity">
                   <option value="weird">Select weird acitivity:</option>
@@ -116,13 +107,10 @@
                 </select>
               </div>
             </div>
-          <button id="start-weird-activity" class="activity-item btn-tracker btn-tracker-weird">Start</button>
-        </div>
-        <div class="timer-app">
-          <h1>Time spent on tracker:</h1>
-          <h2 id="timer">00 : 00 . 000</h2>
+          <button id="start-weird-activity" class="activity-item btn-tracker">Start</button>
         </div>
 
+        <h2 id="timer">00 : 00 . 000</h2>
         <div>
             <button id="toggle"></button>
         </div>
@@ -133,11 +121,13 @@
       <!-- Home -->
       <section id="home-view">
           <div class="home-intro">
-            If you want to know where the time flies then track your time. And do it quickly. Otherwise your time will be spent here.
+            <p>If you want to know where the time flies then track your time. And do it quickly. Otherwise your time will be spent here.</p>
           </div>
-          <div class="timer-app">
-            <p>Time spent on tracker:</p>
-            <p></p>
+          <h2>Your time has been spent here-></h2>
+          <div class="activity-tracker activity-tracker-main">
+            <ul id="data">
+      
+            </ul>
           </div>
       </section>
     </main>

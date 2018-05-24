@@ -149,10 +149,10 @@ document.addEventListener('click', closeAllSelect)
 
 /* Taimer */
 
-var timer = document.getElementById('timer')
-var toggleBtn = document.getElementById('toggle')
+const timer = document.getElementById('timer')
+const toggleBtn = document.getElementById('toggle')
 
-var watch = new Stopwatch(timer)
+const watch = new Stopwatch(timer)
 
 function start () {
   toggleBtn.textContent = ''
@@ -175,10 +175,14 @@ const mainActivity = document.getElementById('main-activity')
 const mainActivityStopwatch = new Stopwatch(false)
 
 function startMainActivity () {
+  mainActivityTrigger.classList.add('is-active')
+  mainActivityTrigger.textContent = 'Stop'
   mainActivityStopwatch.start()
 }
 
 function stopMainActivity () {
+  mainActivityTrigger.classList.remove('is-active')
+  mainActivityTrigger.textContent = 'Start'
   mainActivityStopwatch.stop(mainActivity.value)
 }
 
@@ -221,3 +225,36 @@ function stopWeirdActivity () {
 weirdActivityTrigger.addEventListener('click', function () {
   weirdActivityStopwatch.isOn ? stopWeirdActivity() : startWeirdActivity()
 })
+
+// Kuvamised
+
+const activityList = document.getElementById('data')
+
+for (var i = 0, len = localStorage.length; i < len; ++i) {
+  // console.log(localStorage.getItem(localStorage.key(i)))
+  activityList.insertAdjacentHTML('beforeend', `<li>${localStorage.key(i)} – ${timeFormatter(destructMS(localStorage.getItem(localStorage.key(i))))}</li>`)
+  console.log(destructMS(localStorage.getItem(localStorage.key(i))))
+}
+
+// timeformatter
+
+function destructMS (milli) {
+  if (isNaN(milli) || milli < 0) {
+    return null
+  }
+
+  var d, h, m, s, ms
+  s = Math.floor(milli / 1000)
+  m = Math.floor(s / 60)
+  s = s % 60
+  h = Math.floor(m / 60)
+  m = m % 60
+  d = Math.floor(h / 24)
+  h = h % 24
+  ms = Math.floor((milli % 1000) * 1000) / 1000
+  return { d: d, h: h, m: m, s: s, ms: ms }
+}
+
+function timeFormatter (msObject) {
+  return `${msObject.h} hours and ${msObject.m} minutes ${msObject.s} seconds `
+}

@@ -23,7 +23,9 @@ function Stopwatch (elem) {
   }
 
   function save (activity) {
-    localStorage.setItem(activity, timeFormatter(time += delta()))
+    let t = Number(time) + Number(localStorage.getItem(activity))
+    console.log(activity)
+    localStorage.setItem(activity, t)
   }
 
   function timeFormatter (time) {

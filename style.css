@@ -81,7 +81,9 @@ main > *:target ~ * {
   color: rgb(27, 26, 29);
 }
 
-.menu-link.active-menu {
+.menu-link.main-view.active-menu,
+.menu-link.fit-view.active-menu,
+.menu-link.weird-view.active-menu {
   border: 2px solid rgb(102, 93, 50);
 }
 
@@ -90,17 +92,11 @@ main > *:target ~ * {
 }
 
 .activity-item {
-  padding: 5px;
-  margin-top: 10px;
   text-align: center;
 }
 
 .flex-activity {
   margin-bottom: 40px;
-}
-
-.menu-link.home-view {
-  font: 41em;
 }
 
 /* Select box */
@@ -162,12 +158,46 @@ main > *:target ~ * {
   font-weight: 100;
 }
   
-button {
-border-radius: 50%;
-padding: 10px;
-background-color: #90a7c4;
+#toggle {
+  border-radius: 50%;
+  padding: 10px;
+  background-color: #90a7c4;
 }
 
-button:focus{
+#toggle:focus{
   background-color: #ff6961;
+}
+
+button.is-active {
+  background-color: #d38b87;
+}
+
+.btn-tracker {
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 1em;
+}
+/* Media queries */
+
+@media (min-width: 789px) {
+  h1 {
+    font-size: 2.6em;
+  }
+
+  li {
+    font-size: 1.4em;
+  }
+
+  p {
+    font-size: 1.4em;
+    max-width: 400px;
+    margin: 0 auto;
+  }
 }
