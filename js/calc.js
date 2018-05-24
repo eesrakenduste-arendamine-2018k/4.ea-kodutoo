@@ -24,3 +24,4 @@ function getScreenRes(){
 	document.getElementById("diagonal").defaultValue = 23;
 }
 
+

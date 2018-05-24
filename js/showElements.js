@@ -22,6 +22,7 @@ function getBack() {
     comparison.style.display = "none";
     tutorial.style.display = "block";
 }
+
 /*
 example to draw displays
 if (main.style.display === "none") {
