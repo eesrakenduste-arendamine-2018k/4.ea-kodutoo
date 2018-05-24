@@ -12,5 +12,7 @@ Tegemist on kivi-käärid-paber mänguga, milles mängija võistleb arvutiga. Ar
 2. Pärast valiku tegemist vajuta nuppu "Vaata tulemust"
 3. Mängijale kuvatakse tulemus. Uue raundi alustamiseks vali uus märk
 
+Aadress: http://www.tlu.ee/~rkaldmaa/eesrakendused/kkp/kkp-game.html
+
 Ekraanipilt:
 ![alt text](ekraanipilt.png "Kivi-paber-käärid mängu ekraanipilt")
