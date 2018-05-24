@@ -29,7 +29,6 @@ html, body {
 .keypadwrapper .inputwrapper {
   margin: 2em;
   line-height: 0.61em;
-  vertical-align: middle;
 }
 .keypadwrapper .numberinput {
   display: inline-block;
