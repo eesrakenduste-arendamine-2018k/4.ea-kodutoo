@@ -1,0 +1,73 @@
+/** {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center;
+}*/
+html,
+body {
+	margin-top: 10vh;
+    background-color: #afd8ff
+}
+
+.dice_1 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice1.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dice_2 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice2.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dice_3 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice3.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dice_4 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice4.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dice_5 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice5.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dice_6 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice6.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.dice_7 {
+	background-image:url('https://www.tlu.ee/~ttaevik/dice/dicepildid/dice7.png');
+	background-size:contain;
+    height:70vw;
+    width:70vw;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
