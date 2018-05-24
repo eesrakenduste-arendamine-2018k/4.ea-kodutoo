@@ -3,14 +3,16 @@ ___
 
 # Mäng: Hit the Dot 
 
+![hit_dot](https://github.com/earist/4.ea-kodutoo/blob/master/hitdot.PNG)
+
 **Autorid:** Ea Rist, Marianne Orusalu, Henrik Romanenkov
 
 **Kirjeldus:** Mängu idee seisneb antud aja jooksul võimalikult paljude nupukeste vajutamist. Eesmärgiks on saada võimalikult suur skoor.
 
 **Funktsionaalsused:** 
-1. ServiceWorker, offline + mobiilivaade.
-2. Kui paned mööda, vilgub tauat punaselt.
-3. Iga nupuvajutusega tuleb heli + add to homescreen funktsionaalsus
+1. ServiceWorker, offline, mobiilivaade.
+3. Vastavalt klikile õige/vale heli.
+3. Add to homescreen funktsionaalsus
 
 ___
 ## Nõuded
