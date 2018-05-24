@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" sizes="192x192" href="icon-highres.png">
+    <link rel="icon" sizes="128x128" href="icon.png">
+    <link rel="apple-touch-icon" sizes="128x128" href="icon.png">
+    <link rel="apple-touch-icon-precomposed" sizes="128x128" href="icon.png">
+    <title>Kivi-käärid-paber mäng</title>
+    <script src="kkp-game.js"></script>
+    <script src="serviceWorker.js"></script>
+    <link href="kkp-game.css" rel="stylesheet" type="text/css"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+    <div class="main">
+        <div class="container">
+            <h1>Tere tulemast kivi-käärid-paber mängu!</h1>
+            <div class="game-area">
+                <p id="game-introduction">
+                    Tegemist on lihtsa mänguga, millega on paljud inimesed kokku puutunud juba lapsepõlvest. Reegleid teavad ilmselt kõik, aga tuletame veel korra meelde. <br>
+                    Kaks mängijat viskavad korraga välja käe, mille kujudeks on kas kivi, käärid või paber. Kivi võidab käärid, käärid võidab paberi ning paber võidab kivi. Käesolevas rakenduses mängija võistleb arvutiga. Mängus on kolm tulemust: kas mängija võidab, kaotab või tekib viigiseis.
+                    <ol>
+                        <li>Vali kõigepealt kivi, paberi ja käärid vahel ning vajuta vastavale nupule</li>
+                        <li>Pärast valiku tegemist vajuta nuppu "Vaata tulemust"</li>
+                        <li>Mängijale kuvatakse tulemus. Uue raundi alustamiseks vali uus märk</li>
+                    </ol> 
+                </p>
+                <div class="buttons">
+                    <button onClick='choose("rock")'>Kivi</button>
+                    <button onClick='choose("paper")'>Paber</button>
+                    <button onClick='choose("scissors")'>Käärid</button>
+                </div>
+                <div class="result-button">
+                    <button onClick='compare(user, computerChoice)'>Vaata tulemust!</button>
+                </div>
+                <div class="result-area">
+                    <p id="result"></p>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>Rauno Kaldmaa @ <br>
+            <a href="https://github.com/lostinthemist/4.ea-kodutoo">Repositooriumi link</a></p>
+        </footer>
+    </div> 
+</body>
+</html>
