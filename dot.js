@@ -34,7 +34,6 @@ function stopgame() {
 	playing=false;
 	document.cpanel.timeleft.value=0;
 	clrholes();
-	display("Game Over");
 	alert('Game Over.\nYour score is:  '+totalhits);
 }
 
@@ -48,14 +47,9 @@ function play() {
 	clrholes();
 	totalhits=0;
 	document.cpanel.score.value=totalhits;
-	//display("Playing");
 	launch();
 	showtime(gamelength);
 }
-/*
-function display(msg) {
-	document.cpanel.state.value=msg;
-}*/
 
 function launch() {
 	var launched=false;
@@ -72,7 +66,6 @@ function launch() {
 function hithead(id) {
 	if(playing==false) {
 	clrholes();
-	display("Push Start to Play");
 	return;
 }
 

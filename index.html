@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hit the Dot</title>
 	<link rel="stylesheet" href="style.css" title="styles" type="text/css" media="screen" charset="utf-8">
     <script type="text/javascript" src="dot.js" charset="utf-8" defer></script>
@@ -20,15 +21,13 @@
     <link rel="icon" type="image/png" sizes="96x96" href="icons/icon96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
 </head>
-<body>
+<body id="wholebody">
 	<!--
 	Mäng on võetud aadressilt:
 	http://www.jsmadeeasy.com/javascripts/Games/Hit%20The%20Dot/index.htm
-	<tr>
-			<td></td>
-	</tr>
 	-->
-	<audio id="audio" src="" autostart="false"></audio>
+	<audio id="audio_correct" src="http://www.tlu.ee/~earist/suva/hitdot/whip.wav" autostart="false"></audio>
+	<audio id="audio_false" src="http://www.tlu.ee/~earist/suva/hitdot/block-hit.wav" autostart="false"></audio>
 	<form name="cpanel">
 	<table cellspacing="10" align="center">
 		<tr>
@@ -38,7 +37,7 @@
 			<td><p>Test your skill. How many boxes can you check in 30 seconds?</p></td>
 		</tr>
 		<tr>
-			<td><input type="button" class="btn" name="startstop" value=" Start Game | Stop Game " onClick="play()"></td>
+			<td><input type="button" class="btn" name="startstop" value=" Start | Stop" onClick="play()"></td>
 		</tr>
 		<tr colspan="2">
 			<td>Time:&nbsp; <input type="text" name="timeleft" size="4" onFocus="this.blur()">&nbsp;&nbsp;
