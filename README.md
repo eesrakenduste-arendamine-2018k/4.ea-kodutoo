@@ -3,6 +3,7 @@
 Rakenduse nimi: Kivi-käärid-paber mäng
 
 Autorid: Rauno Kaldmaa
+
 Kivi-käärid-paber algeline mängu kood, mida on vastavalt kodutöö nõuetele kohandatud: http://jsfiddle.net/2jqz51Ly/
 
 Rakenduse kirjeldus: 
