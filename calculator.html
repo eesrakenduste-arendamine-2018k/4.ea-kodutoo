@@ -7,88 +7,25 @@
 		<script type="text/javascript"></script>
 		<link rel="stylesheet" href="style.css">
 		<script src="calculator.js"></script>
-	</head>	
+	</head>
 	<body>
-		<div class="keypadwrapper">
-		  <div class="inputwrapper">	
-			  <h3>EUR <input class="numberinput" type="number" id="EUR"></h3>
-			  <h3>USD <input class="numberinput" type="number" id="USD"></h3>
-			  <h3>GBP <input class="numberinput" type="number" id="GBP"></h3>
-			  <h3>RUB <input class="numberinput" type="number" id="RUB"></h3>
-			  <h3>CAD <input class="numberinput" type="number" id="CAD"></h3>
-			  <h3>JPY <input class="numberinput" type="number" id="JPY"></h3>
-			  <h3>MXN <input class="numberinput" type="number" id="MXN"></h3>
-		  </div>
-		  <div class="keypad">
-		    <div id="lineone" class="numberline">
-		      <div class="content">
-		        <div>
-		          <span class="number">1</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">2</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">3</span>
-		        </div>
-		      </div>
-		    </div>
-		    <div id="linetwo" class="numberline">
-		      <div class="content">
-		        <div>
-		          <span class="number">4</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">5</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">6</span>
-		        </div>
-		      </div>
-		    </div>
-		    <div id="linethree" class="numberline">
-		      <div class="content">
-		        <div>
-		          <span class="number">7</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">8</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">9</span>
-		        </div>
-		      </div>
-		    </div>
-		    <div id="linefour" class="numberline">
-		      <div class="content">
-		        <div>
-		          <span class="number"><</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">0</span>
-		        </div>
-		      </div>
-		      <div class="content">
-		        <div>
-		          <span class="number">,</span>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
+		<div class="inputwrapper">
+			<div class="numberInput">
+				<label for="EUR" class="label">EUR</label>
+				<input class="numberinput" type="number" id="EUR" oninput="eurConverter();">
+				<label for="USD" class="label">USD</label>
+			  <input class="numberinput" type="number" id="USD" oninput="converter();">
+				<label for="GBP" class="label">GBP</label>
+			  <input class="numberinput" type="number" id="GBP" oninput="converter();">
+				<label for="RUB" class="label">RUB</label>
+			 	<input class="numberinput" type="number" id="RUB" oninput="converter();">
+				<label for="CAD" class="label">CAD</label>
+			  <input class="numberinput" type="number" id="CAD" oninput="converter();">
+				<label for="JPY" class="label">JPY</label>
+			  <input class="numberinput" type="number" id="JPY" oninput="converter();">
+				<label for="MXN" class="label">MXN</label>
+			  <input class="numberinput" type="number" id="MXN" oninput="converter();">
+			</div>
 		</div>
 	</body>
-</html> 
+</html>
