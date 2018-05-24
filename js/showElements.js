@@ -9,31 +9,49 @@ function showMain() {
     var tutorial = document.getElementById("tutorial");
     main.style.display = "block";
     tutorial.style.display = "none";
+    more.style.display = "none";
 } 
 function showComparison() {
     var tutorial = document.getElementById("tutorial");
     var comparison = document.getElementById("comparison");
     tutorial.style.display = "none";
     comparison.style.display = "block";
+    more.style.display = "none";
 } 
 function getBack() {
     var tutorial = document.getElementById("tutorial");
     var comparison = document.getElementById("comparison");
-    comparison.style.display = "none";
-    tutorial.style.display = "block";
-}
-
-/*
-example to draw displays
-if (main.style.display === "none") {
-        main.style.display = "block";
+    var saved = document.getElementById("saved");
+    var more = document.getElementById("more");
+    more.style.display = "none";
+    if (comparison.style.display === "none") {
+        comparison.style.display = "block";
     } else {
-        main.style.display = "none";
+        comparison.style.display = "none";
     }
-    if (tutorial.style.display === "block") {
-        tutorial.style.display = "none";
-    } else {
+    saved.style.display = "none";
+    if (comparison.style.display === "none") {
         tutorial.style.display = "block";
+    } else {
+        tutorial.style.display = "none";
     }
-    comparison.style.display === "none"
-*/
+}
+function showSaved(){
+    var comparison = document.getElementById("comparison");
+    var saved = document.getElementById("saved");
+    comparison.style.display = "none";
+    saved.style.display = "block";
+    
+}
+function showMore(){
+    var more = document.getElementById("more");
+    var comparison = document.getElementById("comparison");
+    more.style.display = "block";
+    comparison.style.display = "none";
+}
+function closeMore(){
+    var comparison = document.getElementById("comparison");
+    var more = document.getElementById("more");
+    more.style.display = "none";
+    comparison.style.display = "block";
+}

@@ -219,10 +219,23 @@ p{
 #result {
     transition: color 3s ease 2s;
     filter: blur(10px);
-    color: rgba(255, 255, 255, 0.4);
+    color: rgba(255, 255, 255, 0.7);
     font-size: 180%;
 } 
-
+/*-- Saved --*/
+.saved{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:28%;
+}
+.saved h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size:400%;
+    color: #E1EFE9;
+    line-height: 85%;  
+}
   /*--- Media Queries --*/
 @media screen and (max-width: 900px) {
     .btn1 {
