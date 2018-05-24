@@ -1,7 +1,7 @@
 //= ============================================================================
 // PONG
 //= ============================================================================
-let timer, mode, p1HighScore, p2HighScore, e
+let timer, mode, p1HighScore, p2HighScore, e, mobileControls
 
 Pong = {
 
@@ -60,8 +60,11 @@ Pong = {
 
   initialize: function (runner, cfg) {
     Game.loadImages(Pong.Images, function (images) {
-      if (window.DeviceOrientationEvent){
+      if (window.DeviceOrientationEvent) {
+        mobileControls = 1
         window.addEventListener('deviceorientation', this.deviceOrientationListener)
+      } else {
+        mobileControls = 0
       }
       this.cfg = cfg
       this.runner = runner
@@ -77,13 +80,13 @@ Pong = {
       this.ball = Object.construct(Pong.Ball, this)
       this.sounds = Object.construct(Pong.Sounds, this)
       this.runner.start()
-      localforage.getItem('p1HighScore').then(function(value){
+      localforage.getItem('p1HighScore').then(function (value) {
         this.p1HighScore = value
         p1HighScore = value
         this.p1HSspan = document.getElementById('p1HighScore')
         this.p1HSspan.innerHTML = this.p1HighScore
       })
-      localforage.getItem('p2HighScore').then(function(value){
+      localforage.getItem('p2HighScore').then(function (value) {
         this.p2HighScore = value
         p2HighScore = value
         console.log(this.p2HighScore)
@@ -92,40 +95,40 @@ Pong = {
       })
       this.startTime = 0
       this.duration = 0
+      document.getElementById('timer').innerHTML = secToMin(60)
     }.bind(this))
   },
-  deviceOrientationListener: function(event){
-    console.log('gamma: ' + event.gamma)
-    if(event.gamma > 20){
-      if( e !== undefined){
-        if (e.keyCode === Game.KEY.A){
-          e = new Event("keyup")
+  deviceOrientationListener: function (event) {
+    if (event.gamma > 20) {
+      if (e !== undefined) {
+        if (e.keyCode === Game.KEY.A) {
+          e = new Event('keyup')
           e.keyCode = Game.KEY.A
           document.dispatchEvent(e)
         }
       }
-      e = new Event("keydown")
+      e = new Event('keydown')
       e.keyCode = Game.KEY.Q
       document.dispatchEvent(e)
-    } else if (event.gamma < -20){
-      if( e !== undefined){
-        if (e.keyCode === Game.KEY.Q){
-          e = new Event("keyup")
+    } else if (event.gamma < -20) {
+      if (e !== undefined) {
+        if (e.keyCode === Game.KEY.Q) {
+          e = new Event('keyup')
           e.keyCode = Game.KEY.Q
           document.dispatchEvent(e)
         }
       }
-      e = new Event("keydown")
+      e = new Event('keydown')
       e.keyCode = Game.KEY.A
       console.log('keydown a')
       document.dispatchEvent(e)
     } else {
-      if(e.keyCode === Game.KEY.A){
-        e = new Event("keyup")
+      if (e.keyCode === Game.KEY.A) {
+        e = new Event('keyup')
         e.keyCode = Game.KEY.A
         document.dispatchEvent(e)
-      } else if (e.keyCode === Game.KEY.Q){
-        e = new Event("keyup")
+      } else if (e.keyCode === Game.KEY.Q) {
+        e = new Event('keyup')
         e.keyCode = Game.KEY.Q
         document.dispatchEvent(e)
       }
@@ -142,10 +145,12 @@ Pong = {
       this.startTime = Date.now() / 1000
       this.duration = parseFloat(document.getElementById('duration').value) * 60
       timer = this.duration
+      document.getElementById('timer').innerHTML = secToMin(timer)
       console.log(this.duration)
       this.timer = setInterval(function () {
         timer = timer - 1
         console.log(timer)
+        document.getElementById('timer').innerHTML = secToMin(timer)
       }, 1000)
     }
   },
@@ -168,8 +173,18 @@ Pong = {
           console.log('p1HighScore updated: ' + p1HighScore)
           localforage.setItem('p1HighScore', p1HighScore)
           document.getElementById('p1HighScore').innerHTML = p1HighScore
+        } else if (p1HighScore === undefined) {
+          p1HighScore = p1Score
+          console.log('p1HighScore updated: ' + p1HighScore)
+          localforage.setItem('p1HighScore', p1HighScore)
+          document.getElementById('p1HighScore').innerHTML = p1HighScore
         }
         if (p2Score > p2HighScore) {
+          p2HighScore = p2Score
+          console.log('p2HighScore updated: ' + p2HighScore)
+          localforage.setItem('p2HighScore', p2HighScore)
+          document.getElementById('p2HighScore').innerHTML = p2HighScore
+        } else if (p2HighScore === undefined) {
           p2HighScore = p2Score
           console.log('p2HighScore updated: ' + p2HighScore)
           localforage.setItem('p2HighScore', p2HighScore)
@@ -216,7 +231,8 @@ Pong = {
           this.menu.declareWinner(1)
           this.stop()
         } else {
-          timer += 5
+          timer += 1
+          document.getElementById('timer').innerHTML = 'Sudden death'
         }
       }
     }
@@ -281,10 +297,10 @@ Pong = {
     declareWinner: function (playerNo) {
       this.winner = playerNo
     },
-
+    drawTimer: function (ctx, timer) {
+      ctx.draw(timer, this.winner1.x, this.winner1.y)
+    },
     draw: function (ctx) {
-      ctx.drawImage(this.press1.image, this.press1.x, this.press1.y)
-      ctx.drawImage(this.press2.image, this.press2.x, this.press2.y)
       if (this.winner === 0) { ctx.drawImage(this.winner1.image, this.winner1.x, this.winner1.y) } else if (this.winner == 1) { ctx.drawImage(this.winner2.image, this.winner2.x, this.winner2.y) }
     }
 
@@ -713,3 +729,12 @@ modeDemo.addEventListener('click', function () {
   mode = 0
   console.log(mode)
 })
+function secToMin (seconds) {
+  let minutes = Math.floor(seconds / 60)
+  let secsLeft = seconds - minutes * 60
+  if (secsLeft < 10) {
+    secsLeft = '0' + secsLeft
+  }
+  let timer = minutes + ':' + secsLeft
+  return timer
+}

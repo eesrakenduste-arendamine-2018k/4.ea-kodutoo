@@ -20,7 +20,7 @@ body { background-color: black; color: #AAA; font-size: 12pt; padding: 1em; }
 #sidebar .description           { margin-bottom: 2em; }
 #sidebar .description b         { font-weight: normal; color: #FFF; }
 #duration {width: 30%}
-
+#timer {font-size: 40px; text-align: center;}
 
 @media screen and (min-width: 0px) {
   #sidebar { display: none; }
