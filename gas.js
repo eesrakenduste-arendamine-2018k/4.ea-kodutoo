@@ -18,7 +18,8 @@ Output:
 		var consumed =  (fuel * (distance/100)).toFixed(2);
 		var costper100 = (consumed * costper).toFixed(2);
 		var passangers = (costper100/people).toFixed(2);
-		document.getElementById('consumption').innerHTML = "Consumption is " + consumed + " Litres/100km ( $ " + costper100 + " / 100km ) <br><br>Total Fuel cost including people = € " + ((fuel*costper)/people).toFixed(2);
+		var totalFuel = ((distance/100)*fuel).toFixed(2);
+		document.getElementById('consumption').innerHTML = "Fuel consumed: " + totalFuel +" Liters"+ "<br>" + ( costper100 )+ " Euros  <br><br>   Total Fuel cost including people = " + (costper100/people).toFixed(2)+ " Euros";
 	}
 
 	function registerServiceWorker  () {
