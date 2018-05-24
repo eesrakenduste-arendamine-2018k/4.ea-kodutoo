@@ -6,6 +6,32 @@ let CAD = 1.5093263;
 let JPY = 130.74914;
 let MXN = 23.2767315;
 
+$(function () {
+	$(".content").click(function () {
+
+		let value = $(this).find(".number").text();
+
+		if (value !== "<") {
+			$(".numberinput").each(function () {
+				let a = $(this).text();
+				if (!a) {
+					$(this).text(value);
+					$(this).addClass("nocircle");
+					return false;
+				}
+			});
+		} else {
+			$($(".numberinput").get().reverse()).each(function () {
+				let a = $(this).text();
+				if (a) {
+					$(this).text("");
+					$(this).removeClass("nocircle");
+					return false;
+				}
+			});
+		}
+	});
+});
 
 function init(){
 	EUR = document.getElementById("EUR");
