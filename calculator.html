@@ -8,6 +8,7 @@
 		<script type="text/javascript"></script>
 		<link rel="stylesheet" href="style.css">
 		<script src="calculator.js"></script>
+		<script src="keypad.js"></script>
 	</head>
 	<body>
 		<div class="inputwrapper">
@@ -26,6 +27,54 @@
 			  <input class="numberinput" type="number" id="JPY" oninput="jpyConverter();">
 				<label for="MXN" class="label">MXN</label>
 			  <input class="numberinput" type="number" id="MXN" oninput="mxnConverter();">
+			</div>
+			<div class="keypad">
+				<table>
+					<tr>
+						<td>
+							<button id="1" type="button">1</button>
+						</td>
+						<td>
+							<button id="2" type="button">2</button>
+						</td>
+						<td>
+							<button id="3" type="button">3</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="4" type="button">4</button>
+						</td>
+						<td>
+							<button id="5" type="button">5</button>
+						</td>
+						<td>
+							<button id="6" type="button">6</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="7" type="button">7</button>
+						</td>
+						<td>
+							<button id="8" type="button">8</button>
+						</td>
+						<td>
+							<button id="9" type="button">9</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="0" type="button">0</button>
+						</td>
+						<td>
+							<button id="comma" type="button">.</button>
+						</td>
+						<td>
+							<button id="del" type="button">del</button>
+						</td>
+					</tr>
+			</table>
 			</div>
 		</div>
 		<script>
