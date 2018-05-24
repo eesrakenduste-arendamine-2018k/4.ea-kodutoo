@@ -56,19 +56,22 @@
 					</section>
 					<a class="btn3" href="#" onclick="getBack()">Back</a>
 					<a class="btn2" href="#" onclick="showSaved()">Saved</a>
-					<a class="btn3" href="#" onclick="showMore()" value="more">More</a>
+					<a class="btn3" href="#" onclick="showMore();getMore()" value="more">More</a>
 				</section>
 			</div>
 			<div id="more" class="comparison" style="display: none; ">
 				<section class="os-animation" data-os-animation="bounceInDown" data-os-animation-delay=".1s">
 					<div class="calculations">
 						<h1>Info</h1>
-						<p id="resolution">1</p>
-						<p id="aspectRatio">2</p>
-						<p id="sizeCm">3</p>
-						<p id="area">4</p>
-						<p id="colorDepth">5</p>
-						<p id="pixelDepth">6</p>
+						<p id="resolution"></p>
+						<p id="ppi"></p>
+						<p id="inch"></p>
+						<p id="aspectRatio"></p>
+						<p id="sizeCm"></p>
+						<p id="areaCm"></p>
+						<p id="areaPx"></p>
+						<p id="colorDepth"></p>
+						<p id="pixelDepth"></p>
 						<div id="calculator" >
 							<button class="calculate" onclick="closeMore()"><span>Close</span></button>
 						</div>
