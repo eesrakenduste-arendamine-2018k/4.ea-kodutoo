@@ -2,7 +2,7 @@
 const CACHE_NAME = 'gas-v1'
 const urlsToCache = [
   '/~kaugsilv/gas/scripts.js',
-  '/~kaugsilv/gas/gas.html',
+  '/~kaugsilv/gas/fuel.html',
   '/~kaugsilv/gas/',
   '/~kaugsilv/gas/style.css'
 ]
