@@ -62,7 +62,7 @@ function usdConverter(){
 	let CAD = 1.28908506;
 	let JPY = 109.325462;
 	let MXN = 19.7199763;
-	let newEUR = USD*EUR;
+	let newEUR = USD * EUR;
 	document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 	let newGBP = USD * GBP;
 	document.getElementById("GBP").value = Math.round(newGBP * 100) / 100;
@@ -84,17 +84,17 @@ function gbpConverter(){
 	let CAD = 1.72526761;
 	let JPY = 146.317481;
 	let MXN = 26.3925458;
-	let newEUR = GBP*EUR;
+	let newEUR = GBP * EUR;
 	document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
-	let newUSD = GBP*USD;
+	let newUSD = GBP * USD;
 	document.getElementById("USD").value = Math.round(newUSD * 100) / 100;
-	let newRUB = USD * RUB;
+	let newRUB = GBP * RUB;
 	document.getElementById("RUB").value = Math.round(newRUB * 100) / 100;
-	let newCAD = USD * CAD;
+	let newCAD = GBP * CAD;
 	document.getElementById("CAD").value = Math.round(newCAD * 100) / 100;
-	let newJPY = USD * JPY;
+	let newJPY = GBP * JPY;
 	document.getElementById("JPY").value = Math.round(newJPY * 100) / 100;
-	let newMXN = USD * MXN;
+	let newMXN = GBP * MXN;
 	document.getElementById("MXN").value = Math.round(newMXN * 100) / 100;
 }
 
@@ -106,18 +106,83 @@ function rubConverter(){
 	let CAD = 0.0209115378;
 	let JPY = 1.77347764;
 	let MXN = 0.319897456;
-	let newEUR = RUB*EUR;
+	let newEUR = RUB * EUR;
 	document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
-	let newUSD = RUB*USD;
+	let newUSD = RUB * USD;
 	document.getElementById("USD").value = Math.round(newUSD * 100) / 100;
 	let newGBP = RUB * GBP;
-	document.getElementById("GBP").value = Math.round(newRUB * 100) / 100;
-	let newCAD = RUB* CAD;
+	document.getElementById("GBP").value = Math.round(newGBP * 100) / 100;
+	let newCAD = RUB * CAD;
 	document.getElementById("CAD").value = Math.round(newCAD * 100) / 100;
 	let newJPY = RUB * JPY;
 	document.getElementById("JPY").value = Math.round(newJPY * 100) / 100;
 	let newMXN = RUB * MXN;
 	document.getElementById("MXN").value = Math.round(newMXN * 100) / 100;
+}
+
+function cadConverter(){
+	let EUR = 0.661643567;
+	let USD = 0.775744;
+	let GBP = 0.579620223;
+	let RUB = 47.8204907;
+	let CAD = parseFloat(document.getElementById("CAD").value);
+	let JPY = 84.8085711;
+	let MXN = 15.2976533;
+	let newEUR = CAD * EUR;
+	document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
+	let newUSD = CAD * USD;
+	document.getElementById("USD").value = Math.round(newUSD * 100) / 100;
+	let newGBP = CAD * GBP;
+	document.getElementById("GBP").value = Math.round(newGBP * 100) / 100;
+	let newRUB = CAD * RUB;
+	document.getElementById("RUB").value = Math.round(newRUB * 100) / 100;
+	let newJPY = CAD * JPY;
+	document.getElementById("JPY").value = Math.round(newJPY * 100) / 100;
+	let newMXN = CAD * MXN;
+	document.getElementById("MXN").value = Math.round(newMXN * 100) / 100;
+}
+function jpyConverter(){
+	let EUR = 0.00780161201;
+	let USD = 0.009147;
+	let GBP = 0.00683445336;
+	let RUB = 0.563863889;
+	let CAD = 0.011791261;
+	let JPY = parseFloat(document.getElementById("JPY").value);
+	let MXN = 0.180378624;
+	let newEUR = JPY * EUR;
+	document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
+	let newUSD = JPY * USD;
+	document.getElementById("USD").value = Math.round(newUSD * 100) / 100;
+	let newGBP = JPY * GBP;
+	document.getElementById("GBP").value = Math.round(newGBP * 100) / 100;
+	let newRUB = JPY * RUB;
+	document.getElementById("RUB").value = Math.round(newRUB * 100) / 100;
+	let newCAD = JPY * CAD;
+	document.getElementById("CAD").value = Math.round(newCAD * 100) / 100;
+	let newMXN = JPY * MXN;
+	document.getElementById("MXN").value = Math.round(newMXN * 100) / 100;
+}
+function mxnConverter(){
+	let EUR = 0.0432513114;
+	let USD = 0.05071;
+	let GBP = 0.0378894861;
+	let RUB = 3.12600173;
+	let CAD = 0.0653695033;
+	let JPY = 5.54389417;
+	let MXN = parseFloat(document.getElementById("MXN").value);
+	let newEUR = MXN * EUR;
+	document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
+	let newUSD = MXN * USD;
+	document.getElementById("USD").value = Math.round(newUSD * 100) / 100;
+	let newGBP = MXN * GBP;
+	document.getElementById("GBP").value = Math.round(newGBP * 100) / 100;
+	let newRUB = MXN * RUB;
+	document.getElementById("RUB").value = Math.round(newRUB * 100) / 100;
+	let newCAD = MXN * CAD;
+	document.getElementById("CAD").value = Math.round(newCAD * 100) / 100;
+	let newJPY = MXN * JPY;
+	document.getElementById("JPY").value = Math.round(newJPY * 100) / 100;
+	
 }
 /*function converter(){
 	EUR.value = document.getElementById("EUR").value;
