@@ -16,3 +16,33 @@ Kui kasutaja on kõik vajamineva informatsiooni sisestanud, arvutatakse PPI. Koh
 [screen1]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen1.PNG "Home screen"
 
 Home screen
+
+![alt text][screen2]
+
+[screen2]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen2.PNG "Introduction"
+
+Introduction
+
+![alt text][screen3]
+
+[screen3]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen3.PNG "Calculator"
+
+Calculator
+
+![alt text][screen3-result]
+
+[screen3-result]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen3.PNG "Calculator with result"
+
+Calculator with result
+
+![alt text][screen4]
+
+[screen4]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen4.PNG "Extra information"
+
+Extra information
+
+![alt text][screen5]
+
+[screen5]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen5.PNG "Saved results"
+
+Saved results
