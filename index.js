@@ -17,9 +17,12 @@ window.onload = function(){
             }]
         },
 
-        options: {}
+        options: {
+             maintainAspectRatio : false,
+             responsive : true
+        }
     };
-createNewChart = new Chart(ctx, config)
+    createNewChart = new Chart(ctx, config)
 }
 // Lisab kehakaalu ja hetkekuupäeva ühte massiivi ning salvestab selle localstoragesse.
 bodyWeightToArray = function(){
@@ -67,8 +70,13 @@ chartUpdate = function(){
                 data: dataArray,
             }]
         },
-        options: {}
+        options: {
+            responsive : true,
+            maintainAspectRatio : false
+        }
     };
 createNewChart = new Chart(ctx, config)
-
 }
+window.onresize = function(event) {
+    chartUpdate()
+};
