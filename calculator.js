@@ -40,7 +40,7 @@ function eurConverter(){
 	let CAD = 1.5093263;
 	let JPY = 130.74914;
 	let MXN = 23.2767315;
-	if(EUR) {
+	if(EUR  && !(isNaN(EUR))) {
 		let newUSD = EUR * USD;
 		document.getElementById("USD").value = Math.round(newUSD * 100) / 100;
 		let newGBP = EUR * GBP;
@@ -64,7 +64,7 @@ function usdConverter(){
 	let CAD = 1.28908506;
 	let JPY = 109.325462;
 	let MXN = 19.7199763;
-	if(USD) {
+	if(USD  && !(isNaN(USD))) {
 		let newEUR = USD * EUR;
 		document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 		let newGBP = USD * GBP;
@@ -88,7 +88,7 @@ function gbpConverter(){
 	let CAD = 1.72526761;
 	let JPY = 146.317481;
 	let MXN = 26.3925458;
-	if(GBP) {
+	if(GBP  && !(isNaN(GBP))) {
 		let newEUR = GBP * EUR;
 		document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 		let newUSD = GBP * USD;
@@ -112,7 +112,7 @@ function rubConverter(){
 	let CAD = 0.0209115378;
 	let JPY = 1.77347764;
 	let MXN = 0.319897456;
-	if (RUB) {
+	if (RUB  && !(isNaN(RUB))) {
 		let newEUR = RUB * EUR;
 		document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 		let newUSD = RUB * USD;
@@ -136,7 +136,7 @@ function cadConverter(){
 	let CAD = parseFloat(document.getElementById("CAD").value);
 	let JPY = 84.8085711;
 	let MXN = 15.2976533;
-	if(CAD) {
+	if(CAD  && !(isNaN(CAD))) {
 		let newEUR = CAD * EUR;
 		document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 		let newUSD = CAD * USD;
@@ -159,7 +159,7 @@ function jpyConverter(){
 	let CAD = 0.011791261;
 	let JPY = parseFloat(document.getElementById("JPY").value);
 	let MXN = 0.180378624;
-	if(JPY) {
+	if(JPY  && !(isNaN(JPY))) {
 		let newEUR = JPY * EUR;
 		document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 		let newUSD = JPY * USD;
@@ -182,7 +182,7 @@ function mxnConverter(){
 	let CAD = 0.0653695033;
 	let JPY = 5.54389417;
 	let MXN = parseFloat(document.getElementById("MXN").value);
-	if(MXN) {
+	if(MXN && !(isNaN(MXN))) {
 		let newEUR = MXN * EUR;
 		document.getElementById("EUR").value = Math.round(newEUR * 100) / 100;
 		let newUSD = MXN * USD;
