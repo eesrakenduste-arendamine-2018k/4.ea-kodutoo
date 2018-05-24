@@ -54,7 +54,7 @@ p{
     text-transform: uppercase;
     text-decoration: none;
     border: solid #CBDFD6;
-    padding: 10px 20px;
+    padding: 7px 16px;
     border-radius: 9px;
     transition: all 0.5s;
 }
@@ -70,7 +70,7 @@ p{
     text-transform: uppercase;
     text-decoration: none;
     border: solid #5F607F;
-    padding: 10px 20px;
+    padding: 7px 16px;
     border-radius: 9px;
     transition: all 0.5s;
 }
@@ -129,9 +129,10 @@ p{
 .comparison .calculations{
     margin:7%;
     /*--- BLUR ---*/
+    /* https://css-tricks.com/the-backdrop-filter-css-property/ */
     border-radius: 5px;
     line-height: 1.5;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1rem;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.4);  
 }
@@ -139,7 +140,7 @@ p{
 
 /*--- Media Queries --*/
 @media screen and (max-width: 900px) {
-    .btn-1 {
+    .btn1 {
         font-size:130%;
         padding: 9px 17px;
     }
@@ -159,7 +160,7 @@ p{
     }
 }
 @media screen and (max-width: 768px) {
-    .btn-1 {
+    .btn1 {
         font-size:110%;
         padding: 7px 15px;
     }/*--- content --*/
@@ -183,7 +184,7 @@ p{
     }
 }
 @media screen and (max-width: 480px) {
-    .btn-1 {
+    .btn1 {
         font-size:100%;
         padding: 6px 14px;
     }
