@@ -52,10 +52,10 @@
 							<button class="calculate" onclick="clicked()"><span>Calculate </span></button>
 							<div id = "result">---</div>
 						</div>
-						<button class="save" onclick="save()"><span>+ </span></button>
+						<button class="save" onclick="saveLS()"><span>+ </span></button>
 					</section>
 					<a class="btn3" href="#" onclick="getBack()">Back</a>
-					<a class="btn2" href="#" onclick="showSaved()">Saved</a>
+					<a class="btn2" href="#" onclick="showSaved();getLS()">Saved</a>
 					<a class="btn3" href="#" onclick="showMore();getMore()" value="more">More</a>
 				</section>
 			</div>
@@ -81,7 +81,11 @@
 			<div id="saved" class="saved" style="display: none;">
 				<section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0s">
 					<h1>Saved Results</h1>
-					<p>Whazzzaaa soon you gonna see some serios talk here.</p>
+					<p id="place0"></p>
+					<p id="place1"></p>
+					<p id="place2"></p>
+					<p id="place3"></p>
+					<p id="place4"></p>
 					<br>
 				</section>
 				<section class="os-animation" data-os-animation="bounceInUp" data-os-animation-delay="0s">
