@@ -17,3 +17,10 @@ function clicked(){
 		return Math.round(number * factor) / factor;
 	}
 }
+
+function getScreenRes(){
+	document.getElementById("vertical").defaultValue = screen.availHeight;
+	document.getElementById("horizontal").defaultValue =  screen.availWidth;
+	document.getElementById("diagonal").defaultValue = 23;
+}
+
