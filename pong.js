@@ -95,6 +95,11 @@ Pong = {
       })
       this.startTime = 0
       this.duration = 0
+      document.getElementById('startGame').addEventListener('click', function () {
+        e = new Event('keydown')
+        e.keyCode = Game.KEY.Y
+        document.dispatchEvent(e)
+      })
       document.getElementById('timer').innerHTML = secToMin(60)
     }.bind(this))
   },
