@@ -142,7 +142,86 @@ p{
 .comparison .calculations h1{
     font-size: 300%;
 }
+.comparison .calculations .caculator{
+    text-align: justify;
+}
+
+  .save {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 50px;
+    font-size: 200%;
+    outline: 0;
+    display: block;
+    color: #5F607F;
+    border-radius: 100%;
+    border: none;
+    width: 50px;
+    cursor: pointer;
+  }
+
   
+  .save:hover {
+    background-color:  rgba(255, 255, 255, 0.9);;
+}
+
+.save:active{
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+  .calculate {
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    color: #5F607F;
+    text-align: center;
+    font-size: 100%;
+    padding: 5px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .calculate span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .calculate span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .calculate:hover span {
+    padding-right: 25px;
+  }
+  
+  .calculate:hover span:after {
+    opacity: 1;
+    right: 0;
+  } 
+  .comparison .calculations input {
+    border: 0.5px solid white;
+    border-radius: 4px;
+    background: none;
+    color: #fff;
+    text-align: center;
+} 
+#result {
+    transition: color 3s ease 2s;
+    filter: blur(10px);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 180%;
+} 
 
   /*--- Media Queries --*/
 @media screen and (max-width: 900px) {

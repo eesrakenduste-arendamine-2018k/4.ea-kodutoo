@@ -11,6 +11,8 @@ function clicked(){
 		answer = 'Values must be greater than 0';
 	}
 	document.getElementById('result').innerHTML = answer;
+	document.getElementById('result').style.color = "#fff";
+	document.getElementById('result').style.filter = "none";
 	//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/round
 	function precisionRound(number, precision) {
 		var factor = Math.pow(10, precision);

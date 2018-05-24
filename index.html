@@ -49,11 +49,13 @@
 							<label for="diagonal">Diagonal (inches):</label>
 							<input type="text" id = "diagonal"/>
 							<br>
-							<a class="btn" href="#" onclick="clicked()">Calculate!</a>
+							<button class="calculate" onclick="clicked()"><span>Calculate </span></button>
+							<div id = "result">---</div>
 						</div>
-						<p id = "result"></p>
+						<button class="save" onclick="save()"><span>+ </span></button>
 					</section>
-					<a class="btn2" href="#" onclick="getBack()">Back</a>
+					<a class="btn3" href="#" onclick="getBack()">Back</a>
+					<a class="btn2" href="#" onclick="showSaved()">Saved</a>
 				</section>
 			</div>
 		</div>
