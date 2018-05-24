@@ -1,5 +1,14 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+# Rakendus - Valuutakalkulaator
+## Autorid
+Elinor Roosalu
+
+Marek Kivikink
+
+## Kirjeldus
+
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
