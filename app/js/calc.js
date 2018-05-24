@@ -71,7 +71,6 @@ function getLS(){
 		for(j=0; el = document.getElementById(prefix + j); j++){
 			key = length-j;
 			var retrievedData = localStorage.getItem(key);
-			//https://www.kirupa.com/html5/storing_and_retrieving_an_array_from_local_storage.htm
 			var dataRaw = JSON.parse(retrievedData);
 			var data = dataRaw[0]+'px x '+dataRaw[1]+'px ' + dataRaw[2] + '" ' + dataRaw[3] + 'ppi';
 			//https://community.spiceworks.com/topic/445381-javascript-looping-through-a-series-of-element-id-s-using-end-digit-as-index
