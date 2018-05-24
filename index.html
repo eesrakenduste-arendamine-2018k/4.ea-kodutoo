@@ -1,0 +1,151 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hit the Dot</title>
+	<link rel="stylesheet" href="style.css" title="styles" type="text/css" media="screen" charset="utf-8">
+    <script type="text/javascript" src="dot.js" charset="utf-8" defer></script>
+    <link rel="apple-touch-icon" sizes="57x57" href="icons/icon57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="icons/icon60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/icon72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="icons/icon76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/icon114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="icons/icon120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="icons/icon144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/icon152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/icon180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="icons/icon192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/icon32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="icons/icon96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/icon16.png">
+</head>
+<body id="wholebody">
+	<!--
+	Mäng on võetud aadressilt:
+	http://www.jsmadeeasy.com/javascripts/Games/Hit%20The%20Dot/index.htm
+	-->
+	<audio id="audio_correct" src="http://www.tlu.ee/~earist/suva/hitdot/whip.wav" autostart="false"></audio>
+	<audio id="audio_false" src="http://www.tlu.ee/~earist/suva/hitdot/block-hit.wav" autostart="false"></audio>
+	<form name="cpanel">
+	<table cellspacing="10" align="center">
+		<tr>
+			<td><h1>Hit-the-Dot</h1></td>
+		</tr>
+		<tr>
+			<td><p>Test your skill. How many boxes can you check in 30 seconds?</p></td>
+		</tr>
+		<tr>
+			<td><input type="button" class="btn" name="startstop" value=" Start | Stop" onClick="play()"></td>
+		</tr>
+		<tr colspan="2">
+			<td>Time:&nbsp; <input type="text" name="timeleft" size="4" onFocus="this.blur()">&nbsp;&nbsp;
+				Score:&nbsp; <input type="text" name="score" size="4" onFocus="this.blur()">
+			</td>
+		</tr>
+    </table>
+	</form>
+	
+	<form name="dmz">
+	<table cellspacing="10" align="center">
+        <tr><td colspan=10><hr size=1></td></tr>
+		<tr>
+			<td align="center" valign="center"><input type="radio" id="test0" onClick="hithead(0)"><label for="test0"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test1" onClick="hithead(1)"><label for="test1"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test2" onClick="hithead(2)"><label for="test2"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test3" onClick="hithead(3)"><label for="test3"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test4" onClick="hithead(4)"><label for="test4"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test5" onClick="hithead(5)"><label for="test5"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test6" onClick="hithead(6)"><label for="test6"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test7" onClick="hithead(7)"><label for="test7"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test8" onClick="hithead(8)"><label for="test8"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test9" onClick="hithead(9)"><label for="test9"></label></td>
+		</tr>
+		<tr>
+			<td align="center" valign="center"><input type="radio" id="test10" onClick="hithead(10)"><label for="test10"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test11" onClick="hithead(11)"><label for="test11"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test12" onClick="hithead(12)"><label for="test12"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test13" onClick="hithead(13)"><label for="test13"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test14" onClick="hithead(14)"><label for="test14"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test15" onClick="hithead(15)"><label for="test15"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test16" onClick="hithead(16)"><label for="test16"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test17" onClick="hithead(17)"><label for="test17"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test18" onClick="hithead(18)"><label for="test18"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test19" onClick="hithead(19)"><label for="test19"></label></td>
+		</tr>
+		<tr>
+			<td align="center" valign="center"><input type="radio" id="test20" onClick="hithead(20)"><label for="test20"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test21" onClick="hithead(21)"><label for="test21"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test22" onClick="hithead(22)"><label for="test22"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test23" onClick="hithead(23)"><label for="test23"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test24" onClick="hithead(24)"><label for="test24"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test25" onClick="hithead(25)"><label for="test25"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test26" onClick="hithead(26)"><label for="test26"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test27" onClick="hithead(27)"><label for="test27"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test28" onClick="hithead(28)"><label for="test28"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test29" onClick="hithead(29)"><label for="test29"></label></td>
+		</tr>
+		<tr>
+			<td align="center" valign="center"><input type="radio" id="test30" onClick="hithead(30)"><label for="test30"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test31" onClick="hithead(31)"><label for="test31"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test32" onClick="hithead(32)"><label for="test32"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test33" onClick="hithead(33)"><label for="test33"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test34" onClick="hithead(34)"><label for="test34"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test35" onClick="hithead(35)"><label for="test35"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test36" onClick="hithead(36)"><label for="test36"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test37" onClick="hithead(37)"><label for="test37"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test38" onClick="hithead(38)"><label for="test38"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test39" onClick="hithead(39)"><label for="test39"></label></td>
+		</tr>
+		<tr>
+			<td align="center" valign="center"><input type="radio" id="test40" onClick="hithead(40)"><label for="test40"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test41" onClick="hithead(41)"><label for="test41"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test42" onClick="hithead(42)"><label for="test42"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test43" onClick="hithead(43)"><label for="test43"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test44" onClick="hithead(44)"><label for="test44"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test45" onClick="hithead(45)"><label for="test45"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test46" onClick="hithead(46)"><label for="test46"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test47" onClick="hithead(47)"><label for="test47"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test48" onClick="hithead(48)"><label for="test48"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test49" onClick="hithead(49)"><label for="test49"></label></td>
+		</tr>
+		<tr>
+			<td align="center" valign="center"><input type="radio" id="test50" onClick="hithead(50)"><label for="test50"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test51" onClick="hithead(51)"><label for="test51"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test52" onClick="hithead(52)"><label for="test52"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test53" onClick="hithead(53)"><label for="test53"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test54" onClick="hithead(54)"><label for="test54"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test55" onClick="hithead(55)"><label for="test55"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test56" onClick="hithead(56)"><label for="test56"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test57" onClick="hithead(57)"><label for="test57"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test58" onClick="hithead(58)"><label for="test58"></label></td>
+			<td align="center" valign="center"><input type="radio" id="test59" onClick="hithead(59)"><label for="test59"></label></td>
+		</tr>
+		<tr></tr><tr></tr><tr></tr>
+		<tr><td colspan=10><hr size=1></td></tr>
+	</table>
+	</form>
+
+	<table cellspacing="10" align="center">
+	<tr><td><p><strong>Instructions:</strong>
+	<ol align="left"><li>Click on the radio buttons as<BR>
+	they are selected randomly by the computer.<BR>
+	<li>1 point per hit, minus 1 point per miss.<BR>
+    </ol></p></td></tr></table>
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+    </script>
+    </body>
+</html>
