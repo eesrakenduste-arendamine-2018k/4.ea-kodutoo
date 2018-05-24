@@ -69,14 +69,20 @@
       <label>0 player: </label>
       <input type='radio' name='mode' value='0' id='demo'>
     </div>
+    <div class='settings'>
+      <p>Player 1 high score: <span id='p1HighScore'></span><br>
+      Player 2 high score: <span id='p2HighScore'></span></p>
+      
+    </div>
   </div>
-
+  
   <canvas id="game">
     <div id="unsupported">
       Sorry, this example cannot be run because your browser does not support the &lt;canvas&gt; element
     </div>
   </canvas>
 
+  <script src='localforage.min.js' type='text/javascript'></script>
   <script src="game.js" type="text/javascript"></script> 
   <script src="pong.js" type="text/javascript"></script>
   <script type="text/javascript">

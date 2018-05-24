@@ -1,7 +1,7 @@
 //= ============================================================================
 // PONG
 //= ============================================================================
-let timer, mode
+let timer, mode, p1HighScore, p2HighScore
 
 Pong = {
 
@@ -76,8 +76,19 @@ Pong = {
       this.ball = Object.construct(Pong.Ball, this)
       this.sounds = Object.construct(Pong.Sounds, this)
       this.runner.start()
-      this.p1HighScore = 0
-      this.p2HighScore = 0
+      localforage.getItem('p1HighScore').then(function(value){
+        this.p1HighScore = value
+        p1HighScore = value
+        this.p1HSspan = document.getElementById('p1HighScore')
+        this.p1HSspan.innerHTML = this.p1HighScore
+      })
+      localforage.getItem('p2HighScore').then(function(value){
+        this.p2HighScore = value
+        p2HighScore = value
+        console.log(this.p2HighScore)
+        this.p2HSspan = document.getElementById('p2HighScore')
+        this.p2HSspan.innerHTML = this.p1HighScore
+      })
       this.startTime = 0
       this.duration = 0
     }.bind(this))
@@ -111,14 +122,23 @@ Pong = {
         this.runner.showCursor()
         clearInterval(this.timer)
         // this.endTime = Date.new()
-        if (this.scores[0] > this.p1HighScore) {
-          this.p1HighScore = this.scores[0]
-          console.log('p1HighScore updated: ' + this.p1HighScore)
+        console.log(this.p1HighScore)
+        console.log(this.scores[0])
+        let p1Score = this.scores[0]
+        let p2Score = this.scores[1]
+        if (p1Score > p1HighScore) {
+          p1HighScore = p1Score
+          console.log('p1HighScore updated: ' + p1HighScore)
+          localforage.setItem('p1HighScore', p1HighScore)
+          document.getElementById('p1HighScore').innerHTML = p1HighScore
         }
-        if (this.scores[1] > this.p2HighScore) {
-          this.p2HighScore = this.scores[1]
-          console.log('p2HighScore updated: ' + this.p2HighScore)
+        if (p2Score > p2HighScore) {
+          p2HighScore = p2Score
+          console.log('p2HighScore updated: ' + p2HighScore)
+          localforage.setItem('p2HighScore', p2HighScore)
+          document.getElementById('p2HighScore').innerHTML = p2HighScore
         }
+        localforage.setItem('playedGames', [mode, this.startTime, this.scores[0], this.scores[1]])
       }
     }
   },
@@ -228,7 +248,7 @@ Pong = {
     draw: function (ctx) {
       ctx.drawImage(this.press1.image, this.press1.x, this.press1.y)
       ctx.drawImage(this.press2.image, this.press2.x, this.press2.y)
-      if (this.winner == 0) { ctx.drawImage(this.winner1.image, this.winner1.x, this.winner1.y) } else if (this.winner == 1) { ctx.drawImage(this.winner2.image, this.winner2.x, this.winner2.y) }
+      if (this.winner === 0) { ctx.drawImage(this.winner1.image, this.winner1.x, this.winner1.y) } else if (this.winner == 1) { ctx.drawImage(this.winner2.image, this.winner2.x, this.winner2.y) }
     }
 
   },
