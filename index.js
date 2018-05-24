@@ -53,6 +53,7 @@ bodyWeightArray.forEach(function(element){
     dataArray.push(arrayElement[0]);
     labelsArray.push(arrayElement[1]);
 })}
+splitArrays()
 
 document.getElementById('addData').addEventListener('click', function() {
     chartUpdate()
