@@ -66,6 +66,10 @@ Pong = {
       } else {
         mobileControls = 0
       }
+      if (window.innerWidth < 1100) {
+        document.getElementById('double').style.display = 'none'
+        document.getElementById('doubleLabel').style.display = 'none'
+      }
       this.cfg = cfg
       this.runner = runner
       this.width = runner.width
@@ -99,6 +103,10 @@ Pong = {
         e = new Event('keydown')
         e.keyCode = Game.KEY.Y
         document.dispatchEvent(e)
+        if (window.innerWidth < 1100) {
+          document.getElementById('game').style.display = 'block'
+          document.getElementById('sidebar').style.display = 'none'
+        }
       })
       document.getElementById('timer').innerHTML = secToMin(60)
     }.bind(this))
@@ -196,6 +204,12 @@ Pong = {
           document.getElementById('p2HighScore').innerHTML = p2HighScore
         }
         localforage.setItem('playedGames', [mode, this.startTime, this.scores[0], this.scores[1]])
+        setTimeout(function () {
+          if (window.innerWidth < 1100) {
+            document.getElementById('game').style.display = 'none'
+            document.getElementById('sidebar').style.display = 'block'
+          }
+        }, 5000)
       }
     }
   },
