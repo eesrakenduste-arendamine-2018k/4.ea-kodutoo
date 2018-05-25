@@ -10,7 +10,7 @@ Andmed, mida peab kasutaja ise täitma:
 
 Kui kasutaja on kõik vajamineva informatsiooni sisestanud, arvutatakse PPI. Kohe antakse võimalus ka saadud tulemus salvestada, vajutades selleks "+" nuppu. Kui kasutaja tunneb huvi rohkema informatsiooni järele, siis on "more" nupp, mis kuvab kogu informatsiooni.
 
-## Pildid ja skeemid
+## Pildid 
 ![alt text][screen1]
 
 [screen1]: https://github.com/RobertShev/4.ea-kodutoo/blob/master/screen/screen1.PNG "Home screen"
