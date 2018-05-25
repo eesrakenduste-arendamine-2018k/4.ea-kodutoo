@@ -71,9 +71,3 @@ var compare = function(choice1, choice2) {
         document.getElementById("result").innerHTML = "Peaksid nagu ka valima nende kolme vahel...";
     }
 }
-
-
-
-
-
-
