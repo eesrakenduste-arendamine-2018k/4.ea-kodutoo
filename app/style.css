@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Yantramanav:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+
+html, body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+  
+  
+.intro{
+    /*gradient background https://codepen.io/P1N2O/pen/pyBNzX*/
+    width: 100%;
+	height: 100%;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 15s ease infinite;
+	-moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+    display: table;
+    top:0;
+}
+.intro .inner{
+    display:table-cell;
+    vertical-align: middle;
+    width: 100%;
+    max-width: none;
+}
+p{
+    font-size:150%;
+    line-height: 120%;
+    font-family: sans-serif;
+}
+.btn1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:135%;
+    font-weight: 400;
+    color:#5F607F;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #5F607F;
+    padding: 10px 20px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn1:hover {
+    color:#CBDFD6;
+    border: solid #CBDFD6 2px;
+}
+.btn2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:100%;
+    font-weight: 400;
+    color:#CBDFD6;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #CBDFD6;
+    padding: 7px 16px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn2:hover {
+    color:#5F607F;
+    border: solid #5F607F 2px;
+}
+.btn3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size:90%;
+    font-weight: 400;
+    color:#5F607F;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: solid #5F607F;
+    padding: 7px 16px;
+    border-radius: 9px;
+    transition: all 0.5s;
+}
+.btn3:hover {
+    color:#CBDFD6;
+    border: solid #CBDFD6 2px;
+}
+/*--- content --*/
+.content{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:28%;
+}
+
+.content h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 600%;
+    font-weight: 100;
+    color: #E1EFE9;
+    line-height: 85%;
+    
+}
+
+/*--- tutorial --*/
+.tutorial{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:28%;
+}
+.tutorial h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size:400%;
+    color: #E1EFE9;
+    line-height: 85%;
+    
+}
+
+/*--- Comparison --*/
+.comparison{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:28%;
+    
+}
+.comparison h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size:400%;
+    color: #E1EFE9;
+    line-height: 85%;
+}
+.comparison .calculations{
+    margin:7%;
+    /*--- BLUR ---*/
+    /* https://css-tricks.com/the-backdrop-filter-css-property/ */
+    border-radius: 5px;
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.4);  
+}
+.comparison .calculations h1{
+    font-size: 300%;
+}
+.comparison .calculations .caculator{
+    text-align: justify;
+}
+
+  .save {
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 50px;
+    font-size: 200%;
+    outline: 0;
+    display: block;
+    color: #5F607F;
+    border-radius: 100%;
+    border: none;
+    width: 50px;
+    cursor: pointer;
+  }
+
+  
+  .save:hover {
+    background-color:  rgba(255, 255, 255, 0.9);;
+}
+
+.save:active{
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+  .calculate {
+    border-radius: 4px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    border: none;
+    color: #5F607F;
+    text-align: center;
+    font-size: 100%;
+    padding: 5px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 10px;
+  }
+  
+  .calculate span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .calculate span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .calculate:hover span {
+    padding-right: 25px;
+  }
+  
+  .calculate:hover span:after {
+    opacity: 1;
+    right: 0;
+  } 
+  .comparison .calculations input {
+    border: 0.5px solid white;
+    border-radius: 4px;
+    background: none;
+    color: #fff;
+    text-align: center;
+} 
+#result {
+    transition: color 3s ease 2s;
+    filter: blur(10px);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 180%;
+} 
+/*-- Saved --*/
+.saved{
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom:28%;
+}
+.saved h1 {
+    font-family: 'Yantramanav', sans-serif;
+    font-weight: 100;
+    font-size:400%;
+    color: #E1EFE9;
+    line-height: 85%;  
+}
+  /*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+    .btn1 {
+        font-size:130%;
+        padding: 9px 17px;
+    }
+    /*--- content --*/
+    .content{
+        padding-bottom:30%;
+    }
+    .content h1{
+        font-size: 450%;
+    }
+    /*--- tutorial --*/
+    .tutorial{
+        padding-bottom:30%;
+    }
+    .tutorial h1{
+        font-size: 450%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .btn1 {
+        font-size:110%;
+        padding: 7px 15px;
+    }/*--- content --*/
+    .content{
+        padding-bottom:40%;
+    }
+    .content h1{
+        font-size: 300%;
+    }
+
+    p {
+        font-size:100%;
+        line-height:100%;
+    }
+    /*--- tutorial --*/
+    .tutorial{
+        padding-bottom:40%;
+    }
+    .tutorial h1{
+        font-size: 300%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .btn1 {
+        font-size:100%;
+        padding: 6px 14px;
+    }
+    /*--- content --*/
+    .content{
+        padding-bottom:50%;
+    }
+    .content h1{
+        font-size: 250%;
+    }
+
+    p {
+        font-size:100%;
+        line-height:100%;
+    }
+    /*--- tutorial --*/
+    .tutorial{
+        padding-bottom:50%;
+    }
+    .tutorial h1{
+        font-size: 250%;
+    }
+}
+/*--- keyframes --*/
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
