@@ -1,9 +1,9 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/~rooselin/4.ea-kodutoo/',
-  '/~rooselin/4.ea-kodutoo/calculator.html',
-  '/~rooselin/4.ea-kodutoo/style.css',
-  '/~rooselin/4.ea-kodutoo/calculator.js'
+  '/~elinorr/4.ea-kodutoo/',
+  '/~elinorr/4.ea-kodutoo/calculator.html',
+  '/~elinorr/4.ea-kodutoo/style.css',
+  '/~elinorr/4.ea-kodutoo/calculator.js'
 ];
 
 self.addEventListener('install', function(event) {

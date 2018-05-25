@@ -28,7 +28,7 @@ $(document).ready(function() {
         //console.log(clicked);
         console.log(string);
         //parseda string floatiks ja kirjutada viimasena klikitud inputi.
-          addValue(lastActive, string);
+          //addValue(lastActive, string);
           console.log(string);
     });
 
