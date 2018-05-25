@@ -16,6 +16,7 @@ https://www.tlu.ee/~ttaevik/dice/
 
 allikad:
 
+https://github.com/eesrakenduste-arendamine-2018k/4.ea-kodutoo
 http://jsfiddle.net/gaby/zZUgF/262/
 https://www.creativebloq.com/web-design/master-screen-orientation-html5-101517371
 
