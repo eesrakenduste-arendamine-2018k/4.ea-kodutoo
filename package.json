@@ -1,7 +1,7 @@
 {
-  "name": "2.ea-kodutoo",
+  "name": "4.ea-kodutoo",
   "version": "1.0.0",
-  "description": "",
+  "description": "### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,12 @@
   },
   "homepage": "https://github.com/eesrakenduste-arendamine-2018k/2.ea-kodutoo#readme",
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "standard": "^11.0.0"
+    "eslint": "^4.19.1",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {
+    "gyronorm": "^2.0.6",
+    "idb": "^2.1.2",
+    "localforage": "^1.7.1"
   }
 }

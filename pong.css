@@ -1,0 +1,37 @@
+body { background-color: black; color: #AAA; font-size: 12pt; padding: 1em; }
+
+#unsupported { border: 1px solid yellow; color: black; background-color: #FFFFAD; padding: 2em; margin: 1em; display: inline-block; }
+
+#sidebar                        { width: 18em; height: 40em; float: left; font-size: 0.825em; background-color: #333; border: 1px solid white; padding: 1em;  }
+#sidebar h2                     { color: white; text-align: center; margin: 0; }
+#sidebar .parts                 { padding-left: 1em; list-style-type: none; margin-bottom: 2em; text-align: right; }
+#sidebar .parts li a            { color: white; text-decoration: none; }
+#sidebar .parts li a:visited    { color: white; }
+#sidebar .parts li a:hover      { color: white; text-decoration: underline; }
+#sidebar .parts li a.selected   { color: #F08010; }
+#sidebar .parts li a i          { color: #AAA;    }
+#sidebar .parts li a.selected i { color: #F08010; }
+#sidebar .settings              { line-height: 1.5rem; height: 1.5rem; text-align: right; }
+#sidebar .settings.size         { }
+#sidebar .settings.speed        { margin-bottom: 1em; }
+#sidebar .settings label        { vertical-align: middle; }
+#sidebar .settings input        { vertical-align: middle; }
+#sidebar .settings select       { vertical-align: middle; }
+#sidebar .description           { margin-bottom: 2em; }
+#sidebar .description b         { font-weight: normal; color: #FFF; }
+#duration {width: 30%}
+#timer {font-size: 40px; text-align: center;}
+#mobileTimer {padding-top: 20%; font-size: 40px; text-align: center;}
+
+@media (max-width: 600px){
+  #game { padding-right: 20%; padding-bottom: 30%; width: 100%; height: 100%; transform: rotate(270deg); display: none;}
+  #sidebar { width: 80%; text-align: center;}
+}
+@media (min-width: 601px) and (max-width: 1099px){
+  #game { padding-bottom: 18%; padding-right: 20%;width: 640px; height: 480px; transform: rotate(270deg); display: none;}
+  #sidebar{ width: 85%;}
+}
+@media (min-width: 1100px){
+  #game {display: block; transform: none;}
+  #sidebar{ width: 25%; margin-right: 2%;}
+}
