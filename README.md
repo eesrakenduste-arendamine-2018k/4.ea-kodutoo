@@ -1,20 +1,19 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+Rakenduse nimi: Kivi-käärid-paber mäng
 
-## Nõuded
+Autorid: Rauno Kaldmaa
 
-1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
-1. README.md fail sisaldab:
-    * suurelt rakenduse nime; 
-    * autorite nimesid; 
-    * rakenduse funktsionaalsuse kirjeldust;
-    * ekraanitõmmist rakendusest.
-1. Rakenduse puhul peavad olema täidetud vähemalt järgmised nõuded:
-    * rakendus lahendab tõsist probleemi või on meelelahutusliku eesmärgiga; 
-    * rakenduse idee peab olema kooskõlastatud õppejõuga (võib kirjutada Slack'i); 
-    * keerukuselt peab ületama 6. tunni vanasõnade näidet; 
-    * töötab võrguta olekus, st kasutab ServiceWorker'it;
-    * töötab hästi väikese ekraaniga seadmel (mobiilil);  
-    * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
-    * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+Kivi-käärid-paber algeline mängu kood, mida on vastavalt kodutöö nõuetele kohandatud: http://jsfiddle.net/2jqz51Ly/
+
+Rakenduse kirjeldus: 
+Tegemist on kivi-käärid-paber mänguga, milles mängija võistleb arvutiga. Arvuti valib läbi random funktsiooni endale väärtuse hulgast kivi, paber või käärid. Seejärel valib mängija samuti ühe nendest valikutest. Vastavalt mängu reeglitele kirjutatakse arvutiekraanile, kas mängija võitis, kaotas või jäi viiki.
+
+1. Vali kõigepealt kivi, paberi ja käärid vahel ning vajuta vastavale nupule
+2. Pärast valiku tegemist vajuta nuppu "Vaata tulemust"
+3. Mängijale kuvatakse tulemus. Uue raundi alustamiseks vali uus märk
+
+Aadress: http://www.tlu.ee/~rkaldmaa/eesrakendused/rockscissorpapers/kkp-game.html
+
+Ekraanipilt:
+![alt text](ekraanipilt.png "Kivi-paber-käärid mängu ekraanipilt")
