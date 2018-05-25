@@ -1,9 +1,15 @@
 @charset "UTF-8";
 
+body{
+    background: #edf0f1;
+    padding: 80px 0 0 0;
+}
+body, input, button{
+    font-family: 'Montserrat', sans-serif;
+}
 header {
     width:100%;
     height: 80px;
-
     position: fixed;
     padding: 15px;
     top: 0;
@@ -15,19 +21,90 @@ header {
     border-bottom-right-radius: 10px;
 }
 header input{
-    width: 90%;
+    width: 100%;
     height: 50px;
     float: left;
+    
+    text-indent: 15px;
+    font-size: 15px;
+    font-weight: 400; /*Google fontidest tulnud paksus (medium ehk tavaline)*/
+    padding: 0 55px 0 0; /*Et tekst lõppeks enne nuppu ära*/
+
     background: rgba(255, 255, 255, 0.2);
-    border-radius: 5px;
+    color: rgb(255, 255, 255);
+
+    border-radius: 5px 25px 25px 5px;
+    
     border: 0px;
     box-shadow: none;
     outline: none;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    -o-appearance: none;
-
     appearance: none;
+}
+::placeholder { 
+    color:rgba(255, 255, 255, 0.8);
+}
+/*Placeholder-i värvi muutmine https://stackoverflow.com/questions/9451902/changing-an-inputs-html5-placeholder-color-with-css-does-not-work-on-chrome*/
+/*KUI ülejäänud browserites ei tööta->
+
+::-webkit-input-placeholder {
+    color:rgba(255, 255, 255, 0.8);
+}
+
+::-moz-placeholder {
+    color:rgba(255, 255, 255, 0.8);
+}
+
+::-ms-placeholder {
+    color:rgba(255, 255, 255, 0.8);
+}
+*/
+header button{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 2;
+    
+    border-radius: 25px;
+    background: #fff;
+    border: 0px;
+    box-shadow: none;
+    outline: none;
+    
+    appearance: none;
+    
+}
+header button svg{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -8px 0 0 -8px;
+}
+
+header button svg .fill{
+    fill: #25b99a;
+}
+
+.container{
+    width: 100%;
+    float:left;
+    padding:15px;
+}
+
+ul.todo{
+    width: 100%;
+    float: left;
+
+}
+ul.todo li{
+    width: 100%;
+    float:left;
+    height: 50px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px, 1px, 2px, rgba(44, 62, 80, 0.10);
 }
