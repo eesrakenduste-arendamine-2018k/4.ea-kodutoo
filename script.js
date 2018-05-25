@@ -73,6 +73,10 @@ function drawSquare(){
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 			x = Math.random()*400;
 			y = Math.random()*400;
+			if(x<100 || y<100){
+				x=100;
+				y=100;
+			}
 			speedX+= 1;
 			if(speedY<0){
 				speedY-= (1+Math.random()*2); 
