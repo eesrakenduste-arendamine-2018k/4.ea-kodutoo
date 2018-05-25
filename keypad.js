@@ -5,13 +5,13 @@ $(document).ready(function() {
       var clicked = $(this).val();
       if(clicked == "del") {
         if (string.length > 0) {
-          string.slice(0, -1);
+          string = string.substring(0, string.length -1);
         } else {
           console.log("Nothing to delete");
         }
       }
       if(clicked == ".") {
-        if(!string.includes(".")){
+        if(string.indexOf(clicked) !== -1){
           string = string+clicked;
         } else {
           console.log(". Already exists");
