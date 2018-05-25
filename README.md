@@ -1,20 +1,25 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+# Dice
 
-## Nõuded
+Autorid: Tauri Taevik, Kert Tamm
 
-1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
-1. README.md fail sisaldab:
-    * suurelt rakenduse nime; 
-    * autorite nimesid; 
-    * rakenduse funktsionaalsuse kirjeldust;
-    * ekraanitõmmist rakendusest.
-1. Rakenduse puhul peavad olema täidetud vähemalt järgmised nõuded:
-    * rakendus lahendab tõsist probleemi või on meelelahutusliku eesmärgiga; 
-    * rakenduse idee peab olema kooskõlastatud õppejõuga (võib kirjutada Slack'i); 
-    * keerukuselt peab ületama 6. tunni vanasõnade näidet; 
-    * töötab võrguta olekus, st kasutab ServiceWorker'it;
-    * töötab hästi väikese ekraaniga seadmel (mobiilil);  
-    * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
-    * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+
+Tegemist on täringuveeratamis mänguga, mis on mõeldud mobiilseadmetele.
+Täringu veeretamiseks tuleb mobiilseadet raputada ning oodata kuni täring lõpetab veeremise.
+Lühike värin annab teada veeretamise algusest, pikem värin veeretamise lõppemisest.
+Uuesti veeretamiseks tuleb mobiilseadet uuesti raputada.
+Mäng toimib ka võrguta olekus.
+Pilti kuvatakse portait vaates.
+
+https://www.tlu.ee/~ttaevik/dice/
+
+allikad:
+
+https://github.com/eesrakenduste-arendamine-2018k/4.ea-kodutoo
+http://jsfiddle.net/gaby/zZUgF/262/
+https://www.creativebloq.com/web-design/master-screen-orientation-html5-101517371
+
+Screenshotid:
+![alt text](Screenshot_1.jpg "dice")
+![alt text](Screenshot_2.jpg "dice")
