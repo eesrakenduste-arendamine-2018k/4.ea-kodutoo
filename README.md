@@ -9,6 +9,8 @@
 **Ekraanitõmmis:* ![Pealeht](https://github.com/phkel/4.ea-kodutoo/blob/master/trackyourlife.PNG)
 ![Main](https://github.com/phkel/4.ea-kodutoo/blob/master/trackyourlife2.PNG)
 
+Koodinäited: https://www.youtube.com/watch?v=jRhB1IG7uAw
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
