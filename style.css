@@ -1,0 +1,41 @@
+body {
+  background-color: rgb(75, 75, 75);
+  color: white;
+}
+
+.inputwrapper {
+  display: block;
+  height: 90vw;
+  width: 30vw;
+  margin-left: 30%;
+}
+
+.label {
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.numberinput {
+  border-radius: 5px;
+}
+
+.keypad {
+  margin-top: 5vw;
+}
+
+table {
+  height: 40vw;
+  width: 40vw;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+td {
+  width: 33%;
+}

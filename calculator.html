@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<title>Rahakalkulaator</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
+		<link rel="shortcut icon" href="icons/eur_256x256.ico" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="64x64" href="icons/eur_64x64.png">
+	    <link rel="apple-touch-icon" sizes="48x48" href="icons/eur_48x48.png">
+	    <link rel="apple-touch-icon" sizes="128x128" href="icons/eur_128x128.png">
+	    <link rel="apple-touch-icon" sizes="256x256" href="icons/eur_256x256.png">
+	    <link rel="apple-touch-icon" sizes="512x512" href="icons/eur_512x512.png">
+		<script type="text/javascript"></script>
+		<link rel="stylesheet" href="style.css">
+		<script src="calculator.js"></script>
+		<script src="keypad.js"></script>
+	</head>
+	<body>
+		<div class="inputwrapper">
+			<div class="numberInput">
+				<label for="EUR" class="label">EUR</label>
+				<input class="numberinput" type="number" id="EUR" oninput="eurConverter();">
+				<label for="USD" class="label">USD</label>
+			  <input class="numberinput" type="number" id="USD" oninput="usdConverter();">
+				<label for="GBP" class="label">GBP</label>
+			  <input class="numberinput" type="number" id="GBP" oninput="gbpConverter();">
+				<label for="RUB" class="label">RUB</label>
+			 	<input class="numberinput" type="number" id="RUB" oninput="rubConverter();">
+				<label for="CAD" class="label">CAD</label>
+			  <input class="numberinput" type="number" id="CAD" oninput="cadConverter();">
+				<label for="JPY" class="label">JPY</label>
+			  <input class="numberinput" type="number" id="JPY" oninput="jpyConverter();">
+				<label for="MXN" class="label">MXN</label>
+			  <input class="numberinput" type="number" id="MXN" oninput="mxnConverter();">
+			</div>
+			<div class="keypad">
+				<table>
+					<tr>
+						<td>
+							<button id="1" value="1" type="button">1</button>
+						</td>
+						<td>
+							<button id="2" value="2" type="button">2</button>
+						</td>
+						<td>
+							<button id="3" value="3" type="button">3</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="4" value="4" type="button">4</button>
+						</td>
+						<td>
+							<button id="5" value="5" type="button">5</button>
+						</td>
+						<td>
+							<button id="6" value="6" type="button">6</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="7" value="7" type="button">7</button>
+						</td>
+						<td>
+							<button id="8" value="8" type="button">8</button>
+						</td>
+						<td>
+							<button id="9" value="9" type="button">9</button>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<button id="0" value="0" type="button">0</button>
+						</td>
+						<td>
+							<button id="comma" value="." type="button">.</button>
+						</td>
+						<td>
+							<button id="del" value="del" type="button">del</button>
+						</td>
+					</tr>
+			</table>
+			</div>
+		</div>
+		<script>
+		 if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+            navigator.serviceWorker.register('sw.js').then(function(registration) {
+              // Registration was successful
+              console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+              // registration failed :(
+              console.log('ServiceWorker registration failed: ', err);
+            });
+          });
+        }
+		</script>
+	</body>
+</html>
