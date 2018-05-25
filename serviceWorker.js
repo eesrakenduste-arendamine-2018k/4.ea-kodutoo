@@ -1,11 +1,12 @@
 // service worker
 const CACHE_NAME = 'homework4-v1'
 const urlsToCache = [
-  '/~romilr/homework4-offline-app/homework4.json',
-  '/~romilr/homework4-offline-app/javascript.js',
-  '/~romilr/homework4-offline-app/index.html',
-  '/~romilr/homework4-offline-app/',
-  '/~romilr/homework4-offline-app/style.css'
+  '/~kippkert/II/eesrakenduste_arendamine/4.ea-kodutoo/homework4.json',
+  '/~kippkert/II/eesrakenduste_arendamine/4.ea-kodutoo/javascript.js',
+  '/~kippkert/II/eesrakenduste_arendamine/4.ea-kodutoo/stopwatch.js',
+  '/~kippkert/II/eesrakenduste_arendamine/4.ea-kodutoo/index.html',
+  '/~kippkert/II/eesrakenduste_arendamine/4.ea-kodutoo/',
+  '/~kippkert/II/eesrakenduste_arendamine/4.ea-kodutoo/style.css'
 ]
 
 self.addEventListener('install', function (event) {
