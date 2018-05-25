@@ -1,17 +1,17 @@
 const CACHE_NAME = 'js_pong'
 const cachedUrls = [
-  '/',
-  '/index.html',
-  '/game.js',
-  '/pong.js',
-  '/pong.css',
-  '/images/press1.png',
-  '/images/press2.png',
-  '/images/winner.png',
-  '/sounds/goal.wav',
-  '/sounds/ping.wav',
-  '/sounds/pong.wav',
-  '/sounds/wall.wav'
+  '/4.ea-kodutoo/',
+  '/4.ea-kodutoo/index.html',
+  '/4.ea-kodutoo/game.js',
+  '/4.ea-kodutoo/pong.js',
+  '/4.ea-kodutoo/pong.css',
+  '/4.ea-kodutoo/images/press1.png',
+  '/4.ea-kodutoo/images/press2.png',
+  '/4.ea-kodutoo/images/winner.png',
+  '/4.ea-kodutoo/sounds/goal.wav',
+  '/4.ea-kodutoo/sounds/ping.wav',
+  '/4.ea-kodutoo/sounds/pong.wav',
+  '/4.ea-kodutoo/sounds/wall.wav'
 ]
 
 self.addEventListener('install', function (event) {

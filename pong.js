@@ -106,8 +106,10 @@ Pong = {
         if (window.innerWidth < 1100) {
           document.getElementById('game').style.display = 'block'
           document.getElementById('sidebar').style.display = 'none'
+          document.getElementById('mobileTimerCont').style.display = 'block'
         }
       })
+      document.getElementById('mobileTimer').innerHTML = secToMin(60)
       document.getElementById('timer').innerHTML = secToMin(60)
     }.bind(this))
   },
@@ -164,6 +166,7 @@ Pong = {
         timer = timer - 1
         console.log(timer)
         document.getElementById('timer').innerHTML = secToMin(timer)
+        document.getElementById('mobileTimer').innerHTML = secToMin(timer)
       }, 1000)
     }
   },
@@ -208,6 +211,7 @@ Pong = {
           if (window.innerWidth < 1100) {
             document.getElementById('game').style.display = 'none'
             document.getElementById('sidebar').style.display = 'block'
+            document.getElementById('mobileTimerCont').style.display = 'none'
           }
         }, 5000)
       }
