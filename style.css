@@ -197,7 +197,7 @@ p {
 }
 /* Media queries */
 
-@media (min-width: 789px) {
+@media (min-width: 900px) {
   h1 {
     font-size: 2.6em;
   }
@@ -212,6 +212,6 @@ p {
 
   p {
     font-size: 1.4em;
-    max-width: 80%;
+    max-width: 400px;
   }
 }
