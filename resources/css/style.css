@@ -7,6 +7,10 @@ body{
 body, input, button{
     font-family: 'Montserrat', sans-serif;
 }
+
+.noFill{
+    fill:none;
+}
 header {
     width:100%;
     height: 80px;
@@ -103,8 +107,104 @@ ul.todo{
 ul.todo li{
     width: 100%;
     float:left;
-    height: 50px;
+    min-height: 50px; /*Et kokkutõmbamisel kasti kõrgus muutuks tekstiga*/
+    font-size: 14px;
+    font-weight: 500;
+    color: #444;
+    line-height: 22px;
+
+    position: relative; /*MIKS? Peab olema kui üks on absolute ja nad samal joonel siis peab olema relative*/
+    padding: 14px 100px 14px 14px; /*Et enne nuppe ära lõppeks*/
     background: #fff;
     border-radius: 5px;
     box-shadow: 0px, 1px, 2px, rgba(44, 62, 80, 0.10);
+    margin: 0 0 10px 0;
+}
+ul.todo li:last-of-type{
+    margin: 0px;
+}
+ul.todo li .buttons{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0; /*Mis need on*/
+    cursor: pointer;
+}
+ul.todo li .buttons button{
+    width: 50px;
+    height: 50px;
+    float:left;
+    position: relative; /*Sest see vahesein on position:absolute*/
+    /*Nuppude jaoks stiil nulli tagasi*/
+    border: 0px;
+    outline: none;
+    box-shadow: none;
+    background: none;
+    appearance: none;
+    cursor: pointer;
+}
+/*Vahesein nuppude vahel*/
+ul.todo li .buttons button:last-of-type:before{
+    content: '';
+    width: 1px;
+    height: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background: #edf0f1;
+}
+
+
+ul.todo li .buttons button svg{
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -11px 0 0 -11px;
+}
+
+ul.todo li .buttons button.complete svg{
+    border-radius: 11px;
+    border: 1.5px solid #25b99a;
+
+    transition:background 0.2s ease;
+}
+ul.todo#completed li .buttons button.complete svg{
+    background: #25b99a;
+    border: 0px;
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg{
+    background: rgba(37, 185, 154, 0.6);
+}
+
+ul.todo:not(#completed) li .buttons button.complete:hover svg .fill{
+    fill: white;
+}
+
+ul.todo#completed li .buttons button.complete svg .fill{
+    fill: white;
+}
+
+ul.todo li .buttons button svg .fill{
+    transition: 0.2 ease; /*Mida Ease teeb siin?*/
+    -webkit-transition: fill 0.2s ease;
+    -moz-transition: fill 0.2s ease;
+    -ms-transition: fill 0.2s ease;
+    -o-transition: fill 0.2s ease;
+
+}
+
+ul.todo li .buttons button.remove svg .fill{
+    fill: #c0cecb;
+}
+
+ul.todo li .buttons button.remove:hover svg .fill{
+    fill: #e85656;
+}
+
+ul.todo li .buttons button.complete svg .fill{
+    fill: #25b99a;
 }
