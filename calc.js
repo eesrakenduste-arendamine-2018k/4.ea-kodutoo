@@ -4,7 +4,8 @@ const HEIGHT = document.getElementById('height')
 const MINCALORIES = document.getElementById('minCalories')
 const ACTIVECALORIES = document.getElementById('activeCalories')
 const ACTIVITYLEVEL = document.getElementById('activityLevel')
-let index, result
+const BODYMASSINDEX = document.getElementById('bmiIndex')
+let activityLevelIndex, result, bmiIndex
 let activityMultiplier = 1.2
 
 const maleDailyCalories = () => {
@@ -20,18 +21,18 @@ const dailyMinCalories = () => {
   if(document.getElementById('female').checked) return Math.round(femaleDailyCalories())
 }
 
-ACTIVITYLEVEL.addEventListener('change', () => {
-  index = ACTIVITYLEVEL.selectedIndex
-  activityMultiplier = ACTIVITYLEVEL.options[index].value
-})
+// const bodyMassIndex = () => {
+//   return bmiIndex = WEIGHT.value / Math.pow((HEIGHT.value / 100), 2)
+// }
 
-/* const activeCalories = () => {
-  console.log(activityLevelValue)
-  return Math.round(dailyMinCalories() * activityLevelValue)
-} */
+ACTIVITYLEVEL.addEventListener('change', () => {
+  activityLevelIndex = ACTIVITYLEVEL.selectedIndex
+  activityMultiplier = ACTIVITYLEVEL.options[activityLevelIndex].value
+})
 
 document.getElementById('calculate').addEventListener('click', (event) => {
   event.preventDefault()
+  // BODYMASSINDEX.innerHTML = `${Math.round(bodyMassIndex() * 100) / 100 } on teie kehamassiindeks`
   MINCALORIES.innerHTML = `${dailyMinCalories()}cal. See on sinu päevane minimaalne kalori vajadus.`
   ACTIVECALORIES.innerHTML = `${Math.round(dailyMinCalories() * activityMultiplier)}cal. See on sinu päevane kalori vajadus kaalu säilitamiseks.`
 })
