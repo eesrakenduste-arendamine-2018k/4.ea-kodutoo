@@ -43,6 +43,11 @@ getDate = function(){
     newdate = day + "/" + month + "/" + year;
     return newdate
 }
+if(bodyWeightArray === null){
+    console.log(tühi)
+}else{
+splitArrays()
+}
 // Lõikab bodyWeightArray kaheks, kaalu väärtused lisab dataArraysse ja kuupäeva LabelArraysse
 splitArrays = function(){
 bodyWeightArray = JSON.parse(localStorage.getItem("bodyArray"));
@@ -53,7 +58,9 @@ bodyWeightArray.forEach(function(element){
     dataArray.push(arrayElement[0]);
     labelsArray.push(arrayElement[1]);
 })}
-splitArrays()
+
+
+
 
 document.getElementById('addData').addEventListener('click', function() {
     chartUpdate()
@@ -83,3 +90,15 @@ createNewChart = new Chart(ctx, config)
 window.onresize = function(event) {
     chartUpdate()
 };
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
