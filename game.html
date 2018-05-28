@@ -1,6 +1,27 @@
+<!doctype html>
 <html>
 <head>
+<title>Linnade põletamine</title>
 <h1>Linnade põletamine<h1/>
+<style>
+#newGame{
+	width: 50%;
+	background-color: black;
+	color: white;
+	top: 50%;
+	left: 50%;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+	font-size: large;
+	text-align: center;
+	}
+	body { 
+		text-align: center;
+		background-color: DeepSkyBlue;
+	}
+</style>
 </head>
 <body>
 
@@ -8,6 +29,7 @@
 <input id = "newPic" type = "button" value = "Uus kaart" onclick = "displayImage()"/>
 <button id="addPic">Lisa</button>
 <button id="removePic">Eemalda</button>
+<button id = "newGame" onclick = "startNewGame()">Alusta uut mängu</button>
 <script src="game.js"></script>
 
 <div id = "result"></div>
