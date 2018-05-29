@@ -34,7 +34,9 @@ bodyWeightToArray = function(){
     bodyWeightDate = getDate()
     bodyWeightArray.push(bodyWeight+";"+bodyWeightDate)
     localStorage.setItem("bodyArray", JSON.stringify(bodyWeightArray));
-    splitArrays()
+    if(bodyWeightArray !== null){
+        splitArrays()
+    }
 }
 // Võtab hetke kuupäeva
 getDate = function(){
@@ -56,7 +58,6 @@ bodyWeightArray.forEach(function(element){
     labelsArray.push(arrayElement[1]);
 })}
 
-splitArrays()
 document.getElementById('addData').addEventListener('click', function() {
     createNewChart.destroy();
     chartUpdate()
