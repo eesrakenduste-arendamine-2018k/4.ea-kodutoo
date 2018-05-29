@@ -23,7 +23,9 @@ window.onload = function(){
         }
     };
     createNewChart = new Chart(ctx, config)
+    
 }
+
 // Lisab kehakaalu ja hetkekuupäeva ühte massiivi ning salvestab selle localstoragesse.
 bodyWeightToArray = function(){
     let bodyWeightArray = JSON.parse(localStorage.getItem('bodyArray'))
@@ -32,7 +34,9 @@ bodyWeightToArray = function(){
     bodyWeightDate = getDate()
     bodyWeightArray.push(bodyWeight+";"+bodyWeightDate)
     localStorage.setItem("bodyArray", JSON.stringify(bodyWeightArray));
-    splitArrays()
+    if(bodyWeightArray !== null){
+        splitArrays()
+    }
 }
 // Võtab hetke kuupäeva
 getDate = function(){
@@ -53,13 +57,14 @@ bodyWeightArray.forEach(function(element){
     dataArray.push(arrayElement[0]);
     labelsArray.push(arrayElement[1]);
 })}
-splitArrays()
 
 document.getElementById('addData').addEventListener('click', function() {
+    createNewChart.destroy();
     chartUpdate()
 })
 //Kui lisatakse uusi andmeid siis uuendab charti
 chartUpdate = function(){
+    console.log("update")
     ctx = document.getElementById('line-chart');
     config = {
         type: 'line',
@@ -81,5 +86,18 @@ chartUpdate = function(){
 createNewChart = new Chart(ctx, config)
 }
 window.onresize = function(event) {
+    console.log("resize")
     chartUpdate()
 };
+
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('/sw.js').then(function(registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }, function(err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err);
+    });
+  });
+}
