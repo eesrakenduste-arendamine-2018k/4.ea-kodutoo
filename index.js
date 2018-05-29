@@ -23,7 +23,9 @@ window.onload = function(){
         }
     };
     createNewChart = new Chart(ctx, config)
+    
 }
+
 // Lisab kehakaalu ja hetkekuupäeva ühte massiivi ning salvestab selle localstoragesse.
 bodyWeightToArray = function(){
     let bodyWeightArray = JSON.parse(localStorage.getItem('bodyArray'))
@@ -43,11 +45,6 @@ getDate = function(){
     newdate = day + "/" + month + "/" + year;
     return newdate
 }
-if(bodyWeightArray === null){
-    console.log(tühi)
-}else{
-splitArrays()
-}
 // Lõikab bodyWeightArray kaheks, kaalu väärtused lisab dataArraysse ja kuupäeva LabelArraysse
 splitArrays = function(){
 bodyWeightArray = JSON.parse(localStorage.getItem("bodyArray"));
@@ -59,14 +56,14 @@ bodyWeightArray.forEach(function(element){
     labelsArray.push(arrayElement[1]);
 })}
 
-
-
-
+splitArrays()
 document.getElementById('addData').addEventListener('click', function() {
+    createNewChart.destroy();
     chartUpdate()
 })
 //Kui lisatakse uusi andmeid siis uuendab charti
 chartUpdate = function(){
+    console.log("update")
     ctx = document.getElementById('line-chart');
     config = {
         type: 'line',
@@ -88,6 +85,7 @@ chartUpdate = function(){
 createNewChart = new Chart(ctx, config)
 }
 window.onresize = function(event) {
+    console.log("resize")
     chartUpdate()
 };
 
