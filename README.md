@@ -4,6 +4,11 @@
 
 ## Nõuded
 
+#
+# Autorid: Rando Aljaste, Peeter Roop
+# Funktsionaalsuse kirjeldus: saad kirja panna oma päevased toimetused ja kui need tehtud siis ära märkida, et midagi meelest ära ei läheks.
+# 
+
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:
     * suurelt rakenduse nime; 
