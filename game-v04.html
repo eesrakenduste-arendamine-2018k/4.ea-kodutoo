@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BlockEvader</title>
+
+<link rel="stylesheet" href="style.css" title="styles" type="text/css" media="screen" charset="utf-8">
+
+<script type="text/javascript" src="script.js" charset="utf-8" defer></script>
+<script type="text/javascript" src="service-worker.js" charset="utf-8" defer></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+</head>
+
+<body onload="startGame()">
+
+<div style="text-align:center;width:480px;">
+  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
+  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
+  <button onclick="playAgain()">Play again!</button><br><br>
+</div>
+</body>
+
+</html>
