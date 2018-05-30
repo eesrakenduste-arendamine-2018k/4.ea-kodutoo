@@ -64,7 +64,7 @@ $(document).ready(function() {
     // Functions
   // Reset Timer
   function resetTimer() {
-    count = 10;
+    count = 60;
     counter = setInterval(timer, 1000);
   }
 //ServiceWorker
