@@ -4,53 +4,36 @@
 <title>Linnade põletamine</title>
 <h1>Linnade põletamine<h1/>
 <style>
-
-#addPic, #removePic, #newPic{
-	width: 6%;
-	background-color:#00BFFF;
-	color: white;
-	top: 50%;
-	left: 50%;
-	padding-top: 2px;
-    padding-right: 2px;
-    padding-bottom: 2px;
-    padding-left: 2px;
-	font-size: normal;
-	text-align: center;
-	}
-
 #newGame{
-	width: 20%;
-	background-color:#00BFFF;
+	width: 50%;
+	background-color: black;
 	color: white;
 	top: 50%;
 	left: 50%;
-	padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+	padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
 	font-size: large;
 	text-align: center;
 	}
-
-body { 
+	body { 
 		text-align: center;
-		background-color: #A9F5F2;
+		background-color: DeepSkyBlue;
 	}
-
 </style>
 </head>
 <body>
 
+
 <input id = "newPic" type = "button" value = "Uus kaart" onclick = "displayImage()"/>
-	<button id="addPic">Lisa</button>
-	<button id="removePic">Eemalda</button>
-		<p></p>
-<script src="game.js"></script>
-	<div id = "result"></div>
-	<div id = "score"></div>
-		<p></p>
+<button id="addPic">Lisa</button>
+<button id="removePic">Eemalda</button>
 <button id = "newGame" onclick = "startNewGame()">Alusta uut mängu</button>
+<script src="game.js"></script>
+
+<div id = "result"></div>
+<div id = "score"></div>
 
 </body>
 </html>
