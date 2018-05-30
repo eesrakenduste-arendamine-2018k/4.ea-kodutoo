@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Kodutöö 4</title>
+
+    <link rel="stylesheet" href="lib/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container-fluid" id="app">
+      <div class="row content">
+        <div class="col-sm-3 sidenav">
+          <add></add>
+          <search></search>
+          <items></items>
+        </div>
+
+        <div class="col-sm-9">
+           <editview :selected-person="selectedPerson"></editview>
+        </div>
+      </div>
+    </div>
+
+    <!-- javascript -->
+    <script src="lib/vue.js"></script>
+    <script src="lib/vuex.js"></script>
+    <script src="sw.js"></script>
+    <script src="javascript.js"></script>
+  </body>
+</html>
