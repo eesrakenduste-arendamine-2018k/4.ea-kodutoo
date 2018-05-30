@@ -92,9 +92,6 @@ $(document).ready(function() {
       }
     }
 
-    
-    
- 
     // Calculate distance between points function
     function calcDistance(fromLat, fromLng, toLat, toLng) {
       return google.maps.geometry.spherical.computeDistanceBetween(new google.maps.LatLng(fromLat, fromLng), new google.maps.LatLng(toLat, toLng));

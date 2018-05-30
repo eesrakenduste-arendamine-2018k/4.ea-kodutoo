@@ -19,13 +19,19 @@ function rminitialize() {
       let actualMarker = new google.maps.Marker({
           position: actualLtLng,
           title:"Actual Location",
-          icon: 'img/actual.png'
+          icon: {
+            url: 'img/actual.png',
+            anchor: new google.maps.Point(0, 62)
+          },
       });
   
       let guessMarker = new google.maps.Marker({
           position: guessLtLng,
           title:"Your Guess",
-          icon: 'img/guess.png'
+          icon: {
+            url: 'img/guess.png',
+            anchor: new google.maps.Point(0, 62)
+          },
       });
   
       // To add the marker to the map, call setMap();

@@ -6,7 +6,7 @@ function mminitialize() {
     // Mini map setup
     let mapOptions = {
       center: new google.maps.LatLng(59, 25, true),
-      zoom: 6,
+      zoom: 5,
       mapTypeControl: false,
       streetViewControl: false,
       mapTypeId: google.maps.MapTypeId.ROADMAP
