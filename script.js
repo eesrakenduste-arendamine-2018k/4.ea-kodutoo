@@ -93,7 +93,7 @@ function obstacleGameArea() {
     }
     myGameArea.clear();
     myGameArea.frameNo += 1;
-    if (myGameArea.frameNo == 1 || everyinterval(75)) {
+    if (myGameArea.frameNo == 1 || everyinterval(80)) {
         x = myGameArea.canvas.width-(Math.random() * 500) + 1;;
         y = myGameArea.canvas.height - 500;
         myObstacles.push(new component((Math.random() * 100) + 1, 40, "green", x, y));
