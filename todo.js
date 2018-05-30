@@ -1,9 +1,38 @@
 // Close nupp to do listi lisatu kinni panemiseks
 /* myMusic = new sound("song.mp3");
 myMusic.play(); */
+
+function registerServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful: ', registration)
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err)
+    })
+  }
+}
+
+
+
 window.onload = function() {
   document.getElementById("song").play();
+
+  function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful: ', registration)
+      }, function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err)
+      })
+    }
+  }
+  registerServiceWorker()
 }
+
 
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -70,3 +99,7 @@ function newElement() {
     }
   }
 }
+
+
+
+
