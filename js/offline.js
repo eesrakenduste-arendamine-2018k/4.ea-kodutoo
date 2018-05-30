@@ -4,6 +4,8 @@ const urlsToCache = [
     '/~meintaav/offline-app/index.html',
     '/~meintaav/offline-app/js/lemmad2013.txt',
     '/~meintaav/offline-app/js/app.js',
+    '/~meintaav/offline-app/css/bootstrap.min.css',
+    '/~meintaav/offline-app/css/bootstrap.min.css.map',
     '/~meintaav/offline-app/'
 ]
 

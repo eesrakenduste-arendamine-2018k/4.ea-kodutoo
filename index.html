@@ -2,16 +2,21 @@
 <html>
 
 <head>
-    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 
 <body>
-	<center>
-    <h1 id="test">My First Heading</h1>
-    <input type = "text" id = "usrInput">
-    <br><br>
-    <input type ="submit" value = "submit">
-	</center>
+    <center>
+        <h1 id="test">My First Heading</h1>
+        <div class="col-xs-3">
+            <input class="form-control" id="ex2" type="text">
+            <br>
+            <br>
+            <button type="button" class="btn btn-success" onclick="app.generateRandomWord()">Arva</button>
+        </div>
+
+
+    </center>
     <script src="js/app.js" charset="utf-8"></script>
 </body>
 

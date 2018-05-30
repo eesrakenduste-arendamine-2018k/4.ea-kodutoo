@@ -47,6 +47,10 @@
                 }
             }
             rawFile.send(null);
+        },
+        generateRandomWord: function(){
+            Sayings.word = Sayings.words[Math.floor(Math.random() * Sayings.words.length)]
+            document.querySelector('#test').innerHTML = Sayings.word
         }
 
     } // Sayings LÕPP
