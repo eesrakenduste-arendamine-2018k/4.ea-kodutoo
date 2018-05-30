@@ -1,5 +1,11 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+DoYouDare
+
+Oskar Juksar&Joosep Penjam
+
+Meelelahutuseks erinevad teod, mida teha aja kulutamiseks või lihtsalt enesekindluse tõstmiseks.
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
