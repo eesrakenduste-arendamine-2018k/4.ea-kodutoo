@@ -1,18 +1,18 @@
 // service worker
 
-const CACHE_NAME = 'sayings-v1'
+const CACHE_NAME = 'notes-v1'
 const urlsToCache = [
-  '/~rasmuskk/4.ea-kodutoo/src/index.html',
-  '/~rasmuskk/4.ea-kodutoo/src/index.js',
-  '/~rasmuskk/4.ea-kodutoo/src/item.html',
-  '/~rasmuskk/4.ea-kodutoo/src/item.html',
-  '/~rasmuskk/4.ea-kodutoo/src/css/style.css',
+  '/~timj/4.ea-kodutoo/src/index.js',
+  '/~timj/4.ea-kodutoo/src/index.html',
+  '/~timj/4.ea-kodutoo/src/item.html',
+  '/~timj/4.ea-kodutoo/src/item.js',
+  '/~timj/4.ea-kodutoo/src/images/manifest.json',
+  '/~timj/4.ea-kodutoo/src/css/style.css',
   'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
-  'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
-  '//code.jquery.com/jquery-3.3.1.min.js'
-		
+  'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'
+
 ]
- // change above and nothing else
+// change above and nothing else
 
 /*
 

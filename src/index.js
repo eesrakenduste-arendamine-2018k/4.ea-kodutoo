@@ -31,7 +31,7 @@ function newElement () {
   if (inputValue === '') {
     alert('You must write something!')
   } else {
-    if (window.location.pathname === '/~rasmuskk/4.ea-kodutoo/src/index.html' || window.location.pathname === '/~rasmuskk/4.ea-kodutoo/src/') {
+    if (window.location.pathname === '/~timj/4.ea-kodutoo/src/index.html' || window.location.pathname === '/~timj/4.ea-kodutoo/src/') {
       document.getElementById('myUL').appendChild(a)
     } else {
       document.getElementById('myUL').appendChild(li)
@@ -52,18 +52,15 @@ function newElement () {
     }
   }
 }
-
-
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful: ', registration)
-    }, function (err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err)
-    })
-  }
-
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
+    // Registration was successful
+    console.log('ServiceWorker registration successful: ', registration)
+  }, function (err) {
+    // registration failed :(
+    console.log('ServiceWorker registration failed: ', err)
+  })
+}
 
 let addButton = document.getElementById('addBtn')
 addButton.addEventListener('click', function () {

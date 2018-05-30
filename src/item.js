@@ -1,16 +1,19 @@
 let item
-
 let category = location.search.split('category=')[1]
-console.log(category)
+document.getElementById('itemTitle').innerHTML = category
+// console.log(category)
+let Label = category
+let o = {
+  stored: [],
+  categoryName: category
+}
 function saveLocal () {
-  // todo: push to array to save all and not last
-  let Label = category
-  let o = [
-    {
-      elementName: document.getElementById('myInput').value,
-      checked: false
-    }
-  ]
+  let json = {
+    elementName: document.getElementById('myInput').value,
+    checked: false
+  }
+  o.stored.push(json)
+  console.log(o)
   localStorage.setItem(Label, JSON.stringify(o))
 }
 // Add a "checked" symbol when clicking on a list item
@@ -29,8 +32,10 @@ let items = localStorage.getItem(category)
 if (items != null) {
   items = JSON.parse(items)
   let listItems = document.getElementById('myUL')
-  for (let i = 0; i < items.length; i++) {
-    item = '<li>' + items[i].elementName + '</li>'
-    listItems.insertAdjacentHTML('beforeend', item)
+  for (let i = 0; i < items.stored.length; i++) {
+    if (items.stored[i] != null) {
+      item = '<li>' + items.stored[i].elementName + '</li>'
+      listItems.insertAdjacentHTML('beforeend', item)
+    }
   }
 }
