@@ -7,7 +7,7 @@
 #
 # Autorid: Rando Aljaste, Peeter Roop
 # Funktsionaalsuse kirjeldus: saad kirja panna oma päevased toimetused ja kui need tehtud siis ära märkida, et midagi meelest ära ei läheks.
-# ![app-to-do](https://gyazo.com/e8a4f2604a5f6da14567bec6ffe0abf8)
+# ![app-to-do](https://gyazo.com/e8a4f2604a5f6da14567bec6ffe0abf8.png)
 
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:
