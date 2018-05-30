@@ -1,14 +1,18 @@
 // service worker
-/*
+
 const CACHE_NAME = 'sayings-v1'
 const urlsToCache = [
-  '/~romilr/sayings-offline-app/sayings.json',
-  '/~romilr/sayings-offline-app/scripts.js',
-  '/~romilr/sayings-offline-app/index.html',
-  '/~romilr/sayings-offline-app/',
-  '/~romilr/sayings-offline-app/styles.css'
+  '/~rasmuskk/4.ea-kodutoo/src/index.html',
+  '/~rasmuskk/4.ea-kodutoo/src/index.js',
+  '/~rasmuskk/4.ea-kodutoo/src/item.html',
+  '/~rasmuskk/4.ea-kodutoo/src/item.html',
+  '/~rasmuskk/4.ea-kodutoo/src/css/style.css',
+  'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js',
+  'https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css',
+  '//code.jquery.com/jquery-3.3.1.min.js'
+		
 ]
-*/ // change above and nothing else
+ // change above and nothing else
 
 /*
 

@@ -53,7 +53,7 @@ function newElement () {
   }
 }
 
-function registerServiceWorker () { // to be placed in main js file and called when you want to initialize worker
+
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
       // Registration was successful
@@ -63,7 +63,7 @@ function registerServiceWorker () { // to be placed in main js file and called w
       console.log('ServiceWorker registration failed: ', err)
     })
   }
-}
+
 
 let addButton = document.getElementById('addBtn')
 addButton.addEventListener('click', function () {
