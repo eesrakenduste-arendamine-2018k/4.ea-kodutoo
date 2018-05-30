@@ -1,20 +1,15 @@
 // service worker
 const CACHE_NAME = 'mapsGame-v1'
 const urlsToCache = [
- /* '/~romilr/sayings-offline-app/sayings.json',
-  '/~romilr/sayings-offline-app/scripts.js',
-  '/~romilr/sayings-offline-app/index.html',
-  '/~romilr/sayings-offline-app/',
-  '/~romilr/sayings-offline-app/styles.css'*/
   
-  '/~ojavgret/maps/MapsGame/app.js',
-  '/~ojavgret/maps/MapsGame/minimap.js',
-  '/~ojavgret/maps/MapsGame/rnd.js',
-  '/~ojavgret/maps/MapsGame/roundmap.js',
-  '/~ojavgret/maps/MapsGame/streetviewmap.js',
-  '/~ojavgret/maps/MapsGame/',
-  '/~ojavgret/maps/MapsGame/../css/bootstrap.css',
-  '/~ojavgret/maps/MapsGame/../style.css'
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/app.js',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/minimap.js',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/rnd.js',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/roundmap.js',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/streetviewmap.js',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/css/bootstrap.css',
+  '/~ojavgret/Eesrakendused/4.ea-kodutoo/css/style.css'
 ]
 
 self.addEventListener('install', function (event) {
