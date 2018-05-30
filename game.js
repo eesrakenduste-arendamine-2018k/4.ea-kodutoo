@@ -39,5 +39,17 @@ function displayImage(){
 function startNewGame(){
 	location.reload();
 }
+window.addEventListener('devicemotion', this.triggerMotion.bind(this))
+triggerMotion: function (event) {
+      // console.log(event);
+      const xGravity = event.accelerationIncludingGravity.x
+
+      // kui liikumine suurem, siis laeme uue ja ootame 1s enne kui uuesti
+      if (xGravity > 10 && this.new) {
+        this.displayImage()
+
+        this.new = false
+      }
+    }
 
 
