@@ -66,9 +66,8 @@
         generateRandomWord: function () {
             Sayings.word = Sayings.words[Math.floor(Math.random() * Sayings.words.length)]
             document.querySelector('#test').innerHTML = Sayings.scrambledWord
-            var s = Sayings.word
-            var m = s.replace("\r", "")
-            var array = m.split("")
+            Sayings.word = Sayings.word.replace("\r", "")
+            var array = Sayings.word.split("")
 
 
             var j, x, i

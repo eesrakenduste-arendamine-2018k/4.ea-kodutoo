@@ -1,12 +1,12 @@
 // service worker
-const CACHE_NAME = 'sayings-v1.1'
+const CACHE_NAME = 'Sonad'
 const urlsToCache = [
     '/~meintaav/offline-app/index.html',
     '/~meintaav/offline-app/js/lemmad2013.txt',
     '/~meintaav/offline-app/js/app.js',
+    '/~meintaav/offline-app/js/offline.js',
     '/~meintaav/offline-app/css/bootstrap.min.css',
-    '/~meintaav/offline-app/css/bootstrap.min.css.map',
-    '/~meintaav/offline-app/'
+    '/~meintaav/offline-app/css/bootstrap.min.css.map'
 ]
 
 self.addEventListener('install', function (event) {
