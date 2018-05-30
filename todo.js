@@ -27,15 +27,21 @@ list.addEventListener('click', function(ev) {
   }
 }, false);
 
+//Enteri vajutus sisestab andmed listi
 document.getElementById('item').addEventListener('keydown', function (e) {
   var value = this.value;
   if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
     newElement(value);
   }
 });
+function play(){
+  var audio = document.getElementById("audio");
+  audio.play();
+  }
 
 // Add nupu vajutusel uue elemendi tekitamine
 function newElement() {
+  play();
   var li = document.createElement("li");
   var inputValue = document.getElementById("item").value;
   var t = document.createTextNode(inputValue);
