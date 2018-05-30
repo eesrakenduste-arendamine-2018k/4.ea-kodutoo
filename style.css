@@ -26,23 +26,21 @@
 }
 
 #percentage {
-    border: 0.5vh solid white;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
     position: absolute;
-    text-align: center;
-    color: white;
-    top: 54%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
     
-    display: block;
+    border: 0.5vh solid white;
     width: 70px;
     height: 70px;
-    line-height: 70px;
-
-    -moz-border-radius: 50%; /* or 50% */
-    border-radius: 50%; /* or 50% */
-
+    border-radius: 50%;
     background-color: black;
+    
+    text-align: center;
+    color: white;
+    line-height: 70px;
     font-size: 2em;
 }
