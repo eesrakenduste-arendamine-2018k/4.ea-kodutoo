@@ -1,6 +1,10 @@
 // service worker
 const CACHE_NAME = 'sayings-v1'
 const urlsToCache = [
+<<<<<<< HEAD
+=======
+  'http://greeny.cs.tlu.ee/~aljarand/js/4.ea-kodutoo/index.html',
+>>>>>>> edd466b0a20b909ead639f41575f19c6c36c7e64
   'http://greeny.cs.tlu.ee/~aljarand/js/4.ea-kodutoo/index.html'
 ]
 
@@ -58,4 +62,8 @@ self.addEventListener('fetch', function (event) {
         }
       })
   )
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> edd466b0a20b909ead639f41575f19c6c36c7e64
