@@ -1,3 +1,13 @@
+body {
+    margin: auto;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    font-family: "Cooper Black";
+    font-size: 20px;
+    background-image: url("images/bg.jpg");
+}
+
 canvas {
     display: block;
     margin: auto;
