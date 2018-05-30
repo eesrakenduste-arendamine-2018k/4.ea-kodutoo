@@ -19,13 +19,13 @@
 		}
       	  
 	div, p {
-		width: 300px;
+		width: 800px;
 		height: 100px;
 		
 		text-align: center;
 
 		position: relative;
-		top:0;
+		top: 200px;
 		bottom: 0;
 		left: 0;
 		right: 0;
@@ -36,14 +36,34 @@
 		display:none;
 	}
 	h1 {
+		width: 800px;
+		height: 100px;
 		
+		position: relative;
+		top: 250px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+		
+	}
+	
+	button {
+		position: relative;
+		top: 300px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: auto;
 	}
     </style>
 	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet"> 
     <style>
       body {
         font-family: 'Cabin Sketch', cursive;
-        font-size: 24px;
+        font-size: 36px;
       }
     </style>
     <script src="app.js"></script>
@@ -62,7 +82,7 @@
 			<h1>Mäng läbi!</h1>
 			<h1 id="score"></h1>
 			<h1>Hea tulemus!</h1>
-			<input id="playAgain" type="submit" value="Mängi uuesti!" onclick="newGame()">
+			<button id="playAgain" onclick="newGame()">Mängi uuesti!</button>
 			
 	</div>
 	
