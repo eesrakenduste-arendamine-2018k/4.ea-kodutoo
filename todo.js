@@ -26,15 +26,18 @@ list.addEventListener('click', function(ev) {
     ev.target.classList.toggle('checked');
   }
 }, false);
-function enterPress(){
-  if(characterCode == 13){
-    newElement();
+
+document.getElementById('item').addEventListener('keydown', function (e) {
+  var value = this.value;
+  if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
+    newElement(value);
   }
-}
+});
+
 // Add nupu vajutusel uue elemendi tekitamine
 function newElement() {
   var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
+  var inputValue = document.getElementById("item").value;
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -42,7 +45,7 @@ function newElement() {
   } else {
     document.getElementById("myUL").appendChild(li);
   }
-  document.getElementById("myInput").value = "";
+  document.getElementById("item").value = "";
 
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
