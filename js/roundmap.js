@@ -18,7 +18,7 @@ function rminitialize() {
   
       let actualMarker = new google.maps.Marker({
           position: actualLtLng,
-          title:"Actual Location",
+          title:"Tegelik asukoht",
           icon: {
             url: 'img/actual.png',
             anchor: new google.maps.Point(0, 62)
@@ -27,7 +27,7 @@ function rminitialize() {
   
       let guessMarker = new google.maps.Marker({
           position: guessLtLng,
-          title:"Your Guess",
+          title:"Sinu pakutud",
           icon: {
             url: 'img/guess.png',
             anchor: new google.maps.Point(0, 62)

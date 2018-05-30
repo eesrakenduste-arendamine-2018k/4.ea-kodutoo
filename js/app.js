@@ -4,7 +4,7 @@ $(document).ready(function() {
     let points = 0;
     let roundScore = 0;
     let totalScore = 0;
-    ranOut = false;
+    let ranOut = false;
     let distance;
  
 
@@ -16,16 +16,11 @@ $(document).ready(function() {
     svinitialize();
     mminitialize();
  
-    // Scoreboard & Guess button event
 
     // Init Timer
     resetTimer();
 
-    // Reset Timer
-    function resetTimer() {
-      count = 10;
-      counter = setInterval(timer, 1000);
-    }
+   
  
     // Timer
     function timer() {
@@ -52,24 +47,13 @@ $(document).ready(function() {
     // End of round continue button click
     $('#roundEnd').on('click', '.closeBtn', function() {
       $('#roundEnd').fadeOut(500);
- 
+     
       // Reload maps to refresh coords
       svinitialize();
       mminitialize();
-      rminitialize();
- 
-      // Reset Timer
+      
       resetTimer();
-      resetMarker();
-     
-
-      // Reset marker function
-      function resetMarker() {
-        //Reset marker
-        if(guessMarker !== null) {
-          guessMarker.setMap(null);
-        }
-      }
+      
     });
  
     // End of game 'play again' button click
@@ -78,7 +62,11 @@ $(document).ready(function() {
     });
  
     // Functions
-
+  // Reset Timer
+  function resetTimer() {
+    count = 10;
+    counter = setInterval(timer, 1000);
+  }
 //ServiceWorker
    function registerServiceWorker() {
       if ('serviceWorker' in navigator) {
@@ -137,20 +125,17 @@ $(document).ready(function() {
         } else if(inRange(distance, 7, 10)) {
           points = 10;
         } else if(inRange(distance, 11, 20)) {
-          points = 7;
-        } else if(inRange(distance, 21, 30)) {
-          points = 6;
-        } else if(inRange(distance, 31, 50)) {
           points = 5;
-        } else if(inRange(distance, 51, 100)) {
+        } else if(inRange(distance, 21, 30)) {
           points = 4;
-        } else if(inRange(distance, 101, 150)) {
+        } else if(inRange(distance, 31, 50)) {
           points = 3;
-        } else if(inRange(distance, 151, 200)) {
+        } else if(inRange(distance, 51, 100)) {
           points = 2;
-        } else if(inRange(distance, 201, 250)) {
+        } else if(inRange(distance, 101, 150)) {
           points = 1;
-        
+        } else if(inRange(distance, 151, 250)) {
+          points = 0;
         } else {
           points = 0;
         }
@@ -176,7 +161,7 @@ $(document).ready(function() {
     function endRound() {
       round++;
       if(ranOut === true) {
-        roundScore = 0;
+        roundScore = 0;               
       } else {
         roundScore = points;
         totalScore = totalScore + points;
@@ -188,9 +173,9 @@ $(document).ready(function() {
  
       // If distance is undefined, that means they ran out of time and didn't click the guess button
       if(typeof distance === 'undefined' || ranOut === true) {
+        
         $('#roundEnd').html('<p>Oh ei! Liiga kaua mõtlesid!.<br/> Sul ei õnnestunud saada ühtegi punkti!<br/><br/><button class="btn btn-primary closeBtn" type="button">Mängi edasi</button></p></p>');
         $('#roundEnd').fadeIn();
- 
         // Stop Counter
         clearInterval(counter);
         resetMarker();
@@ -206,7 +191,7 @@ $(document).ready(function() {
         
         window.guessLatLng = '';
         ranOut = false;
- 
+        
         points = 0;
         
  
@@ -225,11 +210,11 @@ $(document).ready(function() {
  
       roundScore = points;
       totalScore = totalScore + points;
- 
+      rminitialize()
       $('#miniMap, #pano, #guessButton, #scoreBoard, #timer').hide();
       $('#endGame').html('<h1>Tubli!</h1><h2>Said kokku </h2><h1>' + totalScore + ' punkti!</h1><br/><button class="btn btn-large btn-success playAgain" type="button">Mängid uuesti?</button>');
       $('#endGame').fadeIn(500);
- 
+      console.log('mäng läbi');
       
  
       // We're done with the game
