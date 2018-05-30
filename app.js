@@ -38,3 +38,7 @@ function startGame() {
 	window.addEventListener('devicemotion', shake.bind(this))
 	var myVar = setInterval(function(){gameTime+=1;}, 100);
 }
+
+function newGame(){
+	location.reload();
+}
