@@ -1,6 +1,7 @@
 // service worker
 const CACHE_NAME = 'sayings-v1'
 const urlsToCache = [
+  'http://greeny.cs.tlu.ee/~aljarand/js/4.ea-kodutoo/index.html',
   'http://greeny.cs.tlu.ee/~aljarand/js/4.ea-kodutoo/index.html'
 ]
 
