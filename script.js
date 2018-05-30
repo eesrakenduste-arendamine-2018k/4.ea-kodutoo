@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-</style>
-</head>
-<body onload="startGame()">
-<script>
-
-
 let myGamePiece;
 let myObstacles = [];
 let myScore;
@@ -152,11 +141,3 @@ function clearmove() {
 function playAgain () {
 	location.reload();
 }
-</script>
-<div style="text-align:center;width:480px;">
-  <button onmousedown="moveleft()" onmouseup="clearmove()" ontouchstart="moveleft()">LEFT</button>
-  <button onmousedown="moveright()" onmouseup="clearmove()" ontouchstart="moveright()">RIGHT</button><br><br>
-  <button onclick="playAgain()">Play again!</button><br><br>
-</div>
-</body>
-</html>
