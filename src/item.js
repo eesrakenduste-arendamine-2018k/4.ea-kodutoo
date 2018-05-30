@@ -1,12 +1,20 @@
-let item
+let item, o
 let category = location.search.split('category=')[1]
 document.getElementById('itemTitle').innerHTML = category
-let items = JSON.parse(localStorage.getItem(category))
+let items = localStorage.getItem(category)
 let Label = category
-let o = {
-  stored: items.stored,
-  categoryName: category
+if (items != null) {
+  o = {
+    stored: items.stored,
+    categoryName: category
+  }
+} else {
+  o = {
+    stored: [],
+    categoryName: category
+  }
 }
+
 function saveLocal () {
   let json = {
     elementName: document.getElementById('myInput').value,

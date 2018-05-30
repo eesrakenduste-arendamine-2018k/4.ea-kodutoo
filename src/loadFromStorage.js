@@ -9,6 +9,7 @@ if (localStorage.length !== 0) {
     listItems.insertAdjacentHTML('beforeend', item)
   }
 }
+
 /*
 // function registerServiceWorker () {
 if ('serviceWorker' in navigator) {
