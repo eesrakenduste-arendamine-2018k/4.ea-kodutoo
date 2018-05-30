@@ -1,10 +1,10 @@
 let item
 let category = location.search.split('category=')[1]
 document.getElementById('itemTitle').innerHTML = category
-// console.log(category)
+let items = JSON.parse(localStorage.getItem(category))
 let Label = category
 let o = {
-  stored: [],
+  stored: items.stored,
   categoryName: category
 }
 function saveLocal () {
@@ -28,9 +28,9 @@ let addItem = document.getElementById('addBtn')
 addItem.addEventListener('click', function () {
   saveLocal()
 })
-let items = localStorage.getItem(category)
+// let items = localStorage.getItem(category)
 if (items != null) {
-  items = JSON.parse(items)
+  // items = JSON.parse(items)
   let listItems = document.getElementById('myUL')
   for (let i = 0; i < items.stored.length; i++) {
     if (items.stored[i] != null) {
