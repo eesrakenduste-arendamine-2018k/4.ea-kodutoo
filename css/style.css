@@ -152,11 +152,15 @@ html, body {
   }
 
   #roundEnd {
-    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -25vw;
+    margin-left: -25vw;
+    /*position: absolute;
     left: 30%;
-    
-    width: 325px;
-    margin: 3% 0 0 -28%;
+    margin: 3% 0 0 -28%;*/
+    width: 50vw;
     padding: 10px;
     background: white;
     text-align: center;
@@ -167,8 +171,8 @@ html, body {
   }
   
   #roundEnd #roundMap {
-    width: 325px;
-    height: 325px;
+    width: 50vw;
+    height: 25vw;
     background: rgb(248, 248, 248);
     margin: 0 0;
   }
