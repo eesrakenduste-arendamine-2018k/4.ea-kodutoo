@@ -1,9 +1,46 @@
+<<<<<<< HEAD
 window.onload = function() {
   counter = 0;
   /*console.log(counter);*/
   playOrPause();
   // console.log(counter);
+=======
+// Close nupp to do listi lisatu kinni panemiseks
+/* myMusic = new sound("song.mp3");
+myMusic.play(); */
+
+function registerServiceWorker() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
+      // Registration was successful
+      console.log('ServiceWorker registration successful: ', registration)
+    }, function (err) {
+      // registration failed :(
+      console.log('ServiceWorker registration failed: ', err)
+    })
+  }
 }
+
+
+
+window.onload = function() {
+  document.getElementById("song").play();
+
+  function registerServiceWorker() {
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful: ', registration)
+      }, function (err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err)
+      })
+    }
+  }
+  registerServiceWorker()
+>>>>>>> d8bd32156515848602d6baa7d5b4ae3b68e26654
+}
+
 
 var myNodelist = document.getElementsByTagName("LI");
 var i;
@@ -110,3 +147,7 @@ function newElement() {
     }
   }
 }
+
+
+
+
