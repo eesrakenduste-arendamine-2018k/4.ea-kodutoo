@@ -11,6 +11,10 @@
 	![Screenshot](images/screenshot.png)
 	![Screenshot1](images/screenshot1.png)
 
+	Inspiratsiooni ja koodijuppe v�etud: https://www.w3schools.com/graphics/game_intro.asp
+
+	http://greeny.cs.tlu.ee/~kaserola/Eesrakendused/4.ea-kodutoo/game-v04.html
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
