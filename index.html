@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minesweeper</title>
+    <link rel='stylesheet' href='style.css' />
+</head>
+<body>
+<canvas id='canvas' width='600' height='600'></canvas>
+<script src='minesweeper.js'></script>
+<script src='render.js'></script>
+<script src='controller.js'></script>
+<!--Service worker-->
+<script>
+  if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(function() { console.log("Service Worker Registered"); });
+  }
+</script>
+<div>Icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0</div>
+</body>
+</html>
+
+//code from: https://www.youtube.com/watch?v=LRnnNInjmN0
