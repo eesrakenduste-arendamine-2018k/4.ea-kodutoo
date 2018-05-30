@@ -24,6 +24,7 @@
 						
 						document.getElementById("endscreen").style.display = "block";
 						document.getElementById("score").innerHTML = "Time: "+gameTime/10 +"s";
+						document.body.style.backgroundColor = "#98FB98";
 					}
                   }
                 
