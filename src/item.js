@@ -38,7 +38,7 @@ addItem.addEventListener('click', function () {
 })
 // let items = localStorage.getItem(category)
 if (items != null) {
-  // items = JSON.parse(items)
+  items = JSON.parse(items)
   let listItems = document.getElementById('myUL')
   for (let i = 0; i < items.stored.length; i++) {
     if (items.stored[i] != null) {
