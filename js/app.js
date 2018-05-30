@@ -9,7 +9,7 @@ $(document).ready(function() {
  
 
      // service workeri käivitus
-     registerServiceWorker()
+     //registerServiceWorker()
 
     //  Init maps
  
@@ -68,7 +68,7 @@ $(document).ready(function() {
     counter = setInterval(timer, 1000);
   }
 //ServiceWorker
-   function registerServiceWorker() {
+  /* function registerServiceWorker() {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('js/serviceWorker.js').then(function (registration) {
           // Registration was successful
@@ -78,7 +78,7 @@ $(document).ready(function() {
           console.log('ServiceWorker registration failed: ', err)
         })
       }
-    }
+    }*/
 
     // Calculate distance between points function
     function calcDistance(fromLat, fromLng, toLat, toLng) {

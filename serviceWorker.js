@@ -1,14 +1,13 @@
 // service worker
 const CACHE_NAME = 'Kusmaolen-v1'
 const urlsToCache = [
-  
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/app.js',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/minimap.js',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/rnd.js',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/roundmap.js',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/streetviewmap.js',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/css/style.css'
+  '/~ojagre/4.ea-kodutoo/js/app.js',
+  '/~ojagre/4.ea-kodutoo/js/minimap.js',
+  '/~ojagre/4.ea-kodutoo/js/rnd.js',
+  '/~ojagre/4.ea-kodutoo/js/roundmap.js',
+  '/~ojagre/4.ea-kodutoo/js/streetviewmap.js',
+  '/~ojagre/4.ea-kodutoo/',
+  '/~ojagre/4.ea-kodutoo/css/style.css'
 ]
 
 self.addEventListener('install', function (event) {
