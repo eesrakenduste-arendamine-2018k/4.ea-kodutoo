@@ -1,6 +1,6 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-#Shaker
+# Shaker
 
 Autoriteks on Mihkel Haava ja Marii Helena Keerig
 
