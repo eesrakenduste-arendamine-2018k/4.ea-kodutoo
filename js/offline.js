@@ -2,6 +2,7 @@
 const CACHE_NAME = 'sayings-v1'
 const urlsToCache = [
     '/~meintaav/offline-app/index.html',
+    '/~meintaav/offline-app/js/lemmad2013.txt',
     '/~meintaav/offline-app/js/app.js',
     '/~meintaav/offline-app/'
 ]
