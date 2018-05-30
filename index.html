@@ -4,14 +4,39 @@
     <meta charset="UTF-8">
     <title>shaker</title>
     <style> 
- 
+		 * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body, canvas {
+        width: 100%;
+        height: 100%;
+      }
+      
+      canvas {
+        position: absolute;
+      }
+	  
+	div, p {
+		width: 300px;
+		height: 100px;
+		
+
+		position: relative;
+		top:0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+	}
     </style>
     <script src="app.js"></script>
   </head>
   <body>
 		<p id="readme">Mängu tutvustus</p>
 		<div>
-		<input id="playerName" type="text" placeholder="Nimi..." required>
 		<input id="play" type="submit" value="Mängi!" onclick="startGame()">
 		
 		</div>
@@ -25,6 +50,7 @@
 			</table>
 	</div>
 	
-    <canvas></canvas>
+    <h1 id="testObj">test</h1>
+	<h1 id="scoretest">test2</h1>
   </body>
 </html>
