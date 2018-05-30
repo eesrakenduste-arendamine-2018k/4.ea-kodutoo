@@ -2,7 +2,7 @@
 /* myMusic = new sound("song.mp3");
 myMusic.play(); */
 window.onload = function() {
-  document.getElementById("audio").play();
+  document.getElementById("song").play();
 }
 
 var myNodelist = document.getElementsByTagName("LI");
@@ -44,6 +44,7 @@ document.getElementById('item').addEventListener('keydown', function (e) {
 
 // Add nupu vajutusel uue elemendi tekitamine
 function newElement() {
+
   var li = document.createElement("li");
   var inputValue = document.getElementById("item").value;
   var t = document.createTextNode(inputValue);
@@ -52,6 +53,7 @@ function newElement() {
     alert("You must write something!");
   } else {
     document.getElementById("myUL").appendChild(li);
+    document.getElementById("mushroom").play();
   }
   document.getElementById("item").value = "";
 
