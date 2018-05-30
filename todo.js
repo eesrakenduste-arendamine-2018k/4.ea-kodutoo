@@ -44,7 +44,6 @@ document.getElementById('item').addEventListener('keydown', function (e) {
 
 // Add nupu vajutusel uue elemendi tekitamine
 function newElement() {
-  play();
   var li = document.createElement("li");
   var inputValue = document.getElementById("item").value;
   var t = document.createTextNode(inputValue);
