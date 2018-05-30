@@ -1,4 +1,10 @@
 // Close nupp to do listi lisatu kinni panemiseks
+/* myMusic = new sound("song.mp3");
+myMusic.play(); */
+window.onload = function() {
+  document.getElementById("audio").play();
+}
+
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < myNodelist.length; i++) {
@@ -34,10 +40,7 @@ document.getElementById('item').addEventListener('keydown', function (e) {
     newElement(value);
   }
 });
-function play(){
-  var audio = document.getElementById("audio");
-  audio.play();
-  }
+
 
 // Add nupu vajutusel uue elemendi tekitamine
 function newElement() {
