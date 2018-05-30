@@ -1,5 +1,5 @@
 // service worker
-const CACHE_NAME = 'sayings-v1'
+const CACHE_NAME = 'sayings-v1.1'
 const urlsToCache = [
     '/~meintaav/offline-app/index.html',
     '/~meintaav/offline-app/js/lemmad2013.txt',
