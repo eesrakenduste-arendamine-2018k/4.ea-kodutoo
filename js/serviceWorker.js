@@ -1,5 +1,5 @@
 // service worker
-const CACHE_NAME = 'mapsGame-v1'
+const CACHE_NAME = 'Kusmaolen-v1'
 const urlsToCache = [
   
   '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/app.js',
@@ -8,7 +8,6 @@ const urlsToCache = [
   '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/roundmap.js',
   '/~ojavgret/Eesrakendused/4.ea-kodutoo/js/streetviewmap.js',
   '/~ojavgret/Eesrakendused/4.ea-kodutoo/',
-  '/~ojavgret/Eesrakendused/4.ea-kodutoo/css/bootstrap.css',
   '/~ojavgret/Eesrakendused/4.ea-kodutoo/css/style.css'
 ]
 

@@ -184,11 +184,12 @@ html, body {
   }
   
   #endGame {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
-    width: 100px;
-    margin: -190px 0 0 -240px;
+    margin-top: -20vw;
+    margin-left: -20vw;
+    width: 40vw;
     padding: 10px;
     background: #EFEFEF;
     text-align: center;

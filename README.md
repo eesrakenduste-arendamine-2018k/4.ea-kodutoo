@@ -1,15 +1,28 @@
-# 4. kodutöö – Võrguta olekus töötav rakendus
+KUSMAOLEN
 
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+1. Autorid:
+Julika Maiste
 
-## Nõuded
+Grete Ojavere
 
-1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
-1. README.md fail sisaldab:
-    * suurelt rakenduse nime; 
-    * autorite nimesid; 
-    * rakenduse funktsionaalsuse kirjeldust;
-    * ekraanitõmmist rakendusest.
+
+Rakenduse funktsionaalsuse kirjeldus:
+
+Rakendus on loodud eesmärgiga tutvustada inimestele erinevaid kohti Eestimaal.
+
+Selleks tuleb mängu alustades kohe hakata ümbrust uurima ja ära arvama, kus Eesti maakonnas ja veel täpsemaltki antud stardipunkt on. Aega on selleks 1 minut, mis peaks oletuse tegemiseks olema piisav. Pakkumise tegemiseks klikka väikesel kaardil sobivasse kohta ja kinnita pakkumine. Täpsuse tagasiside tuleb kohe peale pakkumise kinnitamist. Kokku on mängus 5 vooru, millede lõppedes kuvatakse kogupunktide arv.
+	
+Ekraanitõmmis rakendusest:
+
+
+
+
+Esialgne idee: 
+
+
+
+
+	
 1. Rakenduse puhul peavad olema täidetud vähemalt järgmised nõuded:
     * rakendus lahendab tõsist probleemi või on meelelahutusliku eesmärgiga; 
     * rakenduse idee peab olema kooskõlastatud õppejõuga (võib kirjutada Slack'i); 
