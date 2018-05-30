@@ -1,3 +1,4 @@
+//code used: https://github.com/eesrakenduste-arendamine-2018k/sayings-offline-app/blob/master/serviceWorker.js
 // service worker
 const CACHE_NAME = 'sayings-v1'
 const urlsToCache = [

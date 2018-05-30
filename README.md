@@ -1,20 +1,9 @@
-# 4. kodutöö – Võrguta olekus töötav rakendus
-
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
-
-## Nõuded
-
-1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
-1. README.md fail sisaldab:
-    * suurelt rakenduse nime; 
-    * autorite nimesid; 
-    * rakenduse funktsionaalsuse kirjeldust;
-    * ekraanitõmmist rakendusest.
-1. Rakenduse puhul peavad olema täidetud vähemalt järgmised nõuded:
-    * rakendus lahendab tõsist probleemi või on meelelahutusliku eesmärgiga; 
-    * rakenduse idee peab olema kooskõlastatud õppejõuga (võib kirjutada Slack'i); 
-    * keerukuselt peab ületama 6. tunni vanasõnade näidet; 
-    * töötab võrguta olekus, st kasutab ServiceWorker'it;
-    * töötab hästi väikese ekraaniga seadmel (mobiilil);  
-    * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
-    * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+# RGB Game  
+### Autorid: Martin Sõmer, Veli Vaigur  
+  
+###  Funktsionaalsus  
+Lehele minnes fikseerib rakendus telefoni positsiooni ja võtab selle algpositsiooniks. Seejärel genereerib suvalise RGB värvi, mis tuleb telefoni erinevate telgede suhtes liigutades saavutada. Telefoni X, Y ja Z teljed on vastavalt R, G ja B väärtustega võrduma pandud. Ekraani keskel näitab üldist protsenti, kui lähedal ollakse etteantud värvile. Ekraanile vajutades tulevad nii etteantud kui ka hetke seisu värvi RGB ja HEX koodid nähtavale.  
+  
+### Screenshotid  
+![Screenshot 1](screenshots/screenshot_1.png)  
+![Screenshot 1](screenshots/screenshot_2.png)
