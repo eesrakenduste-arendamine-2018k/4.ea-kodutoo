@@ -7,6 +7,7 @@ for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement('SPAN')
   var txt = document.createTextNode('\u00D7')
   span.className = 'close'
+  span.id = i
   span.appendChild(txt)
   myNodelist[i].appendChild(span)
 }
@@ -43,6 +44,7 @@ function newElement () {
   var span = document.createElement('SPAN')
   var txt = document.createTextNode('\u00D7')
   span.className = 'close'
+  // span.id = inputValue
   span.appendChild(txt)
   li.appendChild(span)
 
@@ -62,6 +64,15 @@ if ('serviceWorker' in navigator) {
     console.log('ServiceWorker registration failed: ', err)
   })
 }
+/*
+let delButton = document.getElementsByClassName('close')
+delButton.addEventListener('click', function (e) {
+  let id = e.target.id
+  let el = document.getElementById(id)
+  let value =
+  //let value = e.target.parentElement.value
+  localStorage.removeItem(value)
+}) */
 
 let addButton = document.getElementById('addBtn')
 addButton.addEventListener('click', function () {
