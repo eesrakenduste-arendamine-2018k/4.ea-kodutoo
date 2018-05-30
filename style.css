@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#generatedColor {
+    border-top: 1vh solid white;
+    border-bottom: 0.5vh solid white;
+    border-left: 1vh solid white;
+    border-right: 1vh solid white;
+    width: auto;
+    height: 48.5vh;
+    background-color: dimgray;
+    color: white;
+}
+
+#currentColor {
+    border-top: 0.5vh solid white;
+    border-bottom: 1vh solid white;
+    border-left: 1vh solid white;
+    border-right: 1vh solid white;
+    width: auto;
+    height: 48.5vh;
+    background-color: dimgray;
+    color: white;
+}
+
+#percentage {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    
+    border: 0.5vh solid white;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: black;
+    
+    text-align: center;
+    color: white;
+    line-height: 70px;
+    font-size: 2em;
+}
