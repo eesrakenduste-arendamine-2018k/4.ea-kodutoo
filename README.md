@@ -1,6 +1,7 @@
 KUSMAOLEN
 
-1. Autorid:
+Autorid:
+
 Julika Maiste
 
 Grete Ojavere
