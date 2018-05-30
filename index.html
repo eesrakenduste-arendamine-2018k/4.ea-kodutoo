@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>shaker</title>
+    <style> 
+ 
+    </style>
+    <script src="app.js"></script>
+  </head>
+  <body>
+		<p id="readme">Mängu tutvustus</p>
+		<div>
+		<input id="playerName" type="text" placeholder="Nimi..." required>
+		<input id="play" type="submit" value="Mängi!" onclick="startGame()">
+		
+		</div>
+	
+	<div id="endscreen" style="display:none">
+			<h1>Mäng läbi!</h1>
+			<h1 id="score"></h1>
+			<br>
+			<br>
+			<table id="top10">
+			</table>
+	</div>
+	
+    <canvas></canvas>
+  </body>
+</html>
