@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
 }
+body{
+    background: rgba(0, 0, 0, 0.85)
+}
 ul {
     margin: 0;
     padding: 0;
@@ -14,6 +17,11 @@ ul li {
     background: #eee;
     font-size: 18px;
     transition: 0.2s;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 
     /* make the list items unselectable */
     -webkit-user-select: none;
@@ -68,10 +76,19 @@ ul li.checked::before {
 
 /* Style the header */
 .header {
-    background-color: #f44336;
+    /* background-color: #f44336; */
+    background: linear-gradient(red, cyan);
     padding: 30px 40px;
     color: white;
     text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 40px;
+
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 /* Clear floats after the header */
@@ -88,6 +105,10 @@ input {
     padding: 10px;
     float: left;
     font-size: 16px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 /* Style the "Add" button */
@@ -101,8 +122,18 @@ input {
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .addBtn:hover {
     background-color: #bbb;
+}
+
+body svg{
+    height: 5%;
+    width: 5%;
+    cursor: pointer;
 }

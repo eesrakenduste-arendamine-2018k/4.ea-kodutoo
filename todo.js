@@ -1,8 +1,8 @@
-// Close nupp to do listi lisatu kinni panemiseks
-/* myMusic = new sound("song.mp3");
-myMusic.play(); */
 window.onload = function() {
-  document.getElementById("song").play();
+  counter = 0;
+  /*console.log(counter);*/
+  playOrPause();
+  // console.log(counter);
 }
 
 var myNodelist = document.getElementsByTagName("LI");
@@ -15,7 +15,7 @@ for (i = 0; i < myNodelist.length; i++) {
   myNodelist[i].appendChild(span);
 }
 
-// Peidad itemi to do listis 2ra
+// Ülesande sulgemine
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -25,10 +25,11 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
-// Kui vajutad lisatud ylesandele, ilmub kiri checked
+// Ülesanne täidetud ehk ülesandele vajutades toimub läbikriipsutamine
 var list = document.querySelector('ul');
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
+    Silence("death");
     ev.target.classList.toggle('checked');
   }
 }, false);
@@ -41,8 +42,46 @@ document.getElementById('item').addEventListener('keydown', function (e) {
   }
 });
 
+/*-----------------------------------FUNKTSIOONID-----------------------------------*/
+
+function playOrPause(){
+  console.log(counter);
+  if(counter % 2 == 0){
+    document.getElementById("song").play();
+  }else{
+    document.getElementById("song").pause();
+  }
+  counter += 1;
+  if(counter == 10){
+    counter = 0;
+  }
+}
 
 // Add nupu vajutusel uue elemendi tekitamine
+function Silence(song){
+  if(song == "mushroom"){
+    var firstDelay = 5000;
+    var secDelay = 1000;
+  }else if(song == "death"){
+    var firstDelay = 6000;
+    var secDelay = 3627;
+  }
+  if(counter % 2 != 0){
+    document.getElementById("song").pause();
+
+    document.getElementById(song).play();
+
+    setTimeout(function() {
+      document.getElementById(song).pause();
+    }, firstDelay);
+    setTimeout(function() {
+      document.getElementById("song").play();
+    }, secDelay);
+
+  }else{
+    document.getElementById(song).play()
+  }
+}
 function newElement() {
 
   var li = document.createElement("li");
@@ -50,10 +89,11 @@ function newElement() {
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
-    alert("You must write something!");
+    alert("Ei saa jätta tühjaks!");
   } else {
-    document.getElementById("myUL").appendChild(li);
-    document.getElementById("mushroom").play();
+    document.getElementById("mainUl").appendChild(li);
+    Silence("mushroom");
+    console.log(counter);
   }
   document.getElementById("item").value = "";
 
