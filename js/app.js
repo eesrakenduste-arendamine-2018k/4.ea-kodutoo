@@ -10,7 +10,7 @@
 
         this.new = true
         this.words = []
-        this.word = null
+        this.word = ""
         this.init()
     }
 
@@ -22,7 +22,6 @@
             // service workeri käivitus
             this.registerServiceWorker()
             this.readTextFromFile()
-            console.log(document.getElementById("test"))
         },
         registerServiceWorker: function () {
             if ('serviceWorker' in navigator) {
@@ -42,8 +41,8 @@
                 if (rawFile.readyState === 4) {
                     if (rawFile.status === 200 || rawFile.status == 0) {
                         var allText = rawFile.responseText
-                        this.words = allText.split("\n");
-                        this.word = this.words[Math.floor(Math.random() * this.words.length)]
+                        Sayings.words = allText.split("\n");
+                        Sayings.word = Sayings.words[Math.floor(Math.random() * Sayings.words.length)]
                     }
                 }
             }
@@ -56,5 +55,6 @@
     window.onload = function () {
         const app = new Sayings()
         window.app = app
+        document.querySelector('#test').innerHTML = Sayings.word
     }
 })()
