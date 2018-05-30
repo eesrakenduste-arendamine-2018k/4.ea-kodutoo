@@ -1,0 +1,18 @@
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f1f1f1;
+}
+
+.container-fluid, .row.content, .sidenav {
+    min-height: 100vh !important;
+    height: auto;
+    overflow: auto;
+}
+
+.add-new, .input-group, .list-group {
+  margin-top: 13px;
+}
+
+html, body {
+    height: 100%;
+}
