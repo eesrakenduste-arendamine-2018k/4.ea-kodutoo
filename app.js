@@ -12,10 +12,10 @@
  var score= 0;
  var gameTime = 0;
  function shake(event) {
-                  const xGravity = event.accelerationIncludingGravity.x
+                  const yGravity = event.accelerationIncludingGravity.y
                   
-                  if (xGravity > 10) {
-                    score += xGravity-10;
+                  if (yGravity > 10) {
+                    score += yGravity-10;
                     //navigator.vibrate(300)
                     document.getElementById("scoretest").innerHTML = "Progress: "+Math.floor((100*score)/1000)+"%";
 					if (score>=1000) {
