@@ -1,6 +1,6 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-#Notes
+# Notes
 
 Mihkel Jäe
 
