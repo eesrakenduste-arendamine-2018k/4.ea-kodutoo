@@ -1,9 +1,29 @@
+var CACHE_NAME = 'my-site-cache-v1';
+var urlsToCache = [
+  '/',
+  '/index.html',
+  '/controller.js',
+  '/minesweeper.js',
+  '/render.js',
+  '/style.css',
+];
 
-
+self.addEventListener('install', function(event) {
+  // Perform install steps
+  event.waitUntil(
+    caches.open(CACHE_NAME)
+      .then(function(cache) {
+        console.log('Opened cache');
+        return cache.addAll(urlsToCache);
+      })
+  );
+});
+ /*
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('minesweeper').then(function(cache) {
       return cache.addAll([
+        '/',
         '/mihkel26.github.io/4.ea-kodutoo/',
         '/mihkel26.github.io/4.ea-kodutoo/index.html',
         '/mihkel26.github.io/4.ea-kodutoo/controller.js',
@@ -16,7 +36,7 @@ self.addEventListener('install', function(e) {
     })
   );
 });
-
+*/
 self.addEventListener('fetch', function (event) {
   // console.log('WORKER: fetch event in progress.');
 
