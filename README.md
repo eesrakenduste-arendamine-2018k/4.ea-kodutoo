@@ -4,6 +4,8 @@
 
 Rakenduseks on klassikaline Minesweeper, mis töötab ka offlines kasutades Service Workerit.
 
+screenshot: https://gyazo.com/26fd745c157416f1c9733cec93bc1ec3
+
 
 # 4. kodutöö – Võrguta olekus töötav rakendus
 

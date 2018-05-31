@@ -7,7 +7,7 @@ let colors = [
   'blue', 'darkgreen', 'red', 'navyblue', 'darkred', 'cyan', 'purple', 'black'
 ];
 let bombIcon = new Image();
-bombIcon.src = 'images/bomb.svg';
+bombIcon.src = 'images/bombb.svg';
 let flagIcon = new Image();
 flagIcon.src = 'images/flag.svg';
 
