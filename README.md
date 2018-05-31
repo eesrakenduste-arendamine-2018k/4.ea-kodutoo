@@ -1,5 +1,20 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+	rakenduse nimi: BlockEvader
+
+	Autorid: Caspar Sepp ja Roland Kasenurm
+	
+	Kirjeldus: Rakenduseks on mäng, kus mängija eesmärgiks on eemale põigata laest kukkuvatest kastidest.
+	Pidevalt suureneb skoor ja kastide kukkumiskiirus suureneb iga kastiga. Pidevalt varieerub kastide kukkumise asukoht ja suurus.
+	Mäng lõppeb, kui mingi objekt kukub mängija pihta.
+	
+	![Screenshot](images/screenshot.png)
+	![Screenshot1](images/screenshot1.png)
+
+	Inspiratsiooni ja koodijuppe v�etud: https://www.w3schools.com/graphics/game_intro.asp
+
+	http://greeny.cs.tlu.ee/~kaserola/Eesrakendused/4.ea-kodutoo/game-v04.html
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
@@ -18,3 +33,6 @@
     * töötab hästi väikese ekraaniga seadmel (mobiilil);  
     * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
     * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+	
+
+	
