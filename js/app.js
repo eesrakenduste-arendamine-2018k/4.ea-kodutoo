@@ -53,21 +53,20 @@
         },
         compareAnswer: function () {
             var userAnswer = document.querySelector('#ex2').value
-            console.log('"'+userAnswer.toString()+'"' +"  ==  "+ '"'+Sayings.word.toString()+'"')
             if (userAnswer.toString() === Sayings.word.toString()) {
-                console.log("I made it here1")
-                console.log(true)
                 document.querySelector('#ex2').value = ""
-                Sayings.score = Sayings.score + 1
-                console.log(Sayings.score)
-                document.querySelector('#score').innerHTML = Sayings.score.toString
+                this.score++
+                document.querySelector('#score').innerHTML = this.score
                 app.generateRandomWord()
             } else {
-                console.log("I made it here2"+Sayings.word.toString())
-                console.log(false)
                 document.querySelector('#ex2').value =""
-                Sayings.score--
-                document.querySelector('#score').innerHTML = Sayings.score.toString
+                if(this.score> 0){
+                    this.score--
+                    document.querySelector('#score').innerHTML = this.score
+                } else{
+                    this.score = 0
+                    document.querySelector('#score').innerHTML = this.score
+                }
                 app.generateRandomWord()
             }
         },
