@@ -12,7 +12,8 @@ Kõik salvestatakse localstorage kaudu
 
 Kategooriat saab kustutada, kui see avada ja vajutada "Delete category nupule"
 
-## Screenshot
+## Screenshots
+
 ![Alt text](https://i.imgur.com/fPe3MFb.jpg)
 ![Alt text](https://i.imgur.com/pG1Skus.jpg)
 ![Alt text](https://i.imgur.com/PTHIq8s.jpg)
