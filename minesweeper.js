@@ -32,7 +32,8 @@ function countMinesAround(x, y) {
 }
 
 function init() {
-  this.registerServiceWorker()
+  //this.registerServiceWorker()
+
   for (let y = 0; y < ROWS; ++y) {
     board.push([]);
     state.push([]);
