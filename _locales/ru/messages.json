@@ -1,0 +1,10 @@
+﻿{
+	"extName": {"message": "Валютный калькулятор"},
+	"save": {"message": "Сохранить"},
+	"defaultBaseCurrency": {"message": "Базовая валюта по умолчанию"},
+	"optionsSaved": { "message": "Настройки успешно сохранены"},
+	"placeholder": { "message": "Значение в базовой валюте"},
+	"loadingRates": { "message": "Загрузка курсов валют"},
+	"pleaseWait": { "message": "Пожалуйста, подождите ..."},
+	"notAbleLoad": { "message": "Не удалось загрузить курсы валют. Пожалуйста, попробуйте еще раз позже."}
+}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <title>__MSG_extName__</title>
+    <style></style>
+	<script src="vue.min.js"></script>
+	<script src="localization.js"></script>
+    <script src="popup.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="imageDropDown.css">
+	<link rel="stylesheet" type="text/css" href="popup.css">
+  </head>
+  <body>
+	<div id="container">
+		<h3 class="text-center"><em>__MSG_extName__</em></h3>
+
+		<div class="row">
+			<div class="col-xs-8 leftSide">
+				<div class="input-group inputContainer">
+					<div class="input-group-addon">{{{ baseCurrency.symbol }}}</div>
+					<input type="number" class="form-control" placeholder="__MSG_placeholder__" v-model="baseValue" min="0" max="9999999" v-on:keyup="keyup" />
+				</div>
+				<div class="row valuesContainer" v-for="currency in currencies">
+					<div class="col-xs-8"><p class="text-right value">{{{ currency.symbol }}} {{ currency.value | currencyDisplay }}</p></div>
+					<div class="col-xs-2 flag"><img v-bind:src="currency.icon"/></div>
+					<div class="col-xs-2 country"><span>{{ currency.id | toUpper }}</span></div>
+				</div>
+			</div>
+			
+			<div class="col-xs-3 rightSide">
+				<div id="image-dropdown" >
+					<div v-for="currency in currencies">
+						<input type="radio" id="{{ currency.id }}" name="baseCurrency" value="{{ currency.id }}" v-on:click="baseCurrencyChanged" />
+						<label for="{{ currency.id }}"><img v-bind:src="currency.icon"/><span>{{ currency.id | toUpper }}</span></label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="overlay">
+		<div>
+			<p><em>__MSG_loadingRates__</em></p>
+			<img src="loading.gif"/>
+			<p><em>__MSG_pleaseWait__</em></p>
+		</div>
+	</div>
+	<script>
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker
+           .register('/sw.js')
+           .then(function() { console.log("Service Worker Registered"); });
+		}
+	</script>
+  </body>
+</html>

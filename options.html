@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Currency calculator options</title>
+  <script src="vue.min.js"></script>
+  <script src="localization.js"></script>
+  <script src="options.js"></script>
+  <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+</head>
+
+<body style="margin:15px">
+	<p><strong>__MSG_defaultBaseCurrency__:</strong></p>
+	<div id="list" class="row" >
+		<div v-for="currency in currencies" class="form-group col-xs-4" style="line-height:32px;">
+			<input type="radio" id="{{ currency.id }}" name="baseCurrency" value="{{ currency.id }}" />
+				<label for="{{ currency.id }}"><img v-bind:src="currency.icon" style="margin:0 5px;"/><span>{{ currency.id | toUpper }}</span></label>
+		</div>
+	</div>
+  
+	<div class="row" style="text-align: center; height:25px;">
+		<span id="status"></span>
+	</div>
+	  
+	<div class="row" style="margin:0 auto; width:80px; padding:5px;">
+		<button id="save" style="width:100%;">__MSG_save__</button>
+	</div>
+  
+</body>
+</html>

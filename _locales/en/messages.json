@@ -1,0 +1,10 @@
+{
+	"extName": {"message": "Currency calculator"},
+	"save": {"message": "Save"},
+	"defaultBaseCurrency": {"message": "Default base currency"},
+	"optionsSaved": { "message": "Options saved"},
+	"placeholder": { "message": "Base value"},
+	"loadingRates": { "message": "Loading rates"},
+	"pleaseWait": { "message": "Please, wait ..."},
+	"notAbleLoad": { "message": "Not able to load rates. Please, try again later."}
+}
