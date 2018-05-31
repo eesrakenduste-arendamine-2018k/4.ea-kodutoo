@@ -1,10 +1,11 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-##Notes
+#Notes
 
 Mihkel Jäe
 
-Tegemist on rakendusega kuhu saab märkmeid jätta.
+Tegemist on rakendusega kuhu saab märkmeid jätta, rakenduse saab ka telefoni koduekraanile lisada ja 
+sellega saab kaasa väga põneva ikooni, rakendus toimib ka interneti ühenduseta.
 
 Baasiks oli peamiselt angularJS: https://angularjs.org/
 
