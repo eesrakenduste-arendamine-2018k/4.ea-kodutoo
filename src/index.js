@@ -12,7 +12,7 @@ for (i = 0; i < myNodelist.length; i++) {
   span.id = i
   span.appendChild(txt)
   myNodelist[i].appendChild(span)
-}*/
+} */
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName('close')
@@ -22,7 +22,6 @@ for (i = 0; i < close.length; i++) {
     div.style.display = 'none'
   }
 }
-
 // Create new element when clicking Add
 function newElement () {
   inputValue = document.getElementById('myInput').value
@@ -83,4 +82,4 @@ delButton.addEventListener("click", function (ev){
   debugger
     // let value = e.target.parentElement.value
   // localStorage.removeItem(value)
-})*/
+}) */
