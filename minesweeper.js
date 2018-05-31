@@ -1,3 +1,5 @@
+
+
 const COLS = 10, ROWS = 10, MINES = 10;
 let board = [];
 let state = [];
@@ -32,7 +34,7 @@ function countMinesAround(x, y) {
 }
 
 function init() {
-  this.registerServiceWorker()
+  //this.registerServiceWorker()
 
   for (let y = 0; y < ROWS; ++y) {
     board.push([]);
