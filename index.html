@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>shaker</title>
+    <style> 
+		 * {
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body {
+        width: 100%;
+        height: 100%;
+      }
+	  
+	  body {
+		background-color: lemonchiffon;
+		}
+      	  
+	div, p {
+		width: 800px;
+		height: 100px;
+		
+		text-align: center;
+
+		position: relative;
+		top: 200px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+	}
+	#scoretest {
+		display:none;
+	}
+	h1 {
+		width: 800px;
+		height: 100px;
+		
+		position: relative;
+		top: 250px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+		
+	}
+	input, button {
+		font-size: 32px;
+	}
+	button {
+		position: relative;
+		top: 300px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		margin: auto;
+	}
+    </style>
+	<link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet"> 
+	<link rel="icon" sizes="192x192" href="icon.png">
+    <style>
+      body {
+        font-family: 'Cabin Sketch', cursive;
+        font-size: 36px;
+      }
+    </style>
+    <script src="app.js"></script>
+	<link rel="apple-touch-icon" sizes="128x128" href="icon.png">
+  </head>
+  <body>
+		<p id="readme">Eesmärgiks on vaja saada progress 100% täis.</p>
+		<p id="readme">Selleks on vaja raputada oma telefoni.</p>
+		<p id="readme">Mäng käib aja peale, seega tee kiiresti.</p>
+		<p id="readme" style="font-weight: bold;">Edu mängimisel!</p>
+		<div>
+		<input id="play" type="submit" value="Mängi!" onclick="startGame()">
+		
+		</div>
+	
+	<div id="endscreen" style="display:none">
+			<h1>Mäng läbi!</h1>
+			<h1 id="score"></h1>
+			<h1>Hea tulemus!</h1>
+			<button id="playAgain" onclick="newGame()">Mängi uuesti!</button>
+			
+	</div>
+	
+	<h1 id="scoretest">Progress: 0%</h1>
+  </body>
+</html>
