@@ -33,7 +33,7 @@ function newElement () {
   if (inputValue === '') {
     alert('You must write something!')
   } else {
-    if (window.location.pathname === '/~kogerj/4.ea-kodutoo/src/index.html' || window.location.pathname === '/~kogerj/4.ea-kodutoo/src/') {
+    if (window.location.pathname === '/~timj/4.ea-kodutoo/src/index.html' || window.location.pathname === '/~timj/4.ea-kodutoo/src/') {
       document.getElementById('myUL').appendChild(a)
     } else {
       document.getElementById('myUL').appendChild(li)
