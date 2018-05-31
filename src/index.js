@@ -7,6 +7,7 @@ for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement('SPAN')
   var txt = document.createTextNode('\u00D7')
   span.className = 'close'
+  span.onclick="deleteItem()"
   span.id = i
   span.appendChild(txt)
   myNodelist[i].appendChild(span)
@@ -33,7 +34,7 @@ function newElement () {
   if (inputValue === '') {
     alert('You must write something!')
   } else {
-    if (window.location.pathname === '/~timj/4.ea-kodutoo/src/index.html' || window.location.pathname === '/~timj/4.ea-kodutoo/src/') {
+    if (window.location.pathname === '/~kogerj/4.ea-kodutoo/src/index.html' || window.location.pathname === '/~kogerj/4.ea-kodutoo/src/') {
       document.getElementById('myUL').appendChild(a)
     } else {
       document.getElementById('myUL').appendChild(li)

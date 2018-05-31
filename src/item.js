@@ -47,3 +47,14 @@ if (items != null) {
     }
   }
 }
+
+
+
+ function deleteItem(e) {
+  console.log("test")
+  let id = e.target.id
+  console.log(id)
+  let el = document.getElementById(id)
+  //let value = e.target.parentElement.value
+  //localStorage.removeItem(value)
+  }
