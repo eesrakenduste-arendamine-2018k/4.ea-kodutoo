@@ -32,7 +32,7 @@ function countMinesAround(x, y) {
 }
 
 function init() {
-  //this.registerServiceWorker()
+  this.registerServiceWorker()
 
   for (let y = 0; y < ROWS; ++y) {
     board.push([]);
@@ -59,6 +59,16 @@ function init() {
         board[y][x] = countMinesAround(x, y);
       }
     }
+  }
+  if('serviceWorker' in navigator) {
+    window.addEventListener('load',function(){
+    navigator.serviceWorker
+      .register('/sw.js')
+      .then(function(/*registration*/) { console.log("Service Worker Registered");
+      }, function(err){
+      console.log('ServiceWorker registration failed: ', err);
+      });
+    });
   }
 }
 

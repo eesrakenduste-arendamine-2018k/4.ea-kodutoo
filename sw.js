@@ -1,17 +1,16 @@
-importScripts('/cache-polyfill.js');
 
 self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('minesweeper').then(function(cache) {
       return cache.addAll([
-        '/~piirsten/4.ea-kodutoo/',
-        '/~piirsten/4.ea-kodutoo/index.html',
-        '/~piirsten/4.ea-kodutoo/controller.js',
-        '/~piirsten/4.ea-kodutoo/minesweeper.js',
-        '/~piirsten/4.ea-kodutoo/render.js',
-        '/~piirsten/4.ea-kodutoo/style.css',
-        '/~piirsten/4.ea-kodutoo/images/bomb.svg',
-        '/~piirsten/4.ea-kodutoo/images/flag.svg'
+        '/~mihkel26/4.ea-kodutoo/',
+        '/~mihkel26/4.ea-kodutoo/index.html',
+        '/~mihkel26/4.ea-kodutoo/controller.js',
+        '/~mihkel26/4.ea-kodutoo/minesweeper.js',
+        '/~mihkel26/4.ea-kodutoo/render.js',
+        '/~mihkel26/4.ea-kodutoo/style.css',
+        '/~mihkel26/4.ea-kodutoo/images/bomb.svg',
+        '/~mihkel26/4.ea-kodutoo/images/flag.svg'
       ]);
     })
   );
