@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_package_v0.16/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon_package_v0.16/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon_package_v0.16/favicon-16x16.png">
+  <link rel="manifest" href="favicon_package_v0.16/site.webmanifest">
+  <link rel="mask-icon" href="favicon_package_v0.16/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
+  <title>Kalkulaator</title>
+</head>
+
+<body>
+  <header class="bg-black-90 w-100 ph3 pv3 pv4-ns ph4-m ph5-l">
+    <nav role="navigation" class="f6 fw6 ttu tracked">
+      <a class="link dim white dib mr3" href="#calc" title="calc">Kalkulaator</a>
+      <a class="link dim white dib mr3" href="#weightLog" title="weightLog">Kaalu logi</a>
+    </nav>
+  </header>
+  <main role="main">
+    <div id="weightLog">
+      <div id="input">
+        <label for="bodyWeight">Sisesta kehakaal </label>
+        <input id="bodyWeight" type="number">
+        <button id="addData" onclick="bodyWeightToArray()">GO</button>
+      </div>
+      <div style="position:relative;" , class="chart-container">
+        <canvas id="line-chart"></canvas>
+
+      </div>
+    </div>
+    <div id="default">
+      <h1>Arvutage oma päevane kalori vajadus</h1>
+      <form id="calculator">
+        <div id="gender" style="padding-bottom: 1rem">
+          <input type="radio" name="gender" id="male" checked>Mees
+          <input type="radio" name="gender" id="female">Naine
+        </div>
+        Vanus:
+        <input type="number" id="age" style="padding-bottom: 1rem"><br>
+        Pikkus(cm):
+        <input type="number" id="height" style="padding-bottom: 1rem"><br>
+        Kaal(kg):
+        <input type="number" id="weight" style="padding-bottom: 1rem">
+        <label for="activityLevel">Aktiivsusaste:</label>
+        <select id="activityLevel" size="1" style="padding-bottom: 1rem">
+          <option value="1.2" selected>Istuv (Vähe või üldse mitte trenni)</option>
+          <option value="1.375">Kerge trenn (Treenid 1-3x nädalas)</option>
+          <option value="1.55">Mõõdukas trenn (Treenid 3-5x nädalas)</option>
+          <option value="1.725">Raske trenn (Treenid 6-7x nädalas)</option>
+          <option value="1.9">Väga raske trenn (Treenid 2x päevas)</option>
+        </select><br>
+        <button type="submit" id="calculate">Arvuta</button>
+      </form>
+      <!-- <p id="bmiIndex"></p> -->
+      <p id="minCalories"></p>
+      <p id="activeCalories"></p>
+    </div>
+  </main>
+</body>
+<script src="calc.js"></script>
+<script src="index.js"></script>
+<script src="app.js"></script>
+</html>
