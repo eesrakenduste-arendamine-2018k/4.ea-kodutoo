@@ -1,3 +1,5 @@
+// Some code used from https://www.w3schools.com/howto/howto_js_todolist.asp
+
 let inputValue
 /*
 // Create a "close" button and append it to each list item
