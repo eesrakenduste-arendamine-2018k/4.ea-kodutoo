@@ -11,7 +11,7 @@ self.addEventListener('install', function(e) {
         '/render.js',
         '/style.css',
         '/sw',
-        '/images/bomb.svg',
+        '/images/bombb.svg',
         '/images/flag.svg'
       ]);
     })
