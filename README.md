@@ -1,7 +1,7 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
 
-##SHUFFLER
+## SHUFFLER
 
 
 Autorid:
