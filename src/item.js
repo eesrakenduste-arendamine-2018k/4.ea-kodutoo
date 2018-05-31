@@ -2,26 +2,30 @@ let item, o
 let category = location.search.split('category=')[1]
 document.getElementById('itemTitle').innerHTML = category
 let items = localStorage.getItem(category)
+let save = items
 let Label = category
-if (items != null) {
-  o = {
-    stored: items.stored,
-    categoryName: category
-  }
-} else {
-  o = {
-    stored: [],
-    categoryName: category
-  }
-}
 
 function saveLocal () {
+  if (save == null) {
+    o = {
+      stored: [],
+      categoryName: category
+    }
+  } else {
+    save = JSON.parse(save)
+    o = {
+      stored: save.stored,
+      categoryName: category
+    }
+  }
   let json = {
     elementName: document.getElementById('myInput').value,
     checked: false
   }
+
   o.stored.push(json)
   console.log(o)
+
   localStorage.setItem(Label, JSON.stringify(o))
 }
 // Add a "checked" symbol when clicking on a list item
@@ -48,13 +52,11 @@ if (items != null) {
   }
 }
 
-
-
- function deleteItem(e) {
-  console.log("test")
+function deleteItem (e) {
+  console.log('test')
   let id = e.target.id
   console.log(id)
   let el = document.getElementById(id)
-  //let value = e.target.parentElement.value
-  //localStorage.removeItem(value)
-  }
+  // let value = e.target.parentElement.value
+  // localStorage.removeItem(value)
+}
