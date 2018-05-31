@@ -1,30 +1,11 @@
-<<<<<<< HEAD
 window.onload = function() {
   counter = 0;
   /*console.log(counter);*/
   playOrPause();
   // console.log(counter);
-=======
 // Close nupp to do listi lisatu kinni panemiseks
 /* myMusic = new sound("song.mp3");
 myMusic.play(); */
-
-function registerServiceWorker() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('serviceworker.js').then(function (registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful: ', registration)
-    }, function (err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err)
-    })
-  }
-}
-
-
-
-window.onload = function() {
-  document.getElementById("song").play();
 
   function registerServiceWorker() {
     if ('serviceWorker' in navigator) {
@@ -38,7 +19,6 @@ window.onload = function() {
     }
   }
   registerServiceWorker()
->>>>>>> d8bd32156515848602d6baa7d5b4ae3b68e26654
 }
 
 
@@ -82,7 +62,7 @@ document.getElementById('item').addEventListener('keydown', function (e) {
 /*-----------------------------------FUNKTSIOONID-----------------------------------*/
 
 function playOrPause(){
-  console.log(counter);
+  // console.log(counter);
   if(counter % 2 == 0){
     document.getElementById("song").play();
   }else{
@@ -130,7 +110,7 @@ function newElement() {
   } else {
     document.getElementById("mainUl").appendChild(li);
     Silence("mushroom");
-    console.log(counter);
+    // console.log(counter);
   }
   document.getElementById("item").value = "";
 
@@ -147,7 +127,4 @@ function newElement() {
     }
   }
 }
-
-
-
 
