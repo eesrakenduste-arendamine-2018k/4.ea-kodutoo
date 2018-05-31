@@ -1,8 +1,26 @@
-# 4. kodutöö – Võrguta olekus töötav rakendus
+# Kategooriatega offline todo list
+
+## Liikmed
+
+Tim Jaanson, Jaroslava Koger, Rasmus Kello
+
+## Funktsionaalsus
+
+Kategooriate alla on võimalik lisada kategooriaid ja nende sisse üksikuid elemente.
+
+Kõik salvestatakse localstorage kaudu
+
+Kategooriat saab kustutada, kui see avada ja vajutada "Delete category nupule"
+
+## Screenshot
+
+
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
+
+# 4. kodutöö – Võrguta olekus töötav rakendus
 
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:
