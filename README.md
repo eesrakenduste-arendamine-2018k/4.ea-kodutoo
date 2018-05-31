@@ -1,6 +1,12 @@
-# 4. kodutöö – Võrguta olekus töötav rakendus
+# 4. kodutöö
 
-### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+## Kalorikalkulaator
+### Autorid : Johan Laas ja Sten-Erik Tool
+Rakendus võimaldab kasutajal arvutada oma päevast kalorite kogust, vastavalt tema soole, pikkusele ja kaalule. Samuti on võimalik oma kaalu üle logida pidada ning selle kohta graafikut jälgida.
+
+![Esimene pilt](https://i.gyazo.com/dd166ba680388b4fb81ef45221fae155.png)
+![Teine pilt](https://i.gyazo.com/c8240be8516dd6c5f02a936c41014930.png)
+
 
 ## Nõuded
 
