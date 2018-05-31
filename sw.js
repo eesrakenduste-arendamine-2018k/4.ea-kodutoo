@@ -3,14 +3,14 @@ self.addEventListener('install', function(e) {
   e.waitUntil(
     caches.open('minesweeper').then(function(cache) {
       return cache.addAll([
-        '/~mihkel26/4.ea-kodutoo/',
-        '/~mihkel26/4.ea-kodutoo/index.html',
-        '/~mihkel26/4.ea-kodutoo/controller.js',
-        '/~mihkel26/4.ea-kodutoo/minesweeper.js',
-        '/~mihkel26/4.ea-kodutoo/render.js',
-        '/~mihkel26/4.ea-kodutoo/style.css',
-        '/~mihkel26/4.ea-kodutoo/images/bomb.svg',
-        '/~mihkel26/4.ea-kodutoo/images/flag.svg'
+        '/mihkel26.github.io/4.ea-kodutoo/',
+        '/mihkel26.github.io/4.ea-kodutoo/index.html',
+        '/mihkel26.github.io/4.ea-kodutoo/controller.js',
+        '/mihkel26.github.io/4.ea-kodutoo/minesweeper.js',
+        '/mihkel26.github.io/4.ea-kodutoo/render.js',
+        '/mihkel26.github.io/4.ea-kodutoo/style.css',
+        '/mihkel26.github.io/4.ea-kodutoo/images/bomb.svg',
+        '/mihkel26.github.io/4.ea-kodutoo/images/flag.svg'
       ]);
     })
   );
