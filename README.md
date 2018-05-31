@@ -14,6 +14,7 @@ Rauno Piibor
 
 App info: 
 In Shuffler you are given a word which is mixed up and the user must guess what word is that. User has only one guess and if the user guesses wrong then the new is created and user can try again with new word. The app also keeps track of score. If the user guesses wrong then the score goes down by 1 and if guesses right then the score goes up by 1.
+Link: https://greeny.cs.tlu.ee/~meintaav/offline-app/
 
 
 ![SHUFFLER](https://puu.sh/AwiQ7/11fded0970.png)
