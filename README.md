@@ -1,5 +1,20 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+Autorid:
+
+Taavi Meinberg
+
+
+Rauno Piibor
+
+
+
+
+
+
+
+
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
