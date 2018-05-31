@@ -1,5 +1,5 @@
 let inputValue
-
+/*
 // Create a "close" button and append it to each list item
 var myNodelist = document.getElementsByTagName('LI')
 var i
@@ -7,11 +7,10 @@ for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement('SPAN')
   var txt = document.createTextNode('\u00D7')
   span.className = 'close'
-  span.onclick="deleteItem()"
   span.id = i
   span.appendChild(txt)
   myNodelist[i].appendChild(span)
-}
+}*/
 
 // Click on a close button to hide the current list item
 var close = document.getElementsByClassName('close')
@@ -65,17 +64,21 @@ if ('serviceWorker' in navigator) {
     console.log('ServiceWorker registration failed: ', err)
   })
 }
-/*
-let delButton = document.getElementsByClassName('close')
-delButton.addEventListener('click', function (e) {
-  let id = e.target.id
-  let el = document.getElementById(id)
-  let value =
-  //let value = e.target.parentElement.value
-  localStorage.removeItem(value)
-}) */
 
 let addButton = document.getElementById('addBtn')
 addButton.addEventListener('click', function () {
   newElement()
 })
+/*
+let delButton = document.querySelector('span')
+delButton.addEventListener("click", function (ev){
+  let id = ev.target.id
+  console.log(id)
+  let el = document.getElementById(id)
+  let row = el.parentNode.innerText
+  row = row.slice(0, -1)
+  localStorage.removeItem(row)
+  debugger
+    // let value = e.target.parentElement.value
+  // localStorage.removeItem(value)
+})*/

@@ -1,6 +1,11 @@
 let item, o
 let category = location.search.split('category=')[1]
 document.getElementById('itemTitle').innerHTML = category
+let delButton = document.getElementById("delBtn")
+delButton.addEventListener("click", function(){
+  localStorage.removeItem(category)
+  window.location.replace("https://www.tlu.ee/~timj/4.ea-kodutoo/src/index.html")
+})
 let items = localStorage.getItem(category)
 let save = items
 let Label = category
@@ -52,11 +57,4 @@ if (items != null) {
   }
 }
 
-function deleteItem (e) {
-  console.log('test')
-  let id = e.target.id
-  console.log(id)
-  let el = document.getElementById(id)
-  // let value = e.target.parentElement.value
-  // localStorage.removeItem(value)
-}
+
