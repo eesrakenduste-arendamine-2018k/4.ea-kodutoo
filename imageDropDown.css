@@ -1,0 +1,22 @@
+#image-dropdown {border:1px solid black; width:80px; height:34px; overflow:hidden;
+    /*animate collapsing the dropdown from open to closed state (v. fast)*/
+    -moz-transition: height 0.5s; 
+    -webkit-transition: height 0.5s; 
+    -ms-transition: height 0.5s;  
+    -o-transition: height 0.5s;  
+    transition: height 0.5s;
+}
+#image-dropdown:hover {height:175px;
+    /*nice and smooth expand - speed this up at your preference or remove animation altogether*/
+    -moz-transition: height 0.5s; 
+    -webkit-transition: height 0.5s; 
+    -ms-transition: height 0.5s;  
+    -o-transition: height 0.5s;  
+    transition: height 0.5s;
+}
+#image-dropdown input {position:absolute;top:0;left:0;opacity:0;}
+#image-dropdown label {display:none; margin:2px; height: 32px; opacity:0.3; padding: 0 0 0 0;}
+#image-dropdown label span{display: inline-block;vertical-align:middle;margin:0 0 0 5px}
+#image-dropdown:hover label{display:block;}
+#image-dropdown label:hover {opacity:0.5;}
+#image-dropdown input:checked + label {opacity:1 !important; display:block;}
