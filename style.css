@@ -1,0 +1,29 @@
+.done-true {
+  text-decoration: line-through;
+  color: red;
+}
+
+.done-false {
+	color: black;
+}
+
+.header {
+	width: 100%;
+	background-color: #0FB4A0;
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+	font-style: Times New Roman;
+	color: black;
+}
+
+
+.btn-primary {
+	border-radius: 6px;
+}
+
+.textbox {
+	border-radius: 6px;
+}

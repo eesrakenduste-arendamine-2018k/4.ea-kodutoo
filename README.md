@@ -1,5 +1,13 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+##Notes
+
+Mihkel Jäe
+
+Tegemist on rakendusega kuhu saab märkmeid jätta.
+
+Baasiks oli peamiselt angularJS: https://angularjs.org/
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
