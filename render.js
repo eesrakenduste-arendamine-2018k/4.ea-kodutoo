@@ -55,11 +55,12 @@ function renderNumber(x, y) {
   );
 }
 
-function renderClicks () {
+function renderInfo () {
   cctx.clearRect(0, 0, info.width, info.height);
   cctx.fillStyle = 'white';
-  cctx.font = '10pt Verdana';
-  cctx.fillText("klikke tehtud: " + clicks,20,20);
+  cctx.font = '15pt Verdana';
+  cctx.fillText("Klikke tehtud: " + clicks,20,20);
+  cctx.fillText("Kaste avatud: " + blocksOpened,400,20);
 }
 
 function renderBlock(x, y) {
@@ -94,7 +95,7 @@ function renderBlock(x, y) {
 }
 
 function render() {
-  renderClicks();
+  renderInfo();
   for (let y = 0; y < ROWS; ++y) {
     for (let x = 0; x < COLS; ++x) {
       renderBlock(x, y);

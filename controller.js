@@ -12,7 +12,7 @@ canvas.addEventListener('mousedown', function(e) {
 
   if (e.which === MOUSE_LEFT) {
     clicks += 1;
-    console.log(clicks);
+    //console.log(clicks);
     openBlock(modelCoordinates.x, modelCoordinates.y)
   } else if (e.which === MOUSE_RIGHT) {flagBlock(modelCoordinates.x, modelCoordinates.y)}
 

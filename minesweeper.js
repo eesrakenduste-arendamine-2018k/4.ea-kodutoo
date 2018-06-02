@@ -1,6 +1,6 @@
 
 
-const COLS = 10, ROWS = 10, MINES = 10;
+let COLS = 10, ROWS = 10, MINES = 10;
 let board = [];
 let state = [];
 let STATE_CLOSED = 0,
@@ -8,6 +8,8 @@ let STATE_CLOSED = 0,
   STATE_OPENED = 2;
 let BLOCK_MINE = -1;
 let playing = true;
+let blocksOpened = 0;
+
 
 
 function inBounds(x, y) {
@@ -35,6 +37,7 @@ function countMinesAround(x, y) {
 }
 
 function init() {
+
   //this.registerServiceWorker()
 
   for (let y = 0; y < ROWS; ++y) {
@@ -67,7 +70,7 @@ function init() {
 }
 
 function openBlock(x, y) {
-
+  blocksOpened += 1;
 
   if (!playing) {
     return;
