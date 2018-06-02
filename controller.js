@@ -1,5 +1,7 @@
 let MOUSE_LEFT = 1,
   MOUSE_RIGHT = 3;
+let clicks = 0;
+
 
 canvas.addEventListener('mousedown', function(e) {
   let x = e.clientX - canvas.offsetLeft,
@@ -8,13 +10,11 @@ canvas.addEventListener('mousedown', function(e) {
   // hit test
   let modelCoordinates = viewToModel(x, y);
 
-  switch (e.which) {
-    case MOUSE_LEFT:
-      openBlock(modelCoordinates.x, modelCoordinates.y);
-      break;
-    case MOUSE_RIGHT:
-      flagBlock(modelCoordinates.x, modelCoordinates.y);
-  }
+  if (e.which === MOUSE_LEFT) {
+    clicks += 1;
+    console.log(clicks);
+    openBlock(modelCoordinates.x, modelCoordinates.y)
+  } else if (e.which === MOUSE_RIGHT) {flagBlock(modelCoordinates.x, modelCoordinates.y)}
 
   render();
 

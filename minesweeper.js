@@ -9,6 +9,7 @@ let STATE_CLOSED = 0,
 let BLOCK_MINE = -1;
 let playing = true;
 
+
 function inBounds(x, y) {
   return x >= 0 && y >= 0
     && x < COLS && y < ROWS;
@@ -66,6 +67,8 @@ function init() {
 }
 
 function openBlock(x, y) {
+
+
   if (!playing) {
     return;
   }

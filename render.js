@@ -3,6 +3,8 @@ let BLOCK_W = W / COLS,
   BLOCK_H = H / ROWS;
 let canvas = document.getElementById('canvas'),
   ctx = canvas.getContext('2d');
+let info = document.getElementById('info'),
+  cctx = info.getContext('2d');
 let colors = [
   'blue', 'darkgreen', 'red', 'navyblue', 'darkred', 'cyan', 'purple', 'black'
 ];
@@ -10,6 +12,8 @@ let bombIcon = new Image();
 bombIcon.src = 'images/bombb.svg';
 let flagIcon = new Image();
 flagIcon.src = 'images/flag.svg';
+
+
 
 function modelToView(x, y) {
   return {
@@ -51,6 +55,13 @@ function renderNumber(x, y) {
   );
 }
 
+function renderClicks () {
+  cctx.clearRect(0, 0, info.width, info.height);
+  cctx.fillStyle = 'white';
+  cctx.font = '10pt Verdana';
+  cctx.fillText("klikke tehtud: " + clicks,20,20);
+}
+
 function renderBlock(x, y) {
   let viewCoordinates = modelToView(x, y);
 
@@ -83,6 +94,7 @@ function renderBlock(x, y) {
 }
 
 function render() {
+  renderClicks();
   for (let y = 0; y < ROWS; ++y) {
     for (let x = 0; x < COLS; ++x) {
       renderBlock(x, y);
