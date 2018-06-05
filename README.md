@@ -1,5 +1,7 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+Heino Pärn, Mart Ambur
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
