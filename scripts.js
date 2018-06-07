@@ -7,6 +7,9 @@ var sets=["10", "15", "20", "25", "30"];
 var appendTens = document.getElementById("tens");
 var appendSeconds = document.getElementById("seconds");
 
+/*
+serviceWorkeri koodi osa võetud - https://github.com/elinorroosalu/4.ea-kodutoo/blob/master/calculator.html
+*/
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
   navigator.serviceWorker.register('serviceWorker.js').then(function(registration) {
