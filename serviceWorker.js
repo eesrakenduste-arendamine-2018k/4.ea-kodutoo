@@ -1,3 +1,6 @@
+/*
+kood võetud - https://github.com/eesrakenduste-arendamine-2018k/sayings-offline-app/blob/master/serviceWorker.js
+*/
 const CACHE_NAME = 'my-cache-v1'
 const urlsToCache = [
   '/~simonen/app/scripts.js',
