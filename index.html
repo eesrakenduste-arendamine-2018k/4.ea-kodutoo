@@ -2,13 +2,13 @@
 <html>
 <head>
     <title>Minesweeper</title>
-    <link rel='stylesheet' href='style.css' />
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link rel='stylesheet' href='style.css'/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
 <body>
 <h1 align="center">Minesweeper</h1>
 <canvas id='info' width='600' height='30'></canvas>
-<div  class="wrapper">
+<div class="wrapper">
     <div>
         <canvas id='canvas' width='600' height='600'></canvas>
         <script src='minesweeper.js'></script>
@@ -19,17 +19,17 @@
 </div>
 <!--Service worker-->
 <script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('/4.ea-kodutoo/sw.js').then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
-      });
-    });
-  }
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/4.ea-kodutoo/sw.js').then(function (registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
 </script>
 
 </body>
