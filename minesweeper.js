@@ -111,18 +111,24 @@ function openBlock(x, y) {
         revealBoard(true);
         endDate = new Date();
         endTime = endDate.getTime() / 1000;
-        timer = startTime - endTime;
+        timer = endTime - startTime;
         console.log(timer);
-        result = {
-            clicks: clicks,
-            boxesOpened: blocksOpened,
-            time: timer
+        if (localStorage.getItem("clicks") === null){
+            console.log("value in localStorage not found")
+            localStorage.setItem("clicks", JSON.stringify(clicks))
+            localStorage.setItem("time", JSON.stringify(timer))
+
         }
-        if (localStorage.getItem("win") === null){
-            localStorage.setItem("win", result)
-        }
-        if (localStorage.getItem("win") !== null){
-            localStorage.setItem("win", result)
+        if (localStorage.getItem("clicks") !== null){
+            console.log("value in localStorage found")
+            let localStorageTime = JSON.parse(localStorage.getItem("time"))
+            if (localStorageTime > timer ) {
+                localStorage.setItem("clicks", JSON.stringify(clicks))
+                localStorage.setItem("time", JSON.stringify(timer))
+            }
+            else {
+                console.log("better score found in localStorage")
+            }
         }
     }
 }
