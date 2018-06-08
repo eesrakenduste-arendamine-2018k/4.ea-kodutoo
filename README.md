@@ -7,6 +7,8 @@ Mihkel Jäe
 Tegemist on rakendusega kuhu saab märkmeid jätta, rakenduse saab ka telefoni koduekraanile lisada ja 
 sellega saab kaasa väga põneva ikooni, rakendus toimib ka interneti ühenduseta.
 
+## Tegemist on mobiilist tehtud screenshotiga
+
 ![screenshot](screenshot.jpg)
 
 Baasiks oli peamiselt angularJS: https://angularjs.org/
