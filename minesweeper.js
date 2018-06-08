@@ -12,7 +12,6 @@ let endDate;
 let startTime;
 let endTime;
 let timer;
-let playerAmount;
 
 
 function inBounds(x, y) {
@@ -89,46 +88,6 @@ function openBlock(x, y) {
         playing = false;
         revealBoard(false);
         return;
-        endDate = new Date();
-        startTime = startDate.getTime() / 1000;
-        console.log(timer);
-        result = {
-            gameResult: "lose",
-            clicks: clicks,
-            boxesOpened: blocksOpened,
-            time: timer
-        }
-        try {
-        playerAmount = (localStorage.getItem("playerAmount"))
-        }
-        catch(err){
-            console.log("LocalStorage oli tühi")
-            let errorMessege = err.messege
-        }
-
-        if (errorMessege === null){
-            playerAmount = JSON.parse(localStorage.getItem("playerAmount"))
-            playerAmount += 1
-            localStorage.setItem("playerAmount", JSON.stringify(playerAmount))
-            localStorage.setItem(JSON.stringify(playerAmount, result))
-        }
-        if (errorMessege !== null){
-            localStorage.setItem("playerAmount", "1")
-            localStorage.setItem("1", JSON.stringify(result))
-        }
-
-        /*if (localStorage.getItem('playerAmount') === null) {
-            console.log("localStorage was null")
-            playerAmount = 1
-            localStorage.setItem('playerAmount', JSON.stringify(playerAmount))
-        }
-        if (localStorage.getItem('playerAmount') !== null) {
-            playerAmount = JSON.parse(localStorage.getItem('playerAmount'))
-            console.log("localStorage wasn't null")
-            localStorage.setItem('playerAmount', JSON.stringify(playerAmount))
-            localStorage.setItem(JSON.stringify(playerAmount), JSON.stringify(result))
-        }*/
-
     }
 
     state[y][x] = STATE_OPENED;
@@ -152,13 +111,18 @@ function openBlock(x, y) {
         revealBoard(true);
         endDate = new Date();
         endTime = endDate.getTime() / 1000;
-        timer = startTime / endTime;
+        timer = startTime - endTime;
         console.log(timer);
         result = {
-            gameResult: "win",
             clicks: clicks,
             boxesOpened: blocksOpened,
             time: timer
+        }
+        if (localStorage.getItem("win") === null){
+            localStorage.setItem("win", result)
+        }
+        if (localStorage.getItem("win") !== null){
+            localStorage.setItem("win", result)
         }
     }
 }
