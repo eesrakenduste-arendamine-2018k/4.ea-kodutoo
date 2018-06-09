@@ -7,6 +7,9 @@ let urlsToCache = [
     '/4.ea-kodutoo/minesweeper.js',
     '/4.ea-kodutoo/render.js',
     '/4.ea-kodutoo/style.css',
+    '/4.ea-kodutoo/images/bg.jpg',
+    '/4.ea-kodutoo/images/bomb.svg',
+    '/4.ea-kodutoo/images/flag.svg',
     '/4.ea-kodutoo/sw.js'
 ];
 
