@@ -175,6 +175,7 @@ font {
 // Loo "sule" nupp igale listis olevale asjale
 var myNodelist = document.getElementsByTagName("LI");
 var i;
+var data = [];
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -240,11 +241,30 @@ function newElement() {
         })
       }
     })
-    
-  var data = JSON.parse(localStorage.getItem(inputValue));
-  localStorage.setItem(span, JSON.stringify(inputValue));
-  var malu = 
-  console.log(localStorage);
+
+  var tükelda;
+  var malu = []; 
+  let array = [];
+  
+  //var data = JSON.parse(localStorage.getItem(inputValue));
+  data.push(inputValue);
+  console.log(data)
+  var malu = JSON.stringify(data);
+  localStorage.setItem("Tasks", malu), function(){
+  let array = JSON.parse(malu);
+
+  localStorage.getItem(Tasks), function(){
+    console.log("s")
+    console.log(tükelda)
+    console.log("s")
+
+  };
+};
+
+
+  
+  
+  console.log(malu);
   
 }
 
