@@ -19,5 +19,8 @@
   "devDependencies": {
     "eslint": "^4.18.2",
     "standard": "^11.0.0"
+  },
+  "dependencies": {
+    "angular-route": "^1.6.10"
   }
 }

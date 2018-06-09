@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="notePadApp">
+  <head>
+	<title>notePad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./angular.min.js"></script>
+  <script src="./notes.js"></script>
+	<script src="./serviceWorker.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="194x194" href="images/favicon-194x194.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#9f00a7">
+  <meta name="theme-color" content="#ffffff">
+  <style>
+  html, body {
+    height: 100%;
+    margin: 0;
+    background-color:#0FB4A0;
+  }
+  #container {
+	min-height: 100%; 
+  }
+  </style>
+  </head>
+  <body>
+    <div class="header">
+        <h2>N O T E P A D</h2>
+    </div>
+    <div ng-controller="notePadController as notePad">
+      [ <a href="" ng-click="notePad.archive()">delete</a> ]
+      <ul class="unstyled">
+        <li ng-repeat="note in notePad.notes track by $index">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="note.done" ng-click="notePad.saveCheck()">
+            <span class="done-{{note.done}}">{{note.text}}</span>
+          </label>
+        </li>
+      </ul>
+      <form ng-submit="notePad.addNote()">
+        <input class="textbox" type="text" ng-model="notePad.noteText"  size="30"
+               placeholder="Add new note..">
+        <input class="btn-primary" type="submit" value="Add">
+      </form>
+    </div>
+  </body>
+</html>
