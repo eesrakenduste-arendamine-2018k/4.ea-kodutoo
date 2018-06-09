@@ -1,11 +1,11 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-    '/',
-    '/index.html',
-    '/controller.js',
-    '/minesweeper.js',
-    '/render.js',
-    '/style.css',
+    '/4.ea-kodutoo/index.html',
+    '/4.ea-kodutoo//',
+    '/4.ea-kodutoo//controller.js',
+    '/4.ea-kodutoo//minesweeper.js',
+    '/4.ea-kodutoo//render.js',
+    '/4.ea-kodutoo//style.css'
 ];
 
 self.addEventListener('install', function (event) {
