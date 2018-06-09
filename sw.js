@@ -1,12 +1,12 @@
 let CACHE_NAME = 'my-site-cache-v1';
 let urlsToCache = [
     '/4.ea-kodutoo/',
+    '/4.ea-kodutoo/style.css',
     '/4.ea-kodutoo/index.html',
     '/4.ea-kodutoo/favicon.ico',
     '/4.ea-kodutoo/controller.js',
     '/4.ea-kodutoo/minesweeper.js',
     '/4.ea-kodutoo/render.js',
-    '/4.ea-kodutoo/style.css',
     '/4.ea-kodutoo/images/bg.jpg',
     '/4.ea-kodutoo/images/bombb.svg',
     '/4.ea-kodutoo/images/flag.svg',
