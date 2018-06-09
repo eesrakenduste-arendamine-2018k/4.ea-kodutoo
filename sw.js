@@ -36,13 +36,13 @@ self.addEventListener('fetch', function (event) {
             .then(function (cached) {
                 const networked = fetch(event.request)
                     .then(fetchedFromNetwork, unableToResolve)
-                    .catch(unableToResolve)
-                console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url)
-                return cached || networked
+                    .catch(unableToResolve);
+                console.log('WORKER: fetch event', cached ? '(cached)' : '(network)', event.request.url);
+                return cached || networked;
 
                 function fetchedFromNetwork(response) {
-                    const cacheCopy = response.clone()
-                    console.log('WORKER: fetch response from network.', event.request.url)
+                    const cacheCopy = response.clone();
+                    console.log('WORKER: fetch response from network.', event.request.url);
                     caches
                         .open(version + 'pages')
                         .then(function add(cache) {
@@ -50,13 +50,13 @@ self.addEventListener('fetch', function (event) {
                         })
                         .then(function () {
                             console.log('WORKER: fetch response stored in cache.', event.request.url)
-                        })
+                        });
 
                     return response
                 }
 
                 function unableToResolve() {
-                    console.log('WORKER: fetch request failed in both cache and network.', event.request.url)
+                    console.log('WORKER: fetch request failed in both cache and network.', event.request.url);
                     return new Response('<h1>Service Unavailable</h1>', {
                         status: 503,
                         statusText: 'Service Unavailable',
