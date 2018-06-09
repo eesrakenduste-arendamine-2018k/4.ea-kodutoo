@@ -1,8 +1,20 @@
+# Minesweeper
+
+### Mihkel Mägi, Sten Piirsalu, Kairo Pettai
+
+Rakenduseks on klassikaline Minesweeper, mis töötab ka offlines kasutades Service Workerit. Rakendusele sai juurde lisatud klikkide arv ja avatud kastide arv. Samuti kasutab rakendus local storaget, kuhu salvestab parima tulemuse aja ja klikkide arvuga. Lisaks salvestab sinna ka mitu korda on kaotatud. 
+
+screenshot: https://gyazo.com/48e3614c83d48d07ebb9da17796222ad
+screenshot telefonis võrguta olekus: https://gyazo.com/727ec56dc2453439bab2889a6b6fa600
+
+
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
+
+
 
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:

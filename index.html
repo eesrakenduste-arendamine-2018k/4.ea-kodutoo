@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minesweeper</title>
+    <link rel='stylesheet' href='style.css'/>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1 align="center">Minesweeper</h1>
+<canvas id='info' width='600' height='30'></canvas>
+<div class="wrapper">
+    <div>
+        <canvas id='canvas' width='600' height='600'></canvas>
+        <script src='minesweeper.js'></script>
+        <script src='controller.js'></script>
+        <script src='render.js'></script>
+    </div>
+    <input type="button" value="Alusta uuesti!" onClick="window.location.reload()">
+</div>
+<!--Service worker-->
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+            navigator.serviceWorker.register('/4.ea-kodutoo/sw.js').then(function (registration) {
+                // Registration was successful
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function (err) {
+                // registration failed :(
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
+</script>
+
+</body>
+</html>
+
+
+<!--code from: https://www.youtube.com/watch?v=LRnnNInjmN0-->
+<!--Bomb and flag icon made from <a href="http://www.onlinewebfonts.com/icon">Icon Fonts</a> is licensed by CC BY 3.0-->
+<!--Background photo by Daniel absi from Pexels-->
