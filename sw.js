@@ -1,6 +1,7 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
     '/4.ea-kodutoo/index.html',
+    '/4.ea-kodutoo/favicon.ico',
     '/4.ea-kodutoo//',
     '/4.ea-kodutoo//controller.js',
     '/4.ea-kodutoo//minesweeper.js',

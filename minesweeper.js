@@ -94,7 +94,7 @@ function openBlock(x, y) {
             localStorage.setItem("losses", "1")
         }
         console.log("you have failed " + losses + "times")
-        alert('Sa kaotasid! kaotusi kokku : ' + losses);
+        alert('Sa kaotasid! kaotusi kokku: ' + losses);
         playing = false;
         revealBoard(false);
         return;
