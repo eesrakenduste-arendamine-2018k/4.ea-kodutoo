@@ -73,7 +73,7 @@ function triggerMotion (event) {
 	  function registerServiceWorker () {
       if ('serviceWorker' in navigator) {
 		  window.addEventListener('load', function() {
-			navigator.serviceWorker.register('/serviceWorker.js').then(function(registration) {
+			navigator.serviceWorker.register('/~stenlaht/4.ea-kodutoo/serviceWorker.js').then(function(registration) {
 			  // Registration was successful
 			  console.log('ServiceWorker registration successful with scope: ', registration.scope);
 			}, function(err) {
