@@ -1,10 +1,10 @@
 // service worker
-const CACHE_NAME = 'dare'
+const CACHE_NAME = 'minesweeper'
 const urlsToCache = [
-  '/~juksar98/4.ea-kodutoo/script.js',
+  '/~juksar98/4.ea-kodutoo/minesweeper.js',
   '/~juksar98/4.ea-kodutoo/',
   '/~juksar98/4.ea-kodutoo/index.html',
-  '/~juksar98/4.ea-kodutoo/style.css'
+  '/~juksar98/4.ea-kodutoo/minesweeper.css'
 ]
 
 self.addEventListener('install', function (event) {
