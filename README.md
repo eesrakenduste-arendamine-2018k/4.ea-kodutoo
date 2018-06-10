@@ -9,7 +9,7 @@ Projektis on koostatud klassikaline ussimäng. Enne mängu alustamist saad ussi 
 
 Demo: 31.05
 
-![ASD] pilt.JPG
+![ASD] 4.ea-kodutoo/pilt.JPG
 
 ## Nõuded
 
