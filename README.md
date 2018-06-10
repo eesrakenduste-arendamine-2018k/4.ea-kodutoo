@@ -2,6 +2,7 @@
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 SNAKE
+
 Autor: Sander Lukas
 
 Projektis on koostatud klassikaline ussimäng. Enne mängu alustamist saad ussi liigutamiseks valida telefoni kallutamise või ekraanil näpuga tõmbamise (vaikeväärtuseks swipe)
