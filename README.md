@@ -1,6 +1,11 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
+SNAKE
+Autor: Sander Lukas
+Projektis on koostatud klassikaline ussimäng. Enne mängu alustamist saad ussi liigutamiseks valida telefoni kallutamise või ekraanil näpuga tõmbamise (vaikeväärtuseks swipe)
+Demo: 31.05
+https://github.com/sanderlukas/4.ea-kodutoo/blob/master/pilt.JPG
 
 ## Nõuded
 
