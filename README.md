@@ -1,10 +1,10 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
-DoYouDare
+Minesweeper - Oskar Juksar ja Märten-Joosep Penjam
 
-Oskar Juksar&Joosep Penjam
-
-Meelelahutuseks erinevad teod, mida teha aja kulutamiseks või lihtsalt enesekindluse tõstmiseks.
+Minesweeper on klassikaline mäng iidsetest aegadest, kus tuleb mänguväljal vajutada suvalistele ruutudele, lootuses, et sa ei vajuta pommi peale.
+Mängul on ka tegelikult olemas reeglid ja taktika, kuidas vältida pommide peale vajutamist.
+<img src="https://imgur.com/QGyc0KX.jpg" alt="esileht"> 
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 

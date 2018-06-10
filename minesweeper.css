@@ -1,0 +1,113 @@
+body{
+    background: url('http://isabelspoetry.com/wp-content/uploads/2017/07/3D-Wallpaper-Isa6F.jpg');
+    font-size: 18px;
+    color:#fff;
+    height: 1000px;
+}
+select {
+    width: 150px;
+    height: 35px;
+}
+.valik {
+    width: 150px;
+    margin-top: 40px;
+    
+}
+#koguarv {
+    position: relative;
+    top:44%;
+}
+td {
+    height: 25px;
+    width: 25px;
+}
+.container{
+    margin-top: 15px;
+    height: 270px;
+    opacity: 1.2;
+    width: 40% !important;
+    background-color: coral;
+    position: fixed;
+    border-radius: 10px;
+    box-shadow: 10px 5px 8px 3px rgba(0,0,0,0.2), 0
+    7px 20px 0 rgba(0,0,0,0.2);
+}
+#winwin {
+    position: relative;
+    top: 65%;
+    font-size: 25px;
+}
+
+#gameField
+{
+    height:315px;
+    width: 315px;
+    visibility: hidden;
+    margin-left: 130px;
+    margin-top: 4.5%;
+    margin-bottom: 20px;
+    border-radius: 2px;  
+    background-color: azure;
+}
+@media screen and (min-width: 300px) and (max-width: 800px) and (min-height:300px) and (max-height:800px) {
+
+    td {
+        height:14px;
+        width: 14px;
+        font-size: 10px;
+    }
+    #koguarv {
+        position: relative;
+        top:30%;
+    }
+
+    #gameField
+    {
+        height:265px;
+        width: 265px;
+        visibility: hidden;
+        margin-top: 40px;
+        margin-left: -3px;
+        padding: 10px;
+        border-radius: 2px; 
+      
+}
+#winwin {
+    position: relative;
+    top: 65%;
+    font-size: 20px;
+}
+
+
+body {
+    background: url('https://images.template.net/wp-content/uploads/2014/09/Creative-3D-Wallpaper-copy.jpg');
+    background-repeat: no-repeat;
+    background-size: 500px 1100px;
+}
+.container {
+    width: 80% !important;
+    
+}
+select {
+    width: 150px;
+    height: 35px;
+}
+footer {
+    height: 60px;
+    background-color: coral;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10px;
+    position: relative;
+    top:100%;
+}
+}
+table {
+    table-layout: fixed;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;    
+}
