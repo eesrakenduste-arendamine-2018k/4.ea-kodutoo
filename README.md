@@ -17,4 +17,12 @@
     * töötab võrguta olekus, st kasutab ServiceWorker'it;
     * töötab hästi väikese ekraaniga seadmel (mobiilil);  
     * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
-    * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+    * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine.
+
+# Rakendus: Kaardimäng linnade põletamine
+## Autorid: Rando Mikksaar, Robert Roos, Sten Markus Laht
+
+### Kireldus
+Rakendusega saab mängida kaardimängu linnade põletamine. Kasutaja saab võtta pakist kaardi vajutades nuppu "Uus kaart" või telefoni raputades. Mängu saab mängida kahe telefoniga, mõlemad tõmbavad pakist kaardi ja võrdlevad, kellel oli suurem kaart, kellel väiksem ja vajutavad ekraanil vastavalt nuppu  "Lisa" või "Eemalda". Mäng lõpeb siis kui ühel mängijal on koos kõik 52 kaarti, siis tekib ekraanile võimalus alustada uut mängu.
+### Ekraanitõmmis
+https://www.tlu.ee/~stenlaht/linnade_poletamine.png
