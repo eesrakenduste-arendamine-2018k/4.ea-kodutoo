@@ -9,7 +9,7 @@ Projektis on koostatud klassikaline ussimäng. Enne mängu alustamist saad ussi 
 
 Demo: 31.05
 
-![] 4.ea-kodutoo/pilt.JPG
+![] https://github.com/sanderlukas/4.ea-kodutoo/blob/master/pilt.JPG
 
 ## Nõuded
 
