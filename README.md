@@ -1,1 +1,3 @@
     * suurelt rakenduse nime; 
+	pmst
+	
