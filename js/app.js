@@ -1,3 +1,4 @@
+let timer = 0;
 (function () {
     'use strict'
 
@@ -15,6 +16,7 @@
         this.scrambledWord = ""
         this.score = 0
         this.init()
+		this.timer = 0
     }
 
     window.Sayings = Sayings // Paneme muuutuja külge
@@ -37,6 +39,8 @@
                 })
             }
         },
+		
+		
         readTextFromFile: function () {
             var rawFile = new XMLHttpRequest();
             rawFile.open("GET", '/~meintaav/offline-app/js/lemmad2013.txt', false)
@@ -51,6 +55,9 @@
             }
             rawFile.send(null);
         },
+		
+			
+		
         compareAnswer: function () {
             var userAnswer = document.querySelector('#ex2').value
             if (userAnswer.toString() === Sayings.word.toString()) {
@@ -70,6 +77,9 @@
                 app.generateRandomWord()
             }
         },
+	
+
+	
         generateRandomWord: function () {
             Sayings.word = Sayings.words[Math.floor(Math.random() * Sayings.words.length)]
             document.querySelector('#test').innerHTML = Sayings.scrambledWord
@@ -98,5 +108,41 @@
         const app = new Sayings()
         window.app = app
         app.generateRandomWord()
+		var fiveMinutes = 60 * 5,
+        display = document.querySelector('#time');
+		startTimer(fiveMinutes, display);
+		
+		
+		function startTimer(duration, display) {
+			var start = Date.now(),
+			diff,
+			minutes,
+			seconds;
+			function timer() {
+
+				diff = duration - (((Date.now() - start) / 1000) | 0);
+				minutes = (diff / 60) | 0;
+				seconds = (diff % 60) | 0;
+
+				minutes = minutes < 10 ? "0" + minutes : minutes;
+				seconds = seconds < 10 ? "0" + seconds : seconds;
+
+				display.textContent = minutes + ":" + seconds; 
+
+			if (diff <= 0) {
+				start = Date.now() + 1000;
+				this.score = 0
+                document.querySelector('#score').innerHTML = this.score
+				
+
+
+			}
+		};
+		timer();
+		setInterval(timer, 1000);
+		}
     }
+
+	
+	
 })()
