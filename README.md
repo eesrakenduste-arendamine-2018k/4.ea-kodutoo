@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
     * suurelt rakenduse nime; 
-	pmst
-	
-=======
 # 4. kodutöö – Võrguta olekus töötav rakendus - Planeeringu list
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
@@ -25,4 +22,4 @@
     * töötab hästi väikese ekraaniga seadmel (mobiilil);  
     * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
     * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
->>>>>>> ee8e156b259c5d2a7d16dae31fcb8da6d676ad41
+
