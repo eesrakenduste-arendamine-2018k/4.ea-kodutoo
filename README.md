@@ -14,7 +14,7 @@
     * suurelt rakenduse nime; 
     Planeeringu list
     * autorite nimesid;
-    Heino Pärn, Mart Ambur
+    Heino Pärn, Mart Ambur.
     * rakenduse funktsionaalsuse kirjeldust;
     * ekraanitõmmist rakendusest.
 1. Rakenduse puhul peavad olema täidetud vähemalt järgmised nõuded:
