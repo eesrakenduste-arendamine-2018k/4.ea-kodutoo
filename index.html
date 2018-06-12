@@ -167,8 +167,7 @@ font {
 </div>
 
 <ul id="myUL">
-  <li>Mine jõuksi</li>
-  <li class="checked">Maksa elisa arve</li>
+
 </ul>
 
 <script>
@@ -176,6 +175,7 @@ font {
 var myNodelist = document.getElementsByTagName("LI");
 var i;
 var data = [];
+
 for (i = 0; i < myNodelist.length; i++) {
   var span = document.createElement("SPAN");
   var txt = document.createTextNode("\u00D7");
@@ -196,16 +196,50 @@ for (i = 0; i < close.length; i++) {
 
 // Lisa "checked" kui klikid listis asja peale 
 var list = document.querySelector('ul');
+
 list.addEventListener('click', function(ev) {
   if (ev.target.tagName === 'LI') {
     ev.target.classList.toggle('checked');
   }
 }, false);
+window.onload = function(){
+let array1 = []
+var i
+let result = localStorage.getItem('Tasks');
+console.log(result) 
+array1 = result
+console.log(array1)
 
+for (i = 0; i <= array1.length; i++){
+  var li = document.createElement("li");
+  var t = document.createTextNode(array1[i]);
+  li.appendChild(t);
+}
+}
 // Lisa uus element vajutades "Add" 
 function newElement() {
-  var li = document.createElement("li");
+
+
   var inputValue = document.getElementById("myInput").value;
+  var tükelda;
+  var malu = []; 
+  let array = [];
+
+  
+  //var data = JSON.parse(localStorage.getItem(inputValue));
+  data.push(inputValue);
+  var malu = JSON.stringify(data);
+  localStorage.setItem("Tasks", malu), function(){
+  let array = JSON.parse(malu);
+  };
+ 
+  tükelda = result
+  tükelda = tükelda.replace("[", "");
+	tükelda = tükelda.replace("]", "");
+	tükelda = tükelda.replace(/"/g, '');
+  array = tükelda.split(",");
+  var i
+  var li = document.createElement("li");
   var t = document.createTextNode(inputValue);
   li.appendChild(t);
   if (inputValue === '') {
@@ -230,7 +264,7 @@ function newElement() {
   
  init: (function() {
 	this.registerServiceWorker()
-	})
+	}) 
 	registerServiceWorker: (function () {
       if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
@@ -242,30 +276,7 @@ function newElement() {
       }
     })
 
-  var tükelda;
-  var malu = []; 
-  let array = [];
-  
-  //var data = JSON.parse(localStorage.getItem(inputValue));
-  data.push(inputValue);
-  console.log(data)
-  var malu = JSON.stringify(data);
-  localStorage.setItem("Tasks", malu), function(){
-  let array = JSON.parse(malu);
 
-  localStorage.getItem(Tasks), function(){
-    console.log("s")
-    console.log(tükelda)
-    console.log("s")
-
-  };
-};
-
-
-  
-  
-  console.log(malu);
-  
 }
 
 
