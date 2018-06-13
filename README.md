@@ -4,6 +4,14 @@
 
 ## Nõuded
 
+# To-Do
+# Autorid: Rando Aljaste, Peeter Roop
+# Saad kirja panna oma päevased toimetused ja kui need tehtud siis ära märkida. Aitab asju meeles pidada :).
+# ![app-to-do](https://gyazo.com/e8a4f2604a5f6da14567bec6ffe0abf8.png)
+# ![app-to-do](https://gyazo.com/44e26fc1a7c0b2b3fd609b8f6029a6b9.png)
+
+
+
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:
     * suurelt rakenduse nime; 
