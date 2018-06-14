@@ -8,6 +8,8 @@ Mängul on ka tegelikult olemas reeglid ja taktika, kuidas vältida pommide peal
 
 Kasutatud kood väljaku moodustamiseks: http://lambda.ee/wiki/ITV0110_2._t%C3%B6%C3%B6_2017:_javascript_ja_css#CSS-i_ja_javascripti_teegid_ja_erivariandid_javascriptist
 
+Video: https://youtu.be/BtQ_PEd0uyQ
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
