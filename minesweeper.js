@@ -1,11 +1,15 @@
     var strValue;
-    var ruutudearv;
-    var klikknr = 0;
-    var pommidearv;
-    var board = [];
-    var kaotamine;
-    var avatudruudud;
-    
+    var squareValue;//squareValue1/ruutudearv
+    var clickNr = 0;//clickNr1/klikknr 
+    var bombCount;//bombCount/pommidearv
+    var board = [];//
+    var losing;//losing/kaotamine
+    var openSquares;//openSquares/avatudruudud
+    //squareValue1/ruutudearv
+    //clickNr1/klikknr 
+    //bombCount/pommidearv
+    //losing/kaotamine
+    //openSquares/avatudruudud
 
     
     function registerServiceWorker () {
@@ -21,8 +25,8 @@
     }
     
     function Alusta() {
-        var x = document.getElementById("ruutudearv");
-        pommid = document.getElementById("pommidearv").value;
+        var x = document.getElementById("squareValue");
+        pommid = document.getElementById("bombCount").value;
         pommid = TryParseInt(pommid);
         strValue = parseInt(x.options[x.selectedIndex].value);
         var tabel = document.getElementById('tab');
@@ -30,9 +34,9 @@
             tabel.parentNode.removeChild(tabel);
         }
         tableCreate(); 
-        klikknr = 0;
-        kaotamine = false;  
-        avatudruudud = 0;      
+        clickNr = 0;
+        losing = false;  
+        openSquares = 0;      
         
 
     }
@@ -61,7 +65,7 @@
     }
     function cellClicked(element)
     {
-        if (kaotamine == true) return;
+        if (losing == true) return;
         var asukoht = element.target.id;
         var kohtX = Number(asukoht.substring(0, asukoht.search("-")));
         var kohtY = Number(asukoht.substring(asukoht.search("-")+1));
@@ -70,17 +74,17 @@
     function tableCreate() {
         var body = document.getElementById('gameField');
         var tbl = document.createElement('table');
-        ruutudearv = strValue;
+        squareValue = strValue;
         tbl.style.width = '100%';
         tbl.setAttribute("id", "tab");
         tbl.style.marginTop = "50px";
         tbl.style.visibility = 'visible';
         var tbdy = document.createElement('tbody');
-        for (var i = 0; i < ruutudearv; i++) 
+        for (var i = 0; i < squareValue; i++) 
         {
             var tr = document.createElement('tr');
             var board=[];
-            for (var j = 0; j < ruutudearv; j++) 
+            for (var j = 0; j < squareValue; j++) 
             { 
                 {
                     var td = document.createElement('td');
@@ -92,21 +96,21 @@
             tbdy.appendChild(tr);
         }
         tbl.appendChild(tbdy);
-        makeBoard(ruutudearv, pommid);
+        makeBoard(squareValue, pommid);
         tbl.addEventListener("click", function(e){cellClicked(e)})
         body.appendChild(tbl);
     } 
-  function makeBoard(ruutudearv,pommid) 
+  function makeBoard(squareValue,pommid) 
   { 
-      if (pommid>=ruutudearv*ruutudearv )  {
+      if (pommid>=squareValue*squareValue )  {
       alert('Pommide arv ei saa olla suurem kui vأ¤ljaku ruutude arv-1! Ei ole mأµtet mأ¤ngida kui kأµik on pommid.');
       tabel.parentNode.removeChild('tbl');
       }
       // initialize board, filling with zeros
-      for (var x=0; x<ruutudearv; x++) 
+      for (var x=0; x<squareValue; x++) 
       {
         board[x]=[]; // insert empty subarray
-        for (var y=0; y<ruutudearv; y++) board[x][y]=0;
+        for (var y=0; y<squareValue; y++) board[x][y]=0;
       }
 
       // now fill board with bombs in random positions
@@ -114,8 +118,8 @@
       while (i>0) 
       {
         // generate random x and y in range 0...size-1
-        x=Math.floor(Math.random() * ruutudearv);
-        y=Math.floor(Math.random() * ruutudearv);
+        x=Math.floor(Math.random() * squareValue);
+        y=Math.floor(Math.random() * squareValue);
         // put bomb on x,y unless there is a bomb already
         if (board[x][y]!=1) 
         {
@@ -131,14 +135,14 @@
  function cellOpen(x, y){
      
      document.getElementById(x+"-"+y).setAttribute("style", "background-color: coral");
-     var xList = GetNeighbours(ruutudearv, x, y);
-     klikknr++;
+     var xList = GetNeighbours(squareValue, x, y);
+     clickNr++;
      document.getElementById(x+"-"+y).innerHTML = closerBombs(xList);
      if (closerBombs(xList) == "0")
      {
          for (var i = 0; i < xList.length; i++)
          {
-             var naabripommid = closerBombs(GetNeighbours(ruutudearv, xList[i][0], xList[i][1]));
+             var naabripommid = closerBombs(GetNeighbours(squareValue, xList[i][0], xList[i][1]));
              document.getElementById(xList[i][0]+"-"+xList[i][1]).innerHTML = naabripommid;
          }
      }
@@ -146,20 +150,20 @@
      console.log("Koordinaadid: "+x+" ja "+y);
      if (board[x][y] == 1)
      {
-        alert('Kaotasid mأ¤ngu '+klikknr+' kأ¤iguga');
-       // document.getElementById('winwin').innerHTML = "Kaotasid "+klikknr+" kأ¤iguga";
+        alert('Kaotasid mأ¤ngu '+clickNr+' kأ¤iguga');
+       // document.getElementById('winwin').innerHTML = "Kaotasid "+clickNr+" kأ¤iguga";
         document.getElementById(x+"-"+y).innerHTML = "&#x2639;";
         document.getElementById(x+"-"+y).style.backgroundColor = "#f0fff0";
-        document.getElementById('koguarv').innerHTML += "Kaotus: "+klikknr+" kأ¤iku <br>"; 
-        kaotamine = true;
+        document.getElementById('koguarv').innerHTML += "Kaotus: "+clickNr+" kأ¤iku <br>"; 
+        losing = true;
        //setTimeout("location.href = 'minesweeper.html'",4000);
       // document.getElementById('gameField').style.display = "none";
        
-      avatudruudud++;
+      openSquares++;
       
      }
 /*
-      else if(avatudruudud == ruutudearv * ruutudearv - pommidearv) {
+      else if(openSquares == squareValue * squareValue - bombCount) {
         alert('jou');
       }*/
   
@@ -167,14 +171,14 @@
   
      
 
-function GetNeighbours(ruutudearv,x,y) {
+function GetNeighbours(squareValue,x,y) {
   var list=[];
   for (var i=-1; i<=1; i++) {    
     for (var j=-1; j<=1; j++) {
       // square is not a neighbour of itself
       if (i==0 && j==0) continue;
       // check whether the the neighbour is inside board bounds
-      if ((x+i)>=0 && (x+i)<ruutudearv && (y+j)>=0 && (y+j)<ruutudearv) {
+      if ((x+i)>=0 && (x+i)<squareValue && (y+j)>=0 && (y+j)<squareValue) {
         list.push([x+i,y+j]);
       }
     }

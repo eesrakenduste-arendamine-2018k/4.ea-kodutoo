@@ -1,3 +1,8 @@
+//  //ruutudearv
+    //klikknr
+    //pommidearv
+    //kaotamine
+    //avatudruudud
 // service worker
 const CACHE_NAME = 'minesweeper'
 const urlsToCache = [
