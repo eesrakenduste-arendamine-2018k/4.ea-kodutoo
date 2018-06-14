@@ -4,7 +4,9 @@ Minesweeper - Oskar Juksar ja Märten-Joosep Penjam
 
 Minesweeper on klassikaline mäng iidsetest aegadest, kus tuleb mänguväljal vajutada suvalistele ruutudele, lootuses, et sa ei vajuta pommi peale.
 Mängul on ka tegelikult olemas reeglid ja taktika, kuidas vältida pommide peale vajutamist.
-<img src="https://imgur.com/QGyc0KX.jpg" alt="esileht"> 
+<img src="https://imgur.com/QGyc0KX.jpg" alt="esileht">
+
+Kasutatud kood väljaku moodustamiseks: http://lambda.ee/wiki/ITV0110_2._t%C3%B6%C3%B6_2017:_javascript_ja_css#CSS-i_ja_javascripti_teegid_ja_erivariandid_javascriptist
 
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
