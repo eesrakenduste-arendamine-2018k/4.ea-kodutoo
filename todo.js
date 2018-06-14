@@ -24,6 +24,10 @@ function add() {
     return false;
 }
  
+
+// Funktsiooni remove asemele tahaks panna funktsiooni, mis muudab
+// List itemite klassi ja lisab nad klassi, mis paneb külge line through
+// Et tehtud taskid oleks läbikriipsutatud. Katsetasime igatpidi, ei õnnestunud
 function remove() {
     var id = this.getAttribute('id');
     var todos = get_todos();
