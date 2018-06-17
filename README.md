@@ -10,6 +10,10 @@ Kasutatud kood väljaku moodustamiseks: http://lambda.ee/wiki/ITV0110_2._t%C3%B6
 
 Video: https://youtu.be/BtQ_PEd0uyQ
 
+Tööjaotus:
+Oskar - Tegi HTMLi põhja JavaScripti jaoks ja põhimõtteliselt kogu JavaScripti.
+Märten - Tegi HTMLis muutusi, et teha CSSi. Kirjutas kõik CSS-i ja aitas Oskarit osade JavaScripti funktsioonide lahendustega.
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
