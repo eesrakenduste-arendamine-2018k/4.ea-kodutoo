@@ -1,5 +1,19 @@
 # 4. kodutöö – Võrguta olekus töötav rakendus
 
+Minesweeper - Oskar Juksar ja Märten-Joosep Penjam
+
+Minesweeper on klassikaline mäng iidsetest aegadest, kus tuleb mänguväljal vajutada suvalistele ruutudele, lootuses, et sa ei vajuta pommi peale.
+Mängul on ka tegelikult olemas reeglid ja taktika, kuidas vältida pommide peale vajutamist.
+<img src="https://imgur.com/QGyc0KX.jpg" alt="esileht">
+
+Kasutatud kood väljaku moodustamiseks: http://lambda.ee/wiki/ITV0110_2._t%C3%B6%C3%B6_2017:_javascript_ja_css#CSS-i_ja_javascripti_teegid_ja_erivariandid_javascriptist
+
+Video: https://youtu.be/BtQ_PEd0uyQ
+
+Tööjaotus:
+Oskar - Tegi HTMLi põhja JavaScripti jaoks ja põhimõtteliselt kogu JavaScripti.
+Märten - Tegi HTMLis muutusi, et teha CSSi. Kirjutas kõik CSS-i ja aitas Oskarit osade JavaScripti funktsioonide lahendustega.
+
 ### Tähtpäev on valitud põhieksamiaeg (25.05 või 31.05)
 
 ## Nõuded
