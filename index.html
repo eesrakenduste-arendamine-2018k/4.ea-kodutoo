@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="icons/icon.png">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+/* Include the padding and border in an element's total width and height */
+* {
+  box-sizing: border-box;
+}
+/* Remove margins and padding from the list */
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Style the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+/* Darker background-color on hover */
+ul li:hover {
+  background: #ddd;
+}
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+/* Style the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+/* Style the header */
+.header {
+  background-color: #3943ce;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+/* Clear floats after the header */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the input */
+input {
+  border: none;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+/* Style the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+@font-face {
+    font-family: myFirstFont;
+    src: url(CK.otf);
+}
+font {
+    font-family: myFirstFont;
+	font-size: 80px;
+	align: top;
+}
+</style>
+	<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon" />
+	<link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+	<link rel="apple-touch-icon" sizes="57x57" href="icons/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon" sizes="72x72" href="icons/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="76x76" href="icons/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="icons/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon" sizes="144x144" href="icons/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon" sizes="152x152" href="icons/apple-touch-icon-152x152.png" />
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon-180x180.png" />
+	<link rel="icon" type="image/png" href="icons/android-chrome-192x192.png" sizes="192x192">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-TileImage" content="icons/mstile-150x150.png">
+	<meta name="msapplication-config" content="icons/browserconfig.xml">
+	<meta name="theme-color" content="#afd8ff">
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel="manifest" href="manifest.json" />
+
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+</head>
+<body>
+
+<div id="myDIV" class="header">
+<font>To-Do</font>
+<br>
+<!--<img src="logo.png" alt="logo" height="150" width="500" style="margin: 5px">
+  <h2 style="margin:5px">Ülesanded</h2>-->
+  <input type="text" id="myInput" placeholder="Ülesanne...">
+  <span id="addBtn" class="addBtn" onclick="newElement(result)">Lisa</span>
+</div>
+
+<ul id="myUL">
+
+</ul>
+
+<script>
+// Loo "sule" nupp igale listis olevale asjale
+var myNodelist = document.getElementsByTagName("LI");
+var result;
+var i;
+var data = [];
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
+// Vajuta kinni, et peita hetkel olev asi listis
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function() {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
+}
+// Lisa "checked" kui klikid listis asja peale
+var list = document.querySelector('ul');
+list.addEventListener('click', function(ev) {
+  if (ev.target.tagName === 'LI') {
+    ev.target.classList.toggle('checked');
+  }
+}, false);
+window.onload = function(){
+let array1 = []
+var i
+result = localStorage.getItem('Tasks');
+slice = result
+slice = slice.replace("[", "");
+slice = slice.replace("]", "");
+slice = slice.replace(/"/g, '');
+result = slice.split(",");
+//array1 = result
+//console.log(array1)
+for (i = 0; i <= result.length-1; i++){
+  console.log(result[i]);
+  var li = document.createElement("li");
+  var t = document.createTextNode(result[i]);
+  li.appendChild(t);
+  document.getElementById("myUL").appendChild(li);
+   //var t = li.createTextNode(result[i]);
+}
+}
+// Lisa uus element vajutades "Add"
+function newElement(result) {
+  var inputValue = document.getElementById("myInput").value;
+  var slice;
+  var memory = [];
+  let array = [];
+
+  //var data = JSON.parse(localStorage.getItem(inputValue));
+  data.push(inputValue);
+  var memory = JSON.stringify(data);
+  localStorage.setItem("Tasks", memory), function(){
+  let array = JSON.parse(memory);
+  };
+
+  /*slice = result;
+  slice = slice.replace("[", "");
+	slice = slice.replace("]", "");
+	slice = slice.replace(/"/g, '');
+  array = slice.split(",");*/
+  var i
+  var li = document.createElement("li");
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue !== '') {
+    document.getElementById("myUL").appendChild(li);
+  } else {
+    alert("You must write something!");
+  }
+  document.getElementById("myInput").value = "";
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.style.display = "none";
+    }
+  }
+
+ init: (function() {
+	this.registerServiceWorker()
+	})
+	registerServiceWorker: (function () {
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
+
+        }, function (err) {
+          // registration failed :(
+
+        })
+      }
+    })
+}
+
+/*function loadStorage(){
+  let append = "";
+  let append1 = "";
+  for(let i = 0; i < localStorage.length; i++) {
+    console.log(localStorage.key[i]);
+  }
+
+}*/
+</script>
+
+</body>
+</html>
