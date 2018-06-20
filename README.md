@@ -4,6 +4,11 @@
 
 ## Nõuded
 
+#
+# Autorid: Rando Aljaste, Peeter Roop
+# Funktsionaalsuse kirjeldus: saad kirja panna oma päevased toimetused ja kui need tehtud siis ära märkida, et midagi meelest ära ei läheks.
+# 
+
 1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!
 1. README.md fail sisaldab:
     * suurelt rakenduse nime; 
@@ -18,3 +23,12 @@
     * töötab hästi väikese ekraaniga seadmel (mobiilil);  
     * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
     * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+    
+## Rakenduse nimi
+To-Do
+
+## Autorid
+Peeter Roop
+
+## Kirjeldus
+Võimalik kirja panna mis sul päeva jooksul näiteks teha on vaja, et midagi meelest ei läheks. On võimalik ka tehtud asjad ära checkida, et tead, mille pärast enam muretsema ei pea.
