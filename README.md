@@ -23,3 +23,12 @@
     * töötab hästi väikese ekraaniga seadmel (mobiilil);  
     * on loodud vajalikes suurustes ikoonid kasutamaks "add to Home screen" funktsionaalsust.
     * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine. 
+    
+## Rakenduse nimi
+To-Do
+
+## Autorid
+Peeter Roop
+
+## Kirjeldus
+Võimalik kirja panna mis sul päeva jooksul näiteks teha on vaja, et midagi meelest ei läheks. On võimalik ka tehtud asjad ära checkida, et tead, mille pärast enam muretsema ei pea.
