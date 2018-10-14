@@ -4,11 +4,11 @@ var INVENTORY = function(){
     }
     INVENTORY.instance_ = this;
     
-    this.background = null;
+
     this.itemPositions;
     this.itemArray = [];
     
-
+    this.background = null;
 
     this.init();
 };
@@ -17,7 +17,6 @@ var INVENTORY = function(){
 INVENTORY.prototype = {
     init: function(){
         this.background = new Image();
-        this.background.src = 'img/experimental_inventory.png';
         this.refreshPositions();
         this.initInventory();
     },
@@ -37,21 +36,25 @@ INVENTORY.prototype = {
 
         for(var i=0; i<28; i++){
             if(this.itemArray[i].name != 'empty'){
-
+                
             }
         }
     },
 
-    draw: function(x, y, width){
+    drawBackground: function(ctx, x, y, width, height){
+        background = this.background;
 
+        this.background.onload = function(){
+            console.log("drawing");
+            ctx.drawImage(background, x,y, width, height);
+        };
+        console.log("1");
+        this.background.src = 'img/experimental_inventory.png';
     },
 
-    getBackground: function(){
-        this.background.onload = function(){
-            
-            return this.background;
-        }
-    }
+    drawItems: function(){
+
+    },
 
 }
 

@@ -17,7 +17,7 @@ var APP = function(){
     this.bank = null;
     this.inventory = null;
 
-    this.background = null;
+    //this.background = null;
 
 
     this.init();
@@ -26,11 +26,10 @@ var APP = function(){
 APP.prototype = {
     init: function(){
         //this.background = new Image();
-        
 
 
         this.appWidth = 500;
-        this.appHeight = 800
+        this.appHeight = 1000;
         this.useDynamicWidth = false;
         this.initiateChildren();
         //try to remove this:
@@ -51,12 +50,13 @@ APP.prototype = {
             this.useDynamicWidth = false;
             this.updateCanvas();
         }
+        console.log("appwindow resized");
     },
 
     initiateChildren: function(){
         this.canvas = document.getElementById("appScreen");
         this.ctx = this.canvas.getContext("2d");
-        
+        console.log("children initiated");
 
         this.bank = new BANK();
         this.inventory = new INVENTORY();
@@ -73,7 +73,8 @@ APP.prototype = {
             this.bank.height = this.appHeightDynamic * this.bank.heightMultiplier;
             //this.bank.draw(this.appWidthDynamic, this.appHeight, this);
             //this.drawBank(0, 0, this.appWidthDynamic, this.bank.height);
-            //this.drawInventory(0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height))
+            this.updateInventory()
+            console.log("canvas updated");
         }else{
             this.canvas.width = this.appWidth;
             this.canvas.height = this.appHeight;
@@ -82,45 +83,37 @@ APP.prototype = {
             
             this.bank.height = this.appHeight * this.bank.heightMultiplier;
             
+            //this.loadItems();
+            
             //this.drawBank(0, 0, this.appWidth, this.bank.height);
-            //this.drawInventory(0, this.bank.height, this.appWidth, (this.canvas.height - this.bank.height))
+            this.updateInventory()
+            console.log("canvas updated");
         }
     },
-
+    
+    updateInventory: function(x, y, width, height){
+        if(this.useDynamicWidth){
+            this.ctx.clearRect(0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height));
+            this.inventory.drawBackground(this.ctx, 0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height));
+            this.inventory.drawItems();
+        }else{
+            this.ctx.clearRect(0, this.bank.height, this.appWidth, (this.canvas.height - this.bank.height));
+            this.inventory.drawBackground(this.ctx, 0, this.bank.height, this.appWidth, (this.canvas.height - this.bank.height));
+            this.inventory.drawItems();
+        }
+    },
+    
     drawBank: function(x,y,width,height){
         this.ctx.clearRect(x,y,width,height);
         this.ctx.fillStyle="#FF0000";
         this.ctx.fillRect(x,y,width,height);
-    },
-
-    drawInventory: function(x,y,width,height){
-        
-        this.ctx.clearRect(x,y,width,height);
-
-
-        drawImage(this.ctx, this.background, x,y,width,height);
-        this.background.src = 'img/experimental_inventory.png';
-
-    },
-
-    
+    },        
 
     calculateDynamicHeight: function(){
         var multiplier = 1 / this.appWidth * this.appWidthDynamic;
         this.appHeightDynamic = this.appHeight * multiplier;
     }
 };
-
-//drawImage()
-drawImage = function(ctx,image,x,y,width,height){
-    if(!image.compete){
-        setTimeout(function(){
-            drawImage(ctx,image,x,y,width,height);
-        }, 20);
-        return
-    }
-    ctx.drawImage(image, x, y, width, height);
-},
 
 //ei tööta vist
 window.mobilecheck = function() {
