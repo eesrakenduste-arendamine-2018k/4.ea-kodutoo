@@ -4,6 +4,8 @@
 
 autor: Rasmus Kivipõld
 
+Rakendus on meelelahutusliku eesmärgiga väikese nostalgialaksu saamiseks.
+
 Rakenduses on 2 osa. Üleval on pank ja all on inventory. Ülevalt itemite peale vajutades saab need ükshaaval inventorysse panna. inventorys itemite peal vajutades saab need 'panka tagasi' panna.
 
 Rakendus töötab hästi ka lives lehe suurust muutes.
