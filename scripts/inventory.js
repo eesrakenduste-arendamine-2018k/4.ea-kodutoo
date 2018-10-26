@@ -26,7 +26,6 @@ INVENTORY.prototype = {
         for(var i=0; i < 28; i++){
             this.itemArray.push(new ITEM('empty'));
         }
-        this.itemArray[7] = new ITEM("saradomin_brew")
     },
 
     refreshPositions: function(){
