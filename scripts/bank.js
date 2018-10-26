@@ -7,18 +7,24 @@ var BANK = function(height){
     this.heightMultiplier = 0;
     this.height = 0;
     this.heightDynamic = 0;
+    this.background
     this.init();
 };
 
 BANK.prototype = {
     init: function(){
         this.heightMultiplier = 0.3;
+        this.background = new Image()
     },
 
-    draw: function(width, height, app){
-        
-    }
-
+    drawBackground: function(ctx, x, y, width, height){
+        this.background.onload = function(){
+            console.log("drawing");
+            ctx.drawImage(this.background, x,y, width, height);
+        }.bind(this)
+        this.background.src = 'img/bank.png';
+    },
+    
 };
 
 /* window.onload = function(){

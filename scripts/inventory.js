@@ -52,7 +52,6 @@ INVENTORY.prototype = {
             console.log("drawing");
             ctx.drawImage(this.background, x,y, width, height);
         }.bind(this)
-        console.log("1");
         this.background.src = 'img/experimental_inventory.png';
     },
 
