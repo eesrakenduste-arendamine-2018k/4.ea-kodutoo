@@ -1,7 +1,7 @@
 {
-  "name": "2.ea-kodutoo",
+  "name": "4.ea-kodutoo",
   "version": "1.0.0",
-  "description": "",
+  "description": "1. Töö tuleb teha vähemalt kahekesi, eelnevalt kokkuleppel on lubatud ka kolm liiget. GitHub'is peab eristuma, kes mida tegi!\r 1. README.md fail sisaldab:\r     * suurelt rakenduse nime; \r     * autorite nimesid; \r     * rakenduse funktsionaalsuse kirjeldust;\r     * ekraanitõmmist rakendusest.\r 1. Rakenduse puhul peavad olema täidetud vähemalt järgmised nõuded:\r     * rakendus lahendab tõsist probleemi või on meelelahutusliku eesmärgiga; \r     * rakenduse idee peab olema kooskõlastatud õppejõuga (võib kirjutada Slack'i); \r     * keerukuselt peab ületama 6. tunni vanasõnade näidet; \r     * töötab võrguta olekus, st kasutab ServiceWorker'it;\r     * töötab hästi väikese ekraaniga seadmel (mobiilil);  \r     * on loodud vajalikes suurustes ikoonid kasutamaks \"add to Home screen\" funktsionaalsust.\r     * võib kasutada teiste autorite koodi, kuid enda panus peab olema natuke enamat kui võrguta olekus töötamine.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/eesrakenduste-arendamine-2018k/2.ea-kodutoo#readme",
   "devDependencies": {
-    "eslint": "^4.18.2",
-    "standard": "^11.0.0"
-  }
+    "eslint": "^4.19.1",
+    "standard": "^11.0.1"
+  },
+  "dependencies": {}
 }
