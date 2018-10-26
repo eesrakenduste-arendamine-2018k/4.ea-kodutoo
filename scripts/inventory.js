@@ -70,6 +70,16 @@ INVENTORY.prototype = {
         }.bind(this)
         item.img.src = item.imgSource;
     },
+
+    addItem: function(item){
+        for(var i=0; i < 28; i++){
+            if(this.itemArray[i].itemName == 'empty'){
+                this.itemArray[i] = item
+                break
+            }
+        }
+    }
+
 }
 
 function calculatePosition(pointer){

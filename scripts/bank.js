@@ -63,18 +63,40 @@ BANK.prototype = {
     },
 
     withdraw: function(width, height, clickX, clickY){
+        let posx
+        let posy
         if(clickX < width / 5){
+            posx = 1
             console.log("clickis 1")
         }else if(clickX < width/5*2 && clickX >= width/5){
+            posx = 2
             console.log("clickis 2")
         }else if(clickX < width/5*3 && clickX >= width/5*2){
+            posx = 3
             console.log("clickis 3")
         }else if(clickX < width/5*4 && clickX >= width/5*3){
+            posx = 4
             console.log("clickis 4")
         }else if(clickX < width/5*5 && clickX >= width/5*4){
+            posx = 5
             console.log("clickis 5")
         }
+        if(clickY < height / 4){
+            posy = 1
+            console.log("clickis 1y")
+        }else if(clickY < height/4*2 && clickY >= height/4){
+            posy = 2
+            console.log("clickis 2 y ")
+        }else if(clickY < height/4*3 && clickY >= height/4*2){
+            posy = 3
+            console.log("clickis 3y")
+        }else if(clickY < height/4*4 && clickY >= height/4*3){
+            posy = 4
+            console.log("clickis 4y")
+        }
         
+        itemPosition = ((posy-1)*5+posx)-1
+        return new ITEM(this.allItems[itemPosition].itemName)
     }
 };
 

@@ -124,7 +124,11 @@ APP.prototype = {
         this.canvas.addEventListener('click', function(event){
             if(this.useDynamicWidth){
                 if(event.clientY < this.bank.height){
-                    this.bank.withdraw(this.appWidthDynamic, this.bank.height, event.clientX, event.clientY)
+                    item = this.bank.withdraw(this.appWidthDynamic, this.bank.height, event.clientX, event.clientY)
+                    console.log(item.itemName)
+                        this.inventory.addItem(item)
+                        console.log(this.inventory.itemArray)
+                    this.updateCanvas()
                 }else{
                     this.inventory.withdraw(this.appWidthDynamic, (this.canvas.height - this.bank.height), event.clientX, event.clientY)
                 }
