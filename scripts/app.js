@@ -93,7 +93,7 @@ APP.prototype = {
         }
     },
     
-    updateInventory: function(x, y, width, height){
+    updateInventory: function(){
         if(this.useDynamicWidth){
             this.ctx.clearRect(0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height));
             this.bank.drawBackground(this.ctx, 0, 0, this.appWidthDynamic, this.bank.height)
@@ -124,19 +124,23 @@ APP.prototype = {
         this.canvas.addEventListener('click', function(event){
             if(this.useDynamicWidth){
                 if(event.clientY < this.bank.height){
-                    item = this.bank.withdraw(this.appWidthDynamic, this.bank.height, event.clientX, event.clientY)
+                    item = this.bank.withdraw(this.appWidthDynamic, this.bank.height, event.clientX, event.clientY, this.canvas.offsetLeft, this.canvas.offsetTop)
                     console.log(item.itemName)
-                        this.inventory.addItem(item)
-                        console.log(this.inventory.itemArray)
+                    this.inventory.addItem(item)
                     this.updateCanvas()
                 }else{
-                    this.inventory.withdraw(this.appWidthDynamic, (this.canvas.height - this.bank.height), event.clientX, event.clientY)
+                    this.inventory.withdraw(this.appWidthDynamic, (this.canvas.height - this.bank.height), event.clientX, event.clientY, this.bank.height, this.canvas.offsetLeft, this.canvas.offsetTop)
+                    this.updateCanvas()
                 }
             }else{
                 if(event.clientY < this.bank.height){
-                    this.bank.withdraw(this.appWidthDynamic, this.bank.height, event.clientX, event.clientY)
+                    item = this.bank.withdraw(this.appWidth, this.bank.height, event.clientX, event.clientY, this.canvas.offsetLeft, this.canvas.offsetTop)
+                    console.log(item.itemName)
+                    this.inventory.addItem(item)
+                    this.updateCanvas()
                 }else{
-                    this.inventory.withdraw(this.appWidthDynamic, (this.canvas.height - this.bank.height), event.clientX, event.clientY)
+                    this.inventory.withdraw(this.appWidth, (this.canvas.height - this.bank.height), event.clientX, event.clientY, this.bank.height, this.canvas.offsetLeft, this.canvas.offsetTop)
+                    this.updateCanvas()
                 }
             }
             
