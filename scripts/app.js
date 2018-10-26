@@ -33,7 +33,7 @@ APP.prototype = {
     // try to remove this:
     this.resizeAppWindow()
     window.onresize = function () {
-      this.resizeAppWindow()
+      app.resizeAppWindow()
     }
 
     this.addCanvasEventListeners()
