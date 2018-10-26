@@ -95,11 +95,11 @@ APP.prototype = {
         if(this.useDynamicWidth){
             this.ctx.clearRect(0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height));
             this.inventory.drawBackground(this.ctx, 0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height));
-            this.inventory.drawItems();
+            this.inventory.drawItems(this.ctx, 0, this.bank.height, this.appWidthDynamic, (this.canvas.height - this.bank.height));
         }else{
             this.ctx.clearRect(0, this.bank.height, this.appWidth, (this.canvas.height - this.bank.height));
             this.inventory.drawBackground(this.ctx, 0, this.bank.height, this.appWidth, (this.canvas.height - this.bank.height));
-            this.inventory.drawItems();
+            this.inventory.drawItems(this.ctx, 0, this.bank.height, this.appWidth, (this.canvas.height - this.bank.height));
         }
     },
     

@@ -19,12 +19,14 @@ INVENTORY.prototype = {
         this.background = new Image();
         this.refreshPositions();
         this.initInventory();
+        
     },
     
     initInventory: function(){
         for(var i=0; i < 28; i++){
-            this.itemArray.push(new ITEM("empty"));
+            this.itemArray.push(new ITEM('empty'));
         }
+        this.itemArray[0] = new ITEM("saradomin_brew")
     },
 
     refreshPositions: function(){
@@ -34,28 +36,41 @@ INVENTORY.prototype = {
 
     addItem: function(){
 
-        for(var i=0; i<28; i++){
-            if(this.itemArray[i].name != 'empty'){
-                
-            }
-        }
+        
     },
 
     drawBackground: function(ctx, x, y, width, height){
-        background = this.background;
+        
 
         this.background.onload = function(){
             console.log("drawing");
-            ctx.drawImage(background, x,y, width, height);
-        };
+            ctx.drawImage(this.background, x,y, width, height);
+        }.bind(this)
         console.log("1");
         this.background.src = 'img/experimental_inventory.png';
     },
 
-    drawItems: function(){
+    drawItems: function(ctx,x,y,width,height){
+        let invInnerWidth = width*0.78
+        let invInnerHeight = height*0.77
+        x = x + (width - invInnerWidth) / 2
+        y = y + (height - invInnerHeight) / 2
 
+        for(var i=0; i<28; i++){
+            if(this.itemArray[i].itemName != 'empty'){
+                let posx = i
+                let posy = i
+                this.drawItem(ctx, x+(invInnerWidth/4)*posx, y+(invInnerHeight)*posy, invInnerWidth/4, invInnerHeight/7, this.itemArray[i])
+            }
+        }
     },
 
+    drawItem: function(ctx, x, y, width, height, item){
+        item.img.onload = function(){
+            ctx.drawImage(item.img, x,y, width, height);
+        }.bind(this)
+        item.img.src = item.imgSource;
+    },
 }
 
 

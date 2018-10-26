@@ -1,17 +1,23 @@
 var ITEM = function(itemName, position){
     this.itemName = itemName;
     this.position = position;
-    if(itemName!='empty'){
-        this.picture = getPicture(itemName);
-    }
+    this.imgSource 
+    this.img
+    this.init()
 };
 
 ITEM.prototype = {
-    setPosition: function(){
-        return null;
+    init: function(){
+        this.img = new Image();
+        this.imgSource = 'img/' + this.itemName + '.png'
+    },
+    setPosition: function(newPosition){
+        this.position = newPosition;
     },
 
     getPosition: function(){
-        return null;
-    }
+        return this.position;
+    },
+
+    
 }
