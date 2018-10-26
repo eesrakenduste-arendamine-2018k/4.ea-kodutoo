@@ -60,6 +60,21 @@ BANK.prototype = {
             ctx.drawImage(item.img, x,y, width, height);
         }.bind(this)
         item.img.src = item.imgSource;
+    },
+
+    withdraw: function(width, height, clickX, clickY){
+        if(clickX < width / 5){
+            console.log("clickis 1")
+        }else if(clickX < width/5*2 && clickX >= width/5){
+            console.log("clickis 2")
+        }else if(clickX < width/5*3 && clickX >= width/5*2){
+            console.log("clickis 3")
+        }else if(clickX < width/5*4 && clickX >= width/5*3){
+            console.log("clickis 4")
+        }else if(clickX < width/5*5 && clickX >= width/5*4){
+            console.log("clickis 5")
+        }
+        
     }
 };
 

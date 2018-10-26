@@ -43,7 +43,6 @@ INVENTORY.prototype = {
         
 
         this.background.onload = function(){
-            console.log("drawing");
             ctx.drawImage(this.background, x,y, width, height);
         }.bind(this)
         this.background.src = 'img/experimental_inventory.png';
@@ -61,7 +60,6 @@ INVENTORY.prototype = {
                 let posx = i % 4
                 let posy = Math.floor( i/4 );
                 this.drawItem(ctx, x+(invInnerWidth/4)*posx, y+(invInnerHeight/7)*posy, invInnerWidth/4, invInnerHeight/7, this.itemArray[i])
-                console.log("joonistan inv")
             }
         }
     },
