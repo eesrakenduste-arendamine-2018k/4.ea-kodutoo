@@ -26,7 +26,7 @@ var APP = function(){
 APP.prototype = {
     init: function(){
         //this.background = new Image();
-        this.registerServiceWorker()
+        
 
         this.appWidth = 500;
         this.appHeight = 1000;
@@ -39,7 +39,7 @@ APP.prototype = {
         };
 
         this.addCanvasEventListeners();
-        
+        this.registerServiceWorker()
     },
 
     resizeAppWindow: function(){
@@ -149,7 +149,7 @@ APP.prototype = {
 
     registerServiceWorker: function () {
         if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('../serviceWorker.js').then(function (registration) {
+          navigator.serviceWorker.register('serviceWorker.js').then(function (registration) {
             // Registration was successful
             console.log('ServiceWorker registration successful: ', registration)
           }, function (err) {

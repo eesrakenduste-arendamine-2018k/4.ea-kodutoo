@@ -1,19 +1,7 @@
 // service worker
 const CACHE_NAME = 'runescape_inventory_v1'
 const urlsToCache = [
-    '/~sizen/runescape-inventory-offline/scripts/app.js',
-    '/~sizen/runescape-inventory-offline/scripts/bank.js',
-    '/~sizen/runescape-inventory-offline/scripts/inventory.js',
-    '/~sizen/runescape-inventory-offline/scripts/items.js',
-    '/~sizen/runescape-inventory-offline/img/air_rune.png',
-    '/~sizen/runescape-inventory-offline/img/bank.png',
-    '/~sizen/runescape-inventory-offline/img/experimental_inventory.png',
-    '/~sizen/runescape-inventory-offline/img/lobster.png',
-    '/~sizen/runescape-inventory-offline/img/logs.png',
-    '/~sizen/runescape-inventory-offline/img/rune_scimitar.png',
-    '/~sizen/runescape-inventory-offline/img/saradomin_brew.png',
-    '/~sizen/runescape-inventory-offline/img/shark.png',
-    '/~sizen/runescape-inventory-offline/index.html',
+    
     '/~sizen/runescape-inventory-offline/',
     '/~sizen/runescape-inventory-offline/style.css'
 ]
