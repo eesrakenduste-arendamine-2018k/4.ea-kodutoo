@@ -26,12 +26,6 @@ INVENTORY.prototype = {
         for(var i=0; i < 28; i++){
             this.itemArray.push(new ITEM('empty'));
         }
-        this.itemArray[0] = new ITEM("saradomin_brew")
-        this.itemArray[1] = new ITEM("saradomin_brew")
-        this.itemArray[2] = new ITEM("saradomin_brew")
-        this.itemArray[3] = new ITEM("saradomin_brew")
-        this.itemArray[27] = new ITEM("saradomin_brew")
-        this.itemArray[10] = new ITEM("saradomin_brew")
         this.itemArray[7] = new ITEM("saradomin_brew")
     },
 
@@ -61,11 +55,13 @@ INVENTORY.prototype = {
         x = x + (width - invInnerWidth) / 2
         y = y + (height - invInnerHeight) / 2
 
+
         for(var i=0; i<28; i++){
             if(this.itemArray[i].itemName != 'empty'){
                 let posx = i % 4
                 let posy = Math.floor( i/4 );
                 this.drawItem(ctx, x+(invInnerWidth/4)*posx, y+(invInnerHeight/7)*posy, invInnerWidth/4, invInnerHeight/7, this.itemArray[i])
+                console.log("joonistan inv")
             }
         }
     },
