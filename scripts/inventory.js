@@ -27,6 +27,12 @@ INVENTORY.prototype = {
             this.itemArray.push(new ITEM('empty'));
         }
         this.itemArray[0] = new ITEM("saradomin_brew")
+        this.itemArray[1] = new ITEM("saradomin_brew")
+        this.itemArray[2] = new ITEM("saradomin_brew")
+        this.itemArray[3] = new ITEM("saradomin_brew")
+        this.itemArray[27] = new ITEM("saradomin_brew")
+        this.itemArray[10] = new ITEM("saradomin_brew")
+        this.itemArray[7] = new ITEM("saradomin_brew")
     },
 
     refreshPositions: function(){
@@ -58,9 +64,9 @@ INVENTORY.prototype = {
 
         for(var i=0; i<28; i++){
             if(this.itemArray[i].itemName != 'empty'){
-                let posx = i
-                let posy = i
-                this.drawItem(ctx, x+(invInnerWidth/4)*posx, y+(invInnerHeight)*posy, invInnerWidth/4, invInnerHeight/7, this.itemArray[i])
+                let posx = i % 4
+                let posy = Math.floor( i/4 );
+                this.drawItem(ctx, x+(invInnerWidth/4)*posx, y+(invInnerHeight/7)*posy, invInnerWidth/4, invInnerHeight/7, this.itemArray[i])
             }
         }
     },
@@ -73,6 +79,13 @@ INVENTORY.prototype = {
     },
 }
 
+function calculatePosition(pointer){
+    let posXY = []
+
+    //calc x
+    pointerRemainder = pointer % 4
+   
+}
 
 /* window.onload = function(){
     var inventory = new INVENTORY();
